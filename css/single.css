@@ -1,0 +1,146 @@
+#single {
+    max-width: 600px;
+    margin: calc(var(--gap) * 2) auto;
+    padding: 0 var(--gap);
+}
+
+.headline > h1 {
+    font-family: var(--display);
+    font-weight: normal;
+    line-height: 1;
+    font-size: 48px;
+    font-style: italic;
+    margin: 0;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    padding: var(--gap) 0;
+}
+
+.byline {
+    display: flex;
+    align-items: center;
+}
+
+.byline .avatars {
+    display: inline-block;
+    margin-right: 5px;
+}
+.byline img {
+    width: 30px;
+    border-radius: 100%;
+    border: 3px solid white;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.byline img:not(:first-child) {
+    margin-left: -20px;
+    transition: all 0.2s;
+}
+
+.byline .byline-authors,
+.byline .byline-authors a,
+.byline-in {
+    font-family: var(--sans);
+}
+
+.byline .byline-authors a {
+    text-decoration: underline;
+    text-decoration-color: #999999;
+    color: black;
+}
+
+.byline .byline-authors a:hover {
+    text-decoration: none;
+}
+
+.post-date {
+    font-family: var(--sans);
+    margin-left: auto;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.article-content > p {
+    font-size: 17px;
+    line-height: 1.5em;
+}
+
+.author-boxes {
+    margin-top: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: var(--gap);
+    border: solid 1px var(--light);
+}
+
+.author-box {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    grid-gap: var(--gap);
+    align-items: center;
+}
+
+.author-box-name,
+.author-box-position {
+    font-family: var(--sans);
+    margin: 0;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.author-box-name {
+    font-size: 17px;
+}
+
+.author-box-position {
+    font-size: 15px;
+    color: var(--gray);
+}
+
+.author-box img {
+    width: 100%;
+}
+
+.recommended-post {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    grid-gap: var(--gap);
+    color: black;
+    text-decoration: none;
+    align-items: center;
+}
+
+.recommended-posts {
+    padding: var(--gap) 0 0;
+    display: grid;
+    grid-gap: var(--gap);
+}
+
+.recommended-post img {
+    width: 100%;
+}
+
+.recommended-post-title {
+    font-family: var(--display);
+    font-size: 24px;
+    display: inline;
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.recommended-post-date {
+    font-family: var(--sans);
+    font-size: 16px;
+    color: var(--gray);
+}

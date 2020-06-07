@@ -1,0 +1,8 @@
+<svg id="ecwon7h8v5gw1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><style><![CDATA[#ecwon7h8v5gw2 {
+           animation-name: ecwon7h8v5gw2_s_o, ecwon7h8v5gw2_s_w;
+           animation-duration: 1500ms;
+           animation-fill-mode: forwards;
+           animation-timing-function: linear;
+           animation-direction: normal;
+           animation-iteration-count: infinite;  
+        }@keyframes ecwon7h8v5gw2_s_o { 0% {stroke-opacity: 0.500000} 53.333333% {stroke-opacity: 0} 100% {stroke-opacity: 0} }@keyframes ecwon7h8v5gw2_s_w { 0% {stroke-width: 0} 53.333333% {stroke-width: 15} 100% {stroke-width: 15} }]]></style><circle id="ecwon7h8v5gw2" r="6.604399" transform="matrix(1 0 0 1 16 16)" fill="rgb(128,0,0)" stroke="rgb(128,0,0)" stroke-width="0" stroke-opacity="0.5"/></svg>

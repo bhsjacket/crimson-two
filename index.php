@@ -1,0 +1,2 @@
+<?php
+// Suck it hackers!
