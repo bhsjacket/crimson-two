@@ -8,6 +8,7 @@ Description: A rewrite of the Jacket's terrible custom WordPress theme. What pie
 
 :root {
     --accent: #800000;
+    --accent-dark: #5A0000;
     --light: #E7E7E7;
     --gray: #808080;
 
@@ -104,7 +105,7 @@ body {
 
 /* Progress Bar */
 header.site-header .progress-bar {
-    background-color: #800000;
+    background-color: var(--accent);
     height: 1px;
     width: 0px;
     z-index: 901;
@@ -164,7 +165,7 @@ header.site-header .progress-bar {
 }
 
 .site-header .search-toggle-mobile:hover {
-    color: #800000;
+    color: var(--accent);
 }
 
 .header-center {
@@ -197,17 +198,17 @@ header.site-header .progress-bar {
     text-decoration: none;
 }
 .site-header ul li a:hover {
-    color: #800000;
+    color: var(--accent);
 }
 
 .site-header .header-button {
-    background-color: #800000;
+    background-color: var(--accent);
     padding: 10px 15px;
     color: white;
     cursor: pointer;
 }
 .site-header .header-button:hover {
-    background-color: #5A0000;
+    background-color: var(--accent-dark);
 }
 
 .site-header li.mobile-menu-toggle {
@@ -224,7 +225,7 @@ header.site-header .progress-bar {
 }
 .sections-toggle:hover,
 .mobile-menu-toggle:hover {
-    color: #800000;
+    color: var(--accent);
 }
 .sections-toggle i {
     padding-right: 7.5px;
@@ -274,7 +275,7 @@ header.site-header .progress-bar {
 }
 
 .site-header .donation-dropdown-form input[type="submit"] {
-    background-color: #800000;
+    background-color: var(--accent);
     padding: 10px 15px;
     border: none;
     color: white;
@@ -285,11 +286,11 @@ header.site-header .progress-bar {
 }
 
 .site-header .donation-dropdown-form input[type="submit"]:hover {
-    background-color: #5A0000;
+    background-color: var(--accent-dark);
 }
 
 .site-header .donation-dropdown-form select {
-    background-color: #800000;
+    background-color: var(--accent);
     outline: none;
     color: white;
     -webkit-appearance: none;
@@ -305,7 +306,7 @@ header.site-header .progress-bar {
 }
 
 .site-header .donation-dropdown-form select:hover {
-    background-color: #5A0000;
+    background-color: var(--accent-dark);
 }
 
 .donation-dropdown p {
@@ -314,7 +315,7 @@ header.site-header .progress-bar {
 
 .donation-dropdown-left i {
     font-size: 28px;
-    color: #800000;
+    color: var(--accent);
     padding-right: 10px;
 }
 
@@ -351,7 +352,7 @@ header.site-header .progress-bar {
 }
 
 .sections-dropdown-inner a:hover {
-    color: #800000;
+    color: var(--accent);
 }
 
 .search-dropdown {
@@ -635,14 +636,15 @@ header.site-header .progress-bar {
 }
 
 .caption-content {
+    margin-top: 3px;
     width: 80%;
     font-family: var(--font);
-    font-size: 16px;
+    font-size: 14px;
     color: var(--gray);
-    font-style: italic;
 }
 
 .caption-credit {
+    margin-top: 5px;
     text-align: right;
     width: 20%;
     font-family: var(--sans);
@@ -657,7 +659,7 @@ header.site-header .progress-bar {
 }
 
 #disqus_thread a {
-    color: #800000;
+    color: var(--accent);
 }
 
 #disqus_thread:after {
