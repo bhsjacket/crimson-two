@@ -24,11 +24,6 @@ $('.article-content > p:last-child').append(' &#x25C6;');
 // Header
 $(document).ready(function(){
     // Various toggles
-    var dropdowns = {
-        '.sections-toggle': '.sections-dropdown',
-        '.header-button': '.donation-dropdown',
-        '.search-toggle': '.search-dropdown'
-    }
     var dropdowns = [
         {
             trigger: '.sections-toggle',
