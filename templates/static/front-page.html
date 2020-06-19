@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../css/front-page.css">
     <link rel="stylesheet" href="https://use.typekit.net/erm4tbu.css?version=5edc8392a7d5b">
+    <link href="../../css/libs/swiper.min.css" rel="stylesheet">
 </head>
 <body>
-    <iframe style="z-index:1000000;position:sticky;top:0;border:none;width:100vw;height:53px;overflow:hidden;pointer-events:none;margin-bottom:-4px;" src="https://bhsjacket.local"></iframe>
+    <!-- <iframe style="z-index:1000000;position:sticky;top:0;border:none;width:100vw;height:53px;overflow:hidden;pointer-events:none;margin-bottom:-4px;" src="https://bhsjacket.local"></iframe> -->
 
     <main id="front-page">
 
@@ -19,15 +20,15 @@
                 <div class="dense-left-top">
                     <a class="small-item" href>
                         <img src="https://picsum.photos/150?a" class="small-item-image">
-                        <h2 data-lines="2" class="small-item-title">Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur</h2>
+                        <h2 data-lines="2" class="small-item-title"><span class="article-category">Features</span>Lorem ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur ipsum dolor sit amet consectetur</h2>
                     </a>
                     <a class="small-item" href>
                         <img src="https://picsum.photos/150?b" class="small-item-image">
-                        <h2 data-lines="2" class="small-item-title">Lorem ipsum dolor sit amet consectetur</h2>
+                        <h2 data-lines="2" class="small-item-title"><span class="article-category">Opinion</span>Lorem ipsum dolor sit amet consectetur</h2>
                     </a>
                     <a class="small-item" href>
                         <img src="https://picsum.photos/150?c" class="small-item-image">
-                        <h2 data-lines="2" class="small-item-title">Lorem ipsum dolor sit amet consectetur</h2>
+                        <h2 data-lines="2" class="small-item-title"><span class="article-category">News</span>Lorem ipsum dolor sit amet consectetur</h2>
                     </a>
                 </div>
                 <a class="dense-left-bottom" href>
@@ -39,19 +40,30 @@
                     </div>
                 </a>
             </div>
+
+            <div class="dense-right dynamic-content" style="height:100%">
             
-            <div class="dense-right" style="background-color:var(--light);"></div>
+                <iframe src="http://127.0.0.1:5500/templates/static/dynamic-content.html" style="width:100%;height:100%;border:none"></iframe>
+            
+            </div>
 
         </section>
 
-        <section class="row four-columns row-background alert-background">
+        <section class="row five-columns">
 
-            <h2 class="row-header">Features</h2>
+            <!-- <h2 class="section-header">Features</h2> -->
 
             <div class="row-inner">
                 
                 <a href class="row-item">
                     <img src="https://picsum.photos/600/400?a" class="row-image">
+                    <h2 class="row-title">Lorem ipsum, dolor sit amet</h2>
+                    <span class="article-meta">By John Doe, May 3</span>
+                    <p class="article-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus in sapiente magni quod veritatis neque obcaecati. Dolorum fugit dolorem ullam.</p>
+                </a>
+
+                <a href class="row-item">
+                    <img src="https://picsum.photos/600/400?q" class="row-image">
                     <h2 class="row-title">Lorem ipsum, dolor sit amet</h2>
                     <span class="article-meta">By John Doe, May 3</span>
                     <p class="article-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus in sapiente magni quod veritatis neque obcaecati. Dolorum fugit dolorem ullam.</p>
@@ -83,7 +95,102 @@
 
         </section>
 
+        <section class="columns">
+
+            <h2 class="section-header black-line">Opinion</h2>
+
+            <div class="columns-inner">
+
+                <a href class="column yellow-accent">
+                    <div style="background-image:url(https://i.imgur.com/jCFQNtZ.png)" class="column-image"></div>
+                    <div class="column-right">
+                        <h2 class="column-title">Lorem ipsum dolor sit</h2>
+                        <h2 class="column-name">Lauren Huang</h2>
+                    </div>
+                </a>
+
+                <a href class="column">
+                    <div style="background-image:url(https://i.imgur.com/G2jj9oA.png)" class="column-image"></div>
+                    <div class="column-right">
+                        <h2 class="column-title">Lorem ipsum dolor sit amet</h2>
+                        <h2 class="column-name">Lauren Huang</h2>
+                    </div>
+                </a>
+
+                <a href class="column column-has-quote blue-accent">
+                    <div style="background-image:url(https://i.imgur.com/gm2YEnn.png)" class="column-image"></div>
+                    <div class="column-right">
+                        <h2 class="column-title">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptatum rerum qui fugit, error libero!”</h2>
+                        <h2 class="column-name">Lauren Huang</h2>
+                    </div>
+                </a>
+
+                <a href class="column green-accent">
+                    <div style="background-image:url(https://i.imgur.com/jCFQNtZ.png)" class="column-image"></div>
+                    <div class="column-right">
+                        <h2 class="column-title">Lorem ipsum dolor sit amet</h2>
+                        <h2 class="column-name">Lauren Huang</h2>
+                    </div>
+                </a>
+
+                <a href class="column purple-accent">
+                    <div style="background-image:url(https://i.imgur.com/gm2YEnn.png)" class="column-image"></div>
+                    <div class="column-right">
+                        <h2 class="column-title">Lorem ipsum dolor sit amet</h2>
+                        <h2 class="column-name">Lauren Huang</h2>
+                    </div>
+                </a>
+
+            </div>
+            
+        </section>
+
+        <section class="two-columns">
+            
+            <a href class="tc-right">
+                <img src="https://picsum.photos/600/400?i">
+                <div class="tc-right-meta">
+                    <h2 class="tc-right-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem!</h2>
+                    <p class="article-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione enim quam assumenda, asperiores ipsam quaerat eligendi hic. Excepturi atque perferendis, voluptas dolore necessitatibus modi corporis? Quae temporibus blanditiis nisi. Nesciunt, non! Saepe.</p>
+                </div>
+            </a>
+
+            <div class="tc-left">
+
+                <a href class="tc-left-article">
+                    <img src="https://picsum.photos/600/400?g" class="tc-left-image">
+                    <div class="tc-left-meta">
+                        <h2 class="tc-left-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h2>
+                        <span class="article-meta">By John Doe, May 3</span>
+                    </div>
+                </a>
+
+                <a href class="tc-left-article">
+                    <img src="https://picsum.photos/600/400?h" class="tc-left-image">
+                    <div class="tc-left-meta">
+                        <h2 class="tc-left-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h2>
+                        <span class="article-meta">By John Doe, May 3</span>
+                    </div>
+                </a>
+
+                <a href class="tc-left-article">
+                    <img src="https://picsum.photos/600/400?j" class="tc-left-image">
+                    <div class="tc-left-meta">
+                        <h2 class="tc-left-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit</h2>
+                        <span class="article-meta">By John Doe, May 3</span>
+                    </div>
+                </a>
+
+            </div>
+
+
+
+        </section>
+
     </main>
+
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/front-page.js"></script>
 
 </body>
 </html>

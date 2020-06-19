@@ -11,7 +11,9 @@
     <?php } else { ?>
     <link href="<?php echo get_template_directory_uri(); ?>/css/single.css?version=<?php echo uniqid(); ?>" rel="stylesheet">
     <?php } ?>
-    <link href="<?php echo get_template_directory_uri(); ?>/css/balloon.min.css" rel="stylesheet">
+    
+    <link href="<?php echo get_template_directory_uri(); ?>/css/libs/balloon.min.css" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/css/libs/swiper.min.css" rel="stylesheet">
     
     <!-- Icons & Fonts -->
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/load.css" rel="stylesheet">
