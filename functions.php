@@ -20,7 +20,12 @@ function cap_callback() {
 add_filter('coauthors_edit_author_cap', 'cap_callback');
 
 // register image size
-add_image_size('three-two', 900, 600, true);
+add_image_size( 'three-two', 1200, 800, true ); // 3:2 ratio
+add_image_size( 'small-three-two', 600, 400, true ); // smaller 3:2 ratio
+add_image_size( 'reasonable', 900 ); // 900px width
+
+remove_image_size('1536x1536');
+remove_image_size('2048x2048');
 
 // disable for posts
 add_filter('use_block_editor_for_post', '__return_false', 10);
@@ -28,7 +33,7 @@ add_filter('use_block_editor_for_post', '__return_false', 10);
 // disable for post types
 add_filter('use_block_editor_for_post_type', '__return_false', 10);
 
-// Register Theme Features
+// Register Theme Features 
 function custom_theme_features()  {
 
 	// Add theme support for Automatic Feed Links
@@ -136,3 +141,152 @@ add_filter('acf/settings/show_admin', 'my_acf_settings_show_admin');
 function my_acf_settings_show_admin( $show_admin ) {
     return false;
 } */
+
+// Hide Unwanted Blocks
+add_filter( 'allowed_block_types', 'misha_allowed_block_types' );
+ 
+function misha_allowed_block_types( $allowed_blocks ) {
+ 
+	return array(
+		'core/paragraph',
+		'core/heading',
+		'core/list',
+		'acf/extended-image',
+		'acf/embed',
+		'core/quote',
+		'acf/image-gallery',
+		'core-embed/twitter',
+		'core-embed/facebook',
+		'core-embed/youtube',
+		'core-embed/vimeo',
+		'core-embed/spotify',
+		'core-embed/soundcloud',
+		'core-embed/reddit',
+		'core-embed/instagram',
+		'acf/advertisement'
+	);
+ 
+}
+
+// Register Syndication Taxonomy
+add_action( 'init', 'create_syndication_taxonomy', 0 );
+ 
+function create_syndication_taxonomy() {
+ 
+  $labels = array(
+    'name' => _x( 'Syndication Options', 'taxonomy general names' ),
+    'singular_name' => _x( 'Syndication Option', 'taxonomy singular names' ),
+    'search_items' =>  __( 'Search Syndication Options' ),
+    'all_items' => __( 'All Syndication Options' ),
+    'parent_item' => __( 'Parent Syndication Option' ),
+    'parent_item_colon' => __( 'Parent Syndication Option:' ),
+    'edit_item' => __( 'Edit Syndication Option' ), 
+    'update_item' => __( 'Update Syndication Option' ),
+    'add_new_item' => __( 'Add New Syndication Option' ),
+    'new_item_name' => __( 'New Syndication Option Name' ),
+    'menu_name' => __( 'Syndication Options' ),
+  );    
+ 
+  register_taxonomy('syndication',array('post'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_admin_column' => false,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'crimson-syndication' ),
+  ));
+ 
+}
+
+// Columns
+function crimson_columns() {
+
+	$labels = array(
+		'name'                  => 'Columns', 'Post Type General Name',
+		'singular_name'         => 'Column', 'Post Type Singular Name',
+		'menu_name'             => 'Columns',
+		'name_admin_bar'        => 'Column',
+		'archives'              => 'Column Archives',
+		'attributes'            => 'Column Attributes',
+		'parent_item_colon'     => 'Parent Column:',
+		'all_items'             => 'All Columns',
+		'add_new_item'          => 'Add New Column',
+		'add_new'               => 'Add New',
+		'new_item'              => 'New Column',
+		'edit_item'             => 'Edit Column',
+		'update_item'           => 'Update Column',
+		'view_item'             => 'View Column',
+		'view_items'            => 'View Columns',
+		'search_items'          => 'Search Column',
+		'not_found'             => 'Not found',
+		'not_found_in_trash'    => 'Not found in Trash',
+		'featured_image'        => 'Featured Image',
+		'set_featured_image'    => 'Set featured image',
+		'remove_featured_image' => 'Remove featured image',
+		'use_featured_image'    => 'Use as featured image',
+		'insert_into_item'      => 'Insert into column',
+		'uploaded_to_this_item' => 'Uploaded to this column',
+		'items_list'            => 'Column list',
+		'items_list_navigation' => 'Column list navigation',
+		'filter_items_list'     => 'Filter column list',
+	);
+	$args = array(
+		'label'                 => 'Column',
+		'description'           => 'Columns',
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'revisions', 'custom-fields', 'author', 'excerpt' ),
+		'taxonomies'            => array( 'columnist' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-admin-comments',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => 'column',
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'column', $args );
+
+}
+add_action( 'init', 'crimson_columns', 0 );
+
+// Add Issue Taxonomy
+function create_issue_tax() {
+
+	$labels = array(
+		'name'              => 'Issues', 'taxonomy general name',
+		'singular_name'     => 'Issue', 'taxonomy singular name',
+		'search_items'      => 'Search Issues',
+		'all_items'         => 'All Issues',
+		'parent_item'       => 'Parent Issue',
+		'parent_item_colon' => 'Parent Issue:',
+		'edit_item'         => 'Edit Issue',
+		'update_item'       => 'Update Issue',
+		'add_new_item'      => 'Add New Issue',
+		'new_item_name'     => 'New Issue Name',
+		'menu_name'         => 'Issue',
+	);
+	$args = array(
+		'labels' => $labels,
+		'description' => 'Issues',
+		'hierarchical' => true,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'show_in_nav_menus' => false,
+		'show_tagcloud' => false,
+		'show_in_quick_edit' => true,
+		'show_admin_column' => true,
+		'show_in_rest' => true,
+		'rewrite' => false,
+	);
+	register_taxonomy( 'issue', array('post', 'column'), $args );
+
+}
+add_action( 'init', 'create_issue_tax' );

@@ -6,6 +6,7 @@
     
     <!-- Stylesheets -->
     <link href="<?php echo get_template_directory_uri(); ?>/style.css?version=<?php echo uniqid(); ?>" rel="stylesheet">
+    <link href="<?php echo get_template_directory_uri(); ?>/dark-mode.css?version=<?php echo uniqid(); ?>" rel="stylesheet">
     <?php if(is_front_page()) { ?>
     <link href="<?php echo get_template_directory_uri(); ?>/css/front-page.css?version=<?php echo uniqid(); ?>" rel="stylesheet">
     <?php } else { ?>
@@ -19,7 +20,18 @@
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/load.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/erm4tbu.css?version=5edc8392a7d5b">
 
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
+
     <!-- wp_head(); -->
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<?php
+$bodyClasses = get_body_class();
+foreach( $bodyClasses as $class ) {
+    $classes = $classes . ' ' . $class;
+}
+if($_COOKIE['dark-mode'] == 'true') {
+    $classes = $classes . ' dark-mode';
+}
+?>
+<body class="<?php echo $classes ?>">

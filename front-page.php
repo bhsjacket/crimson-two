@@ -1,5 +1,67 @@
+<?php
+/*
+Defaults:
+'post_type' => array('post')
+'post_status' => array('publish'),
+'posts_per_page' => 1,
+'category' => '',
+'tag' => ''
+ */
+?>
+
 <?php get_header(); ?>
+<main id="front-page">
 
-<iframe src="http://127.0.0.1:5500/templates/static/front-page.html" style="width:100vw;height:1835.2px;border:none"></iframe>
+<?php
 
+set_query_var( 'params', 'sports' );
+get_template_part( 'parts/front-page/dense' );
+
+while ( have_rows('sections', 'option') ) : the_row();
+
+    if( get_row_layout() == 'dense' ): // Dense Layout
+        set_query_var( 'params', get_sub_field( 'dynamic_content' ) );
+        get_template_part( 'parts/front-page/dense' );
+
+    elseif( get_row_layout() == 'row' ): // Row Layout
+        set_query_var( 'params', [
+            'title' => get_sub_field( 'title' ) ?? '',
+            'posts' => get_sub_field( 'posts' ) ?? '4',
+            'style_options' => get_sub_field( 'style_options' ) ?? '',
+            'color' => get_sub_field( 'color' ) ?? 'red-accent',
+            'tag' => get_sub_field( 'tag' ) ?? '',
+            'category' => get_sub_field( 'category' ) ?? '',
+            'offset' => get_sub_field( 'offset' ) ?? 0,
+        ] );
+        get_template_part( 'parts/front-page/row' );
+
+    elseif( get_row_layout() == 'title' ): // Standalone Title
+        set_query_var( 'params', [
+            'text' => get_sub_field( 'text' ) ?? '',
+            'color' => get_sub_field( 'color' ) ?? 'red-accent',
+        ] );
+        get_template_part( 'parts/front-page/title' );
+
+    elseif( get_row_layout() == 'two_columns' ): // Two Column Layout
+        set_query_var( 'params', [
+            'title' => get_sub_field( 'title' ) ?? '',
+            'color' => get_sub_field( 'color' ) ?? 'red-accent',
+            'tag' => get_sub_field( 'tag' ) ?? '',
+            'category' => get_sub_field( 'category' ) ?? '',
+            'offset' => get_sub_field( 'offset' ) ?? 0,
+            'position' => get_sub_field( 'position' ) ?? 'large-on-right',
+        ] );
+        get_template_part( 'parts/front-page/two-columns' );
+
+    elseif( get_row_layout() == 'columnists' ):
+        get_template_part( 'parts/front-page/columnists' );
+
+    endif;
+
+// End loop.
+endwhile;
+
+?>
+
+</main>
 <?php get_footer(); ?>

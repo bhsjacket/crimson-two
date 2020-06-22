@@ -14,13 +14,13 @@
 </div>
 
 <header class="site-header">
-    <?php if($_COOKIE['notification'] !== 'closed') { ?>
-    <div id="notification">
+    <?php if($_COOKIE['notification'] !== 'closed' && !empty(get_field('notification_url', 'option')) && !empty(get_field('notification_text', 'option'))) { ?>
+    <a href="<?php echo esc_url(get_field('notification_url', 'option')); ?>" id="notification">
         <div class="notification-inner">
-            <a href="" class="notification-text">This is a notification that needs to be changed soon!</a>
+            <span class="notification-text"><?php echo esc_html(get_field('notification_text', 'option')); ?></span>
             <i class="far fa-times notification-close"></i>
         </div>
-    </div>
+    </a>
     <?php } ?>
     <div class="search-dropdown header-dropdown">
         <div class="search-dropdown-inner">

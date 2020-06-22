@@ -44,7 +44,7 @@
             'post_type' => array( 'post', 'gallery' ),
             'post_status' => array( 'publish' ),
             'posts_per_page' => 3,
-            'nopaging' => true,
+            'nopaging' => false,
             'ignore_sticky_posts' => true,
             'order' => 'DESC',
             'post__not_in' => array( get_the_ID() )

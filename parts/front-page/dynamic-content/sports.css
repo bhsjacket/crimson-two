@@ -1,0 +1,55 @@
+.sports-dc {
+    position: relative;
+    overflow: hidden;
+    padding: var(--gap);
+
+    height: calc(100% - 30px);
+    background-color: var(--light);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sports-dc:after {
+    font-family: 'Font Awesome 5 Pro';
+    position: absolute;
+    color: rgb(0,0,0,0.1);
+    font-size: 512px;
+    bottom: var(--gap);
+    right: var(--gap);
+    pointer-events: none;
+}
+.sports-dc.sport-soccer:after { content: '\f1e3'; }
+.sports-dc.sport-baseball:after { content: '\f433'; }
+.sports-dc.sport-football:after { content: '\f44e'; }
+.sports-dc.sport-basketball:after { content: '\f434'; }
+
+.rival-name,
+.home-name {
+    font-family: var(--display-alt);
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: var(--small-gap);
+}
+
+.sports-location {
+    font-family: var(--sans);
+    display: block;
+}
+
+.sports-date {
+    display: block;
+    font-family: var(--sans);
+}
+
+.sports-button {
+    font-family: var(--sans);
+    color: black;
+    text-decoration: none;
+}
+
+.sports-vs {
+    font-family: var(--sans);
+}

@@ -10,6 +10,7 @@
                     <a target="_blank" href="https://instagram.com/bhsjacket"><i class="fab fa-instagram"></i></a>
                     <a target="_blank" href="https://facebook.com/bhsjacket"><i class="fab fa-facebook-f"></i></a>
                     <a target="_blank" href="/feed"><i class="far fa-rss"></i></a>
+                    <a class="dark-mode-toggle"><i class="far fa-moon"></i></a>
                 </div>
             </div>
         </div>

@@ -68,7 +68,8 @@ $(document).ready(function(){
     })
 
     // Notification bar
-    $(".notification-close").click(function () {
+    $(".notification-close").click(function(event) {
+        event.preventDefault();
         $("#notification").slideUp("fast", function(){
             $(this).remove();
         });
@@ -117,4 +118,15 @@ $(document).ready(function(){
             }
         }
     });
+
+    // Dark Mode
+    $('.dark-mode-toggle').click(function(){
+        if( Cookies.get('dark-mode') == 'true' ) {
+            Cookies.remove('dark-mode');
+            $('body').removeClass('dark-mode');
+        } else {
+            Cookies.set('dark-mode', 'true');
+            $('body').addClass('dark-mode');
+        }
+    })
 })

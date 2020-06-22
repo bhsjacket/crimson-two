@@ -1,2 +1,6 @@
 acf
 - transparent image for user (columnist)
+- sports dynamic content
+- column post type
+    - column homepage module
+- homepage module preview in backend

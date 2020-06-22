@@ -1,0 +1,19 @@
+/* CLASSIC EDITOR */
+.mce-content-body p {
+    font-family: 'PT Serif', 'Georgia', serif;
+    font-size: 17px;
+    color: black;
+}
+
+.mce-content-body a {
+    color: #000000;
+    text-decoration: none;
+    box-shadow: inset 0px -2px 0px 0px #800000;
+    transition: all 0.2s;
+}
+
+.mce-content-body a:hover {
+    box-shadow: inset 0px -2px 0px 0px #800000,
+                inset 0px -1.3em 0px 0px rgb(128, 0, 0, 0.25);
+    transition: all 0.2s;
+}

@@ -1,7 +1,6 @@
 .coronavirus-stat-dc {
     background-color: var(--pale-red);
-    height: -webkit-fill-available;
-    height: -moz-available;
+    height: calc(100% - 30px);
     padding: var(--gap);
     display: flex;
     flex-direction: column;
@@ -21,8 +20,8 @@
 
 .chart-stat {
     position: absolute;
-    right: 11px;
-    top: -10px;
+    right: -10px;
+    top: 8px;
     font-family: var(--sans);
     font-size: 16px;
 }
