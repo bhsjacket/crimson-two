@@ -4,6 +4,8 @@ optional:
 'post_types' (array)
 'title' (string)
 'style_options' (array)
+    - row-background
+    - alert-background
 'offset' (int)
 
 expects:
@@ -35,7 +37,7 @@ if( $params['posts'] == 3 ) {
     $columns = 'four-columns'; // fallback
 }
 
-$classes = implode( ' ', $params['style_options'] );
+@$classes = implode( ' ', $params['style_options'] ); // supressed b/c is whiny when no styles set
 
 $query = new WP_Query( $args_query ); ?>
 

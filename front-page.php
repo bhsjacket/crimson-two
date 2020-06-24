@@ -1,21 +1,20 @@
 <?php
 /*
-Defaults:
-'post_type' => array('post')
-'post_status' => array('publish'),
-'posts_per_page' => 1,
-'category' => '',
-'tag' => ''
- */
+Color Values:
+- 'red-accent'
+- 'yellow-accent'
+- 'green-accent'
+- 'blue-accent'
+- 'purple-accent'
+- 'black-line' (only for title)
+- 'gray-accent'
+*/
 ?>
 
 <?php get_header(); ?>
 <main id="front-page">
 
 <?php
-
-set_query_var( 'params', 'sports' );
-get_template_part( 'parts/front-page/dense' );
 
 while ( have_rows('sections', 'option') ) : the_row();
 
@@ -58,7 +57,6 @@ while ( have_rows('sections', 'option') ) : the_row();
 
     endif;
 
-// End loop.
 endwhile;
 
 ?>

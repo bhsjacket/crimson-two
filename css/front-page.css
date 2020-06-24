@@ -179,6 +179,18 @@ section.dense {
     white-space: nowrap;
 }
 
+@media all and (max-width: 600px) {
+    .section-header {
+        white-space: normal;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .section-header:after {
+        content: none!important;;
+    }
+}
+
 .section-header:after {
     content: '';
     width: 100%;
