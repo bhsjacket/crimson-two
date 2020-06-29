@@ -21,7 +21,7 @@
     
     <!-- Font Awesome & Fonts -->
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/load.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/erm4tbu.css?version=5edc8392a7d5b">
+    <link rel="stylesheet" href="https://use.typekit.net/erm4tbu.css">
 
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
 

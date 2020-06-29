@@ -36,9 +36,9 @@ Description: A rewrite of the Jacket's terrible custom WordPress theme. What pie
     --gray: #808080;
     --dark-gray: #5c5c5c;
 
-    --font: 'PT Serif', georgia, times, serif;
-    --sans: 'PT Sans', 'Source Sans Pro', 'Roboto', sans-serif;
-    --display: 'span', 'New York Large', garamond, georgia, times, serif;
+    --font: 'pt-serif-pro', 'PT Serif', georgia, times, serif;
+    --sans: 'pt-sans-pro', 'PT Sans', 'Source Sans Pro', 'Roboto', sans-serif;
+    --display: 'span', georgia, times, serif;
     --display-alt: 'span-condensed', var(--display);
 
     --gap: 15px;
@@ -773,14 +773,45 @@ header.site-header .progress-bar {
     }
 }
 
+/* IMAGES */
+
+.image-outer.align-center { max-width: var(--normal); }
+.image-outer.align-wide { max-width: var(--wide); }
+.image-outer.align-full { max-width: none; }
+.image-outer.align-full .image {
+    margin-left: calc(var(--gap) * -1);
+    margin-right: calc(var(--gap) * -1);
+    width: 100vw;
+}
+.image-outer.align-left { float: left; }
+.image-outer.align-right { float: right; }
+
+.image-outer.align-left,
+.image-outer.align-right {
+    max-width: 300px;
+}
+
+.image {
+    width: 100%;
+    display: block;
+}
+
+.image-outer {
+    margin-top: calc(var(--gap) * 2.6)!important;
+}
+
 .caption-group {
     display: flex;
+    margin: 0 auto;
     margin-bottom: calc(var(--gap) * 2);
+    line-height: 1em;
+    max-width: var(--normal);
 }
 
 .caption-content,
 .caption-credit {
     margin: 0;
+    line-height: 1.5em;
 }
 
 .caption-content {
@@ -800,6 +831,8 @@ header.site-header .progress-bar {
     text-transform: uppercase;
     font-size: 10px;
 }
+
+/* COMMENTS */
 
 #disqus_thread {
     user-select: none;

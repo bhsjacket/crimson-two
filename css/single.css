@@ -1,15 +1,19 @@
 #single {
-    max-width: 600px;
-    margin: calc(var(--gap) * 2) auto;
+    margin-top: calc(var(--gap) * 2);
     padding: 0 var(--gap);
+}
+
+#single > * {
+    max-width: var(--normal);
+    margin: 0 auto;
 }
 
 .headline > h1 {
     font-family: var(--display);
     font-weight: normal;
-    line-height: 1;
+    line-height: 1.1em;
     font-size: 48px;
-    font-style: italic;
+    font-style: normal;
     margin: 0;
 }
 
@@ -71,6 +75,13 @@
 .article-content {
     font-size: 17px;
     line-height: 1.5em;
+    max-width: none!important;
+}
+
+.article-content > * {
+    max-width: var(--normal);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .author-boxes {

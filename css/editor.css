@@ -1,3 +1,40 @@
+@import 'https://use.typekit.net/erm4tbu.css';
+
+/* GUTENBERG */
+.wp-block{ max-width: 600px; }
+.wp-block[data-align="wide"] { max-width: 800px; }
+.wp-block[data-align="full"] { max-width: none; }
+
+.acf-field-acfe-column {
+    padding: 0!important;
+}
+
+.editor-post-title__block .editor-post-title__input {
+    font-family: 'span', georgia, times, serif;
+    font-size: 48px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.1em;
+}
+
+.wp-block .wp-block-paragraph {
+    font-family: 'pt-serif-pro', 'PT Serif', georgia, times, serif;
+    font-size: 17px;
+    line-height: 1.5em;
+}
+
+.wp-block .wp-block-paragraph a {
+    color: #000000;
+    text-decoration: none;
+    box-shadow: inset 0px -2px 0px 0px #800000;
+    transition: all 0.2s;
+}
+
+.wp-block .wp-block-paragraph a:hover {
+    box-shadow: inset 0px -2px 0px 0px #800000,
+                inset 0px -1.3em 0px 0px rgb(128, 0, 0, 0.25);
+}
+
 /* CLASSIC EDITOR */
 .mce-content-body p {
     font-family: 'PT Serif', 'Georgia', serif;

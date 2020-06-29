@@ -17,7 +17,7 @@ $left_query = array(
 	'posts_per_page' => 3,
     'nopaging' => false,
     'order' => 'DESC',
-    'category' => $params['category_slug'] ?? '',
+    'category_name' => $params['category_slug'] ?? '',
     'tag' => $params['tag'] ?? '',
     'offset' => $params['offset'] ?? 0
 );
@@ -32,7 +32,7 @@ $right_query = array(
     'order' => 'DESC',
     'category' => $params['category_slug'] ?? '',
     'tag' => $params['tag'] ?? '',
-    'offset' => $params['offset'] + 3 ?? '3'
+    'offset' => (int) $params['offset'] + 3 ?? '3'
 );
 
 $right_query = new WP_Query( $right_query ); ?>
@@ -46,7 +46,7 @@ $right_query = new WP_Query( $right_query ); ?>
     <div class="tc-left">
     <?php while ( $left_query->have_posts() ) { $left_query->the_post(); ?>
 
-        <a href class="tc-left-article">
+        <a href="<?php echo get_permalink(); ?>" class="tc-left-article">
             <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'three-two')[0]; ?>" class="tc-left-image">
             <div class="tc-left-meta">
                 <h2 class="tc-left-title"><?php echo esc_html( get_the_title() ); ?></h2>
@@ -58,7 +58,7 @@ $right_query = new WP_Query( $right_query ); ?>
     </div>
 
     <?php while ( $right_query->have_posts() ) { $right_query->the_post(); ?>   
-    <a href class="tc-right">
+    <a href="<?php echo get_permalink(); ?>" class="tc-right">
         <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'three-two')[0]; ?>">
         <div class="tc-right-meta">
             <h2 class="tc-right-title"><?php echo esc_html( get_the_title() ); ?></h2>

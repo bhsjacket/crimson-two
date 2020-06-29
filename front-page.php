@@ -36,7 +36,7 @@ while ( have_rows('sections', 'option') ) : the_row();
 
     elseif( get_row_layout() == 'title' ): // Standalone Title
         set_query_var( 'params', [
-            'text' => get_sub_field( 'text' ) ?? '',
+            'text' => get_sub_field( 'title' ) ?? '',
             'color' => get_sub_field( 'color' ) ?? 'red-accent',
         ] );
         get_template_part( 'parts/front-page/title' );

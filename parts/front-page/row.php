@@ -22,7 +22,7 @@ $args_query = array(
 	'posts_per_page' => $params['posts'] ?? 1,
     'nopaging' => false,
     'order' => 'DESC',
-    'category' => $params['category'] ?? '',
+    'category_name' => $params['category'] ?? '',
     'tag' => $params['tag'] ?? '',
     'offset' => $params['offset'] ?? 0
 );

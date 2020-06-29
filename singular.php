@@ -26,6 +26,7 @@
     <div class="article-content">
         <?php the_content(); ?>
     </div>
+
     <?php if( function_exists( 'get_coauthors' ) && count( get_coauthors() ) > 1 ) { ?>
     <div class="author-boxes">
         <?php foreach( get_coauthors() as $author ) { ?>
@@ -38,12 +39,13 @@
         </a>
         <?php } ?>
     </div>
-    <div class="recommended-posts">
+    <?php } ?>
+    <div class="recommended-posts"<?php if( count( @get_coauthors() ) == 1 ) { echo ' style="border-top: solid 1px var(--light)"'; } ?>>
         <?php
         $args_recommended_posts = array(
             'post_type' => array( 'post', 'gallery' ),
             'post_status' => array( 'publish' ),
-            'posts_per_page' => 3,
+            'posts_per_page' => 2,
             'nopaging' => false,
             'ignore_sticky_posts' => true,
             'order' => 'DESC',
@@ -58,7 +60,7 @@
             </div>
             <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'three-two', false)[0]; ?>">
         </a>
-        <?php }} wp_reset_postdata(); ?>
+        <?php } wp_reset_postdata(); ?>
     </div>
 
     <?php if( is_singular( 'post' ) ) { ?>

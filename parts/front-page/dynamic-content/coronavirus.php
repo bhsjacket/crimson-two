@@ -24,7 +24,7 @@ $ac_data = $ac_data[0]['attributes'];
 
 <a href="https://berkeleyhighjacket.com/2020/multimedia/live-coronavirus-data/" class="coronavirus-stat-dc">
 
-    <h2 class="section-header">Coronavirus</h2>
+    <h2 class="section-header">Covid-19</h2>
     <div class="chart">
         <canvas height="115px" id="chart"></canvas>
         <span class="chart-stat"><?php echo $total_cases; ?></span>
