@@ -1,5 +1,10 @@
 wp.domReady(function(){
     wp.blocks.unregisterBlockStyle('core/quote', 'large'); // Remove Large Quote Style
+    // Prevent Fullscreen Viewwr
+    const isFullscreenMode = wp.data.select('core/edit-post').isFeatureActive('fullscreenMode');
+    if(isFullscreenMode) {
+        wp.data.dispatch('core/edit-post').toggleFeature('fullscreenMode');
+    }
 });
 
 // Remove Editor Panels (https://developer.wordpress.org/block-editor/components/panel/)

@@ -1,5 +1,17 @@
 <?php
 /**
+ * INCLUDING STYLESHEETS & SCRIPTS
+ */
+
+function resources_to_include() {
+	wp_enqueue_style('css-variables', get_template_directory_uri() . '/css/variables.css');
+}
+add_action('wp_enqueue_scripts', 'resources_to_include'); // frontend
+add_action( 'admin_enqueue_scripts', 'resources_to_include' ); // backend
+
+
+
+/**
  * FIXING THE MESS THAT IS GUTENBERG
  */
 
@@ -38,20 +50,15 @@ function allowed_block_types( $allowed_blocks ) {
 		'core/paragraph',
 		'core/heading',
 		'core/list',
-		'acf/image',
+		'acf/extended-image',
 		'acf/embed',
 		'core/quote',
 		'acf/image-gallery',
-		'core-embed/twitter',
-		'core-embed/facebook',
-		'core-embed/youtube',
-		'core-embed/vimeo',
-		'core-embed/spotify',
-		'core-embed/soundcloud',
-		'core-embed/reddit',
-		'core-embed/instagram',
-		'acf/advertisement'
+		'acf/advertisement',
+		'acf/podcast'
 	);
+
+	// youtube, twitter, instagram, facebook
  
 }
 
