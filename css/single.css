@@ -137,6 +137,7 @@
     padding: var(--gap) 0 0;
     display: grid;
     grid-gap: var(--gap);
+    margin-bottom: var(--gap)!important;
 }
 
 .recommended-post img {
