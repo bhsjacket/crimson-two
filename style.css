@@ -732,21 +732,22 @@ header.site-header .progress-bar {
     }
 }
 
-/* IMAGES */
+/* IMAGES & WIDER-THAN-COLUMN */
 
-.image-outer.align-center { max-width: var(--normal); }
-.image-outer.align-wide { max-width: var(--wide); }
-.image-outer.align-full { max-width: none; }
-.image-outer.align-full .image {
+.aligncenter { max-width: var(--normal)!important; }
+.alignwide { max-width: var(--wide)!important; }
+.alignwider { max-width: var(--width)!important; }
+.alignfull { max-width: none!important; }
+.image-outer.alignfull .image {
     margin-left: calc(var(--gap) * -1);
     margin-right: calc(var(--gap) * -1);
     width: 100vw;
 }
-.image-outer.align-left { float: left; }
-.image-outer.align-right { float: right; }
+.image-outer.alignleft { float: left; }
+.image-outer.alignright { float: right; }
 
-.image-outer.align-left,
-.image-outer.align-right {
+.image-outer.alignleft,
+.image-outer.alignright {
     max-width: 300px;
 }
 
@@ -789,6 +790,89 @@ header.site-header .progress-bar {
     color: var(--gray);
     text-transform: uppercase;
     font-size: 10px;
+}
+
+/* EMBED BLOCKS */
+
+.blockquote-wrapper.alignleft > blockquote {
+    float: left;
+    clear: left;
+    width: 300px;
+    margin: 0 20px 7px -100px;
+}
+
+@media all and (max-width: 900px) {
+    .blockquote-wrapper.alignleft > blockquote {
+        margin-left: 0;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .blockquote-wrapper > blockquote {
+        float: none!important;
+        clear: none!important;
+        width: calc(100% - 50px)!important;
+        margin-left: 50px!important;
+        margin-top: 30px!important;
+        margin-bottom: 30px!important;
+    }
+}
+
+.wp-block-embed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wp-block-embed.alignleft,
+.wp-block-embed.alignright {
+    display: block;
+    justify-content: initial;
+    align-items: initial;
+    max-width: var(--normal)!important;
+}
+
+.wp-block-embed.alignleft > .wp-block-embed__wrapper {
+    float: left;
+    clear: left;
+    margin-right: 30px;
+    margin-left: -100px;
+}
+
+.wp-block-embed.alignright > .wp-block-embed__wrapper {
+    float: right;
+    clear: right;
+    margin-left: 20px;
+    margin-right: -100px;
+}
+
+.wp-block-embed > .wp-block-embed__wrapper { max-width: 300px; }
+
+@media all and (max-width: 900px) {
+    .wp-block-embed.alignleft > .wp-block-embed__wrapper,
+    .wp-block-embed.alignright > .wp-block-embed__wrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .wp-block-embed.alignleft > .wp-block-embed__wrapper,
+    .wp-block-embed.alignright > .wp-block-embed__wrapper {
+        float: none;
+        clear: none;
+        max-width: none;
+    }
+    .wp-block-embed {
+        display: block;
+        align-items: initial;
+        justify-content: initial;
+    }
+}
+
+.twitter-tweet {
+    margin: 0!important;
 }
 
 /* COMMENTS */
