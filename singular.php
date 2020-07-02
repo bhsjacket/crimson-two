@@ -16,8 +16,8 @@
         <div class="featured-image-outer">
             <img class="featured-image zoom" src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'large', false)[0]; ?>">
             <div class="caption-group">
-                <p class="caption-content"><?php echo wp_get_attachment_caption( get_post_thumbnail_id() ); ?></p>
-                <p class="caption-credit"><?php echo get_field( 'credit', get_post_thumbnail_id() ); ?></p>
+                <p class="caption-content"><?php echo esc_html( get_field('featured_image_caption') ); ?></p>
+                <p class="caption-credit"><?php echo esc_html( get_field('featured_image_author') ); ?></p>
             </div>
         </div>
         <?php } ?>
