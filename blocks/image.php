@@ -1,16 +1,11 @@
 <?php
 if( $block['align'] === '' ) {
-    $alignment = 'align-center';
+    $alignment = 'aligncenter';
 } else {
-    $alignment = 'align-' . $block['align'];
+    $alignment = 'align' . $block['align'];
 }
 
-if($is_preview) {
-    echo '<link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">';
-    echo '<link href="<?php echo get_template_directory_uri(); ?>/css/single.css" rel="stylesheet">';
-}
-
-if($alignment == 'align-full') {
+if($alignment == 'alignfull') {
     $imageUrl = get_field('image')['url'];
 } else {
     $imageUrl = get_field('image')['sizes']['large'];
