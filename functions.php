@@ -40,7 +40,7 @@ add_editor_style('css/editor.css');
 add_theme_support( 'align-wide' );
 
 // Hide Unwanted Blocks
-// add_filter( 'allowed_block_types', 'allowed_block_types' );
+add_filter( 'allowed_block_types', 'allowed_block_types' );
  
 function allowed_block_types( $allowed_blocks ) {
 
