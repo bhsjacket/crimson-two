@@ -62,7 +62,7 @@ $right_query = new WP_Query( $right_query ); ?>
         <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'three-two')[0]; ?>">
         <div class="tc-right-meta">
             <h2 class="tc-right-title"><?php echo esc_html( get_the_title() ); ?></h2>
-            <p class="article-excerpt" data-lines="5"><?php echo esc_html( get_the_excerpt() ); ?></p>
+            <p class="article-excerpt" data-lines="5"><?php echo esc_html( get_field('excerpt') ); ?></p>
         </div>
     </a>
     <?php } wp_reset_postdata(); ?>
