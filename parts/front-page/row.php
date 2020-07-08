@@ -54,7 +54,7 @@ $query = new WP_Query( $args_query ); ?>
             <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'three-two')[0]; ?>" class="row-image">
             <h2 class="row-title">Lorem ipsum, dolor sit amet</h2>
             <span class="article-meta">By <?php coauthors(); ?>, <?php echo get_the_date('F j') ?></span>
-            <p class="article-excerpt" data-lines="7"><?php echo esc_html( get_field('excerpt') ) ?></p>
+            <p class="article-excerpt" data-lines="7"><?php echo esc_html( get_field('homepage_excerpt') ?? get_field('subheadline') ) ?></p>
         </a>
 
         <?php } wp_reset_postdata(); ?>

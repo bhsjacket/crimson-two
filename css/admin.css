@@ -1,3 +1,12 @@
-/* .block-editor-block-inspector > *:not(.block-editor-block-card) {
-    display: none;
-} */
+.block-editor-block-inspector > *:not(.block-editor-block-card) { display: none; } /* Hide sidebar block ontrols */
+.block-editor-editor-skeleton__footer { display: none; } /* Hide editor breadcrumbs */
+
+.components-panel { border-bottom: none; } /* Removes duplicate border */
+.postbox { box-shadow: none!important; } /* Remove shadow left by removed controls */
+
+.js .postbox .hndle,
+.js .widget .widget-top {
+    cursor: pointer!important; /* Replaces drag handle, better UX */
+}
+
+.components-panel__body.block-editor-block-inspector__advanced { display: none!important; } /* Hides advanced block options */

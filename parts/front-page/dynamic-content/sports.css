@@ -1,55 +1,89 @@
-.sports-dc {
-    position: relative;
-    overflow: hidden;
+.sports-scores {
+    height: 100%;
     padding: var(--gap);
-
-    height: calc(100% - 30px);
-    background-color: var(--light);
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.sports-dc:after {
-    font-family: 'Font Awesome 5 Pro';
-    position: absolute;
-    color: rgb(0,0,0,0.1);
-    font-size: 512px;
-    bottom: var(--gap);
-    right: var(--gap);
-    pointer-events: none;
+.sports-scores-top {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
 }
-.sports-dc.sport-soccer:after { content: '\f1e3'; }
-.sports-dc.sport-baseball:after { content: '\f433'; }
-.sports-dc.sport-football:after { content: '\f44e'; }
-.sports-dc.sport-basketball:after { content: '\f434'; }
 
-.rival-name,
-.home-name {
+.sports-scores-top > span {
+    font-family: var(--sans);
+}
+
+
+.sports-scores-top i {
+    font-size: 18px;
+    margin: 0 10px;
+}
+.sports-scores[data-winner="bhs"] .sports-scores-top i { color: var(--pale-green); }
+.sports-scores[data-winner="rival"] .sports-scores-top i { color: var(--red); }
+.sports-scores[data-winner="tie"] .sports-scores-top i { color: var(--yellow); }
+
+.fa-no-icon:before {
+    content: '—';
+    font-family: inherit;
+}
+.fa-no-icon { font-family: inherit; }
+
+.rival-abbr,
+.bhs-abbr {
     font-family: var(--display-alt);
-    font-size: 24px;
-    margin: 0;
+    border: none;
     padding: 0;
-    margin-bottom: var(--small-gap);
+    margin: 0;
+    font-size: 42px;
+    position: relative;
+    line-height: 1em;
+    padding-left: 7px;
 }
 
-.sports-location {
-    font-family: var(--sans);
+.bhs-abbr:before,
+.rival-abbr:before {
+    content: '';
+    background: linear-gradient(180deg, yellow 33.5%, red 33.5%, red 66.5%, black 66.5%);
+    width: 4px;
+    height: 28px;
     display: block;
+    position: absolute;
+    left: 0;
+    top: 5px;
 }
 
-.sports-date {
-    display: block;
-    font-family: var(--sans);
+.sports-scores .scores .rival-score,
+.sports-scores .scores .bhs-score {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: var(--gap);
+    align-items: center;
 }
 
-.sports-button {
-    font-family: var(--sans);
-    color: black;
-    text-decoration: none;
+.rival-score-number,
+.bhs-score-number {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    font-size: 42px;
+    line-height: 1em;
 }
 
-.sports-vs {
-    font-family: var(--sans);
+.sports-scores[data-winner="rival"] .bhs-score-number,
+.sports-scores[data-winner="bhs"] .rival-score-number {
+    color: var(--red);
+}
+
+.sports-scores[data-winner="rival"] .rival-score-number,
+.sports-scores[data-winner="bhs"] .bhs-score-number {
+    color: var(--green);
+}
+
+.sports-scores[data-winner="tie"] .rival-score-number,
+.sports-scores[data-winner="tie"] .bhs-score-number {
+    color: var(--gray);
 }

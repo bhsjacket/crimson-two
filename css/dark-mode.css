@@ -53,11 +53,11 @@ body.jkt-dark-theme .progress-bar {
 }
 
 body.jkt-dark-theme p > a {
-    box-shadow: inset 0px -2px 0px 0px black;
+    box-shadow: inset 0px -1px 0px 0px black;
 }
 
 body.jkt-dark-theme p > a:hover {
-    box-shadow: inset 0px -2px 0px 0px black, inset 0px -1.3em 0px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0px -1px 0px 0px black, inset 0px -1.3em 0px 0px rgba(0, 0, 0, 0.25);
 }
 
 body.jkt-dark-theme .dynamic-content,

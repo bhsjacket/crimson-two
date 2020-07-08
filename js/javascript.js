@@ -2,19 +2,15 @@ $(document).ready(function () {
     // Medium zoom
     mediumZoom('.zoom', {
         margin: 60,
-        background: 'rgb(0,0,0,0.75)',
+        background: 'rgba(0,0,0,0.75)',
     });
 
     // Animate Anchor Link Scroll
     $(document).on("click", 'a[href^="#"]', function (event) {
         event.preventDefault();
-        $("html, body").animate(
-            {
-                scrollTop: $($.attr(this, "href")).offset().top,
-            },
-            2500,
-            "swing"
-        );
+        $("html, body").animate({
+            scrollTop: $( $.attr(this, "href") ).offset().top - 100,
+        }, 1500, "swing");
     });
 });
 

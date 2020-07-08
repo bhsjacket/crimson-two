@@ -1,0 +1,145 @@
+.call-to-action { padding: var(--gap); }
+
+.cta-top-title {
+    font-family: var(--sans);
+    font-size: 15px!important;
+    font-weight: normal!important;
+
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.cta-title {
+    font-family: var(--display);
+    font-size: 28px!important;
+    font-weight: normal!important;
+
+    padding: 0!important;
+    margin: 0!important;
+}
+
+/* PODCAST */
+
+.call-to-action.podcast-cta {
+    border-top: solid 1px var(--light);
+    border-bottom: solid 1px var(--light);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.podcast-cta-label {
+    font-family: inherit;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--accent);
+
+    margin-left: 4px;
+}
+
+.podcast-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 42px);
+    grid-gap: var(--gap);
+    margin-top: 10px;
+    width: fit-content;
+}
+
+.podcast-buttons img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.2s;
+}
+
+.podcast-buttons .google-podcasts { border: solid 1px var(--light); }
+.podcast-buttons img:not(.google-podcasts) { margin: 1px }
+
+.podcast-buttons:hover img { transform: scale(0.9); }
+.podcast-buttons img:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: scale(1.05);
+}
+
+/* NEWSLETTER */
+
+.call-to-action.newsletter-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.call-to-action.newsletter-cta .cta-top-title { margin: 0; }
+.call-to-action.newsletter-cta .cta-title {
+    margin-top: 4px!important;
+    margin-bottom: 15px!important;
+}
+
+.call-to-action.newsletter-cta > i {
+    font-size: 48px;
+    color: var(--accent);
+    margin-bottom: 15px!important;
+}
+
+.newsletter-cta-form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.newsletter-cta-form input {
+    font-family: var(--sans)!important;
+    font-size: 17px!important;
+    
+    background-color: var(--lighter)!important;
+    border: none!important;
+    outline: none!important;
+    cursor: pointer!important;
+    
+    padding: 10px 15px!important;
+    width: 100%!important;
+}
+
+.newsletter-cta-form input:focus { cursor: text; }
+
+.newsletter-cta-form button {
+    white-space: nowrap;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    outline: none;
+    font-family: var(--sans);
+    font-size: 17px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+/* DONATION */
+
+.call-to-action.donation-cta {
+    background-color: var(--lighter);
+}
+
+.call-to-action.donation-cta .cta-title {
+    font-style: italic;
+    text-align: center;
+    font-size: 32px!important;
+}
+
+.call-to-action.donation-cta .cta-title:before {
+    content: '“';
+    color: var(--accent);
+    font-size: 84px!important;
+    font-weight: bold;
+    margin-bottom: -0.5em;
+    display: block;
+}

@@ -40,8 +40,9 @@ Description: A rewrite of the Jacket's terrible custom WordPress theme. What pie
 h1, h2, h3, h4, h5, h6,
 p, ul, ol, li, span, a, label {
     font-family: var(--font);
-    -webkit-font-smoothing: antialiased;
 }
+
+* { -webkit-font-smoothing: antialiased; }
 
 h2 {
     font-family: var(--display), serif;
@@ -67,14 +68,14 @@ h4 {
 }
 
 p > a {
-    box-shadow: inset 0px -2px 0px 0px var(--accent);
+    box-shadow: inset 0px -1px 0px 0px var(--accent);
     transition: all 0.2s;
     text-decoration: none;
     color: black;
 }
 
 p > a:hover {
-    box-shadow: inset 0px -2px 0px 0px var(--accent), inset 0px -1.3em 0px 0px rgb(128, 0, 0, 0.25);
+    box-shadow: inset 0px -1px 0px 0px var(--accent), inset 0px -1.3em 0px 0px rgb(128, 0, 0, 0.25);
     transition: all 0.2s;
 }
 
@@ -281,7 +282,7 @@ header.site-header .progress-bar {
 
 .site-header ul li {
     display: inline;
-    font-family: 'PT Serif', serif;
+    font-family: var(--font);
     color: gray;
     padding-right: 15px;
 }
@@ -334,7 +335,7 @@ header.site-header .progress-bar {
 }
 
 .donation-dropdown {
-    font-family: 'PT Serif', serif;
+    font-family: var(--font);
     border-bottom: solid 1px var(--light);
     display: none;
     padding: 0 15px;
@@ -367,12 +368,18 @@ header.site-header .progress-bar {
     width: 30%;
 }
 
+.site-header .donation-dropdown-form form {
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
+}
+
 .site-header .donation-dropdown-form input[type="submit"] {
     background-color: var(--accent);
     padding: 10px 15px;
     border: none;
     color: white;
-    font-family: 'PT Serif', serif;
+    font-family: var(--font);
     font-size: 16px;
     cursor: pointer;
     outline: none;
@@ -389,7 +396,7 @@ header.site-header .progress-bar {
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
     border: none;
-    font-family: 'PT Serif', serif;
+    font-family: var(--font);
     padding: 10px 15px;
     font-size: 16px;
     background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='%23fff' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
@@ -439,7 +446,7 @@ header.site-header .progress-bar {
 }
 
 .sections-dropdown-inner a {
-    font-family: 'PT Serif', serif;
+    font-family: var(--font);
     color: gray;
     text-decoration: none;
 }
@@ -475,7 +482,7 @@ header.site-header .progress-bar {
     width: calc(100% - 48px);
     border: none;
     font-size: 16px;
-    font-family: 'PT Serif', serif;
+    font-family: var(--font);
     color: gray;
     outline: none;
 }
@@ -557,7 +564,7 @@ header.site-header .progress-bar {
 
 .mobile-menu .header-button {
     text-align: center;
-    font-family: 'PT Serif', serif;
+    font-family: var(--font);
 }
 
 .mobile-menu ul {
@@ -573,7 +580,7 @@ header.site-header .progress-bar {
 .mobile-menu ul li a {
     text-decoration: none;
     color: black;
-    font-family: 'Noe Display', serif;
+    font-family: var(--display), serif;
     font-size: 32px;
 }
 
@@ -899,14 +906,14 @@ header.site-header .progress-bar {
 .comment-policy {
     font-size: 17px;
     line-height: 1.5em;
-    padding: var(--gap);
     border: solid 1px var(--light);
-    margin: var(--gap) 0;
+    margin: var(--gap) auto!important;
 }
 
 .comment-policy p {
     font-style: italic;
     margin: 0;
+    padding: var(--gap);
 }
 
 .comment-policy p > a {

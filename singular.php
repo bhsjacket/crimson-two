@@ -3,24 +3,35 @@
 
 <main id="single">
 
-    <header class="article-header">
+    <header class="article-header<?php if( empty( get_field('subheadline') ) ) { echo ' has-subheadline'; }; ?>">
+
+        <a href="<?php echo esc_url(get_category_link( get_the_category()[0]->term_id )); ?>" class="article-section"><?php echo esc_html( get_the_category()[0]->name ); ?></a>
+
         <div class="headline">
-            <h1><?php echo get_the_title(); ?></h1>
+            <h1><?php echo esc_html( get_the_title() ); ?></h1>
+            <?php if(!empty( get_field('subheadline') )) { ?>
+            <h2 class="subheadline"><?php echo esc_html( get_field('subheadline') ); ?></h2>
+            <?php } ?>
         </div>
 
-        <?php if( is_singular( 'post' ) ) { ?>
-            <?php get_template_part('parts/article-meta'); ?>
+        <?php if( is_singular( 'post' ) && empty( get_field('subheadline') ) ) { ?>
+            <?php get_template_part('parts/compact-article-meta'); ?>
         <?php } ?>
 
         <?php if( has_post_thumbnail() ) { ?>
         <div class="featured-image-outer">
-            <img class="featured-image zoom" src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'large', false)[0]; ?>">
+            <img alt="<?php echo esc_html( get_field('featured_image_caption') ); ?>" class="featured-image zoom" src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'large', false)[0]; ?>">
             <div class="caption-group">
                 <p class="caption-content"><?php echo esc_html( get_field('featured_image_caption') ); ?></p>
                 <p class="caption-credit"><?php echo esc_html( get_field('featured_image_author') ); ?></p>
             </div>
         </div>
         <?php } ?>
+
+        <?php if( is_singular( 'post' ) && !empty( get_field('subheadline') ) ) { ?>
+            <?php get_template_part('parts/article-meta'); ?>
+        <?php } ?>
+
     </header>
 
     <div class="article-content">

@@ -1,31 +1,30 @@
 <div class="article-meta">
-    <div class="byline">
-        <div class="avatars">
-            <?php if( function_exists( 'get_coauthors') ) { ?>
 
+	<div class="meta-top">
+
+		<div class="avatars">
             <?php foreach( get_coauthors() as $coauthor ) { ?>
-            <img src="<?php echo get_avatar_url( $coauthor->ID ); ?>">
-            <?php }} else { ?>
-
-            <img src="<?php echo get_avatar_url( $post->post_author ); ?>">
-
+            <img alt="The avatar of <?php echo $coauthor->display_name; ?>" src="<?php echo get_avatar_url( $coauthor->ID ); ?>">
             <?php } ?>
-        </div>
-        <?php if( function_exists( 'get_coauthors') ) { ?>
+		</div>
 
-        <span class="byline-authors">By <?php if(empty(get_field('custom_byline'))) { coauthors_posts_links(); } else { echo '<a href="#authors">' . get_field('custom_byline') . '</a>'; }; ?><span class="byline-in"> in</span>
-        <a class="byline-section" href="<?php echo esc_url(get_category_link( get_the_category()[0]->term_id )); ?>">
-            <?php echo esc_html( get_the_category()[0]->name ); ?></a>
-        </span>
+		<p class="byline">By <?php coauthors_posts_links(); ?></p>
 
-        <?php } else { ?>
+	</div>
 
-        <span class="byline-authors">By <a href="<?php echo get_author_posts_url($post->$post_author); ?>"><?php echo get_the_author_meta( 'display_name' ); ?></a><span class="byline-in"> in</span>
-        <a class="byline-section" href="<?php echo esc_url(get_category_link( get_the_category()[0]->term_id )); ?>">
-            <?php echo esc_html( get_the_category()[0]->name ); ?></a>
-        </span>
+	<div class="meta-bottom">
 
-        <?php } ?>
-    </div>
-    <span class="post-date" aria-label="Published at <?php echo get_the_date('g:i A T'); ?>" data-balloon-pos="down-right"><?php echo get_the_date(); ?></span>
+		<div class="meta-bottom-left">
+			<time aria-label="Published at <?php echo get_the_date('g:i A T'); ?>" data-balloon-pos="down-left" class="post-date"><?php echo get_the_date('F j, Y'); ?></time>
+		</div>
+
+		<div class="meta-bottom-right">
+			<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url(get_permalink()); ?>"><i class="fab fa-facebook"></i></a>
+			<a target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo esc_url(get_permalink()); ?>"><i class="fab fa-twitter"></i></a>
+			<a href="mailto:?subject=<?php echo esc_html(get_the_title()); ?>&body=<?php echo esc_url(get_permalink()); ?>"><i class="fas fa-envelope"></i></a>
+			<a href="#comments"><i class="fas fa-comment"></i></a>
+		</div>
+
+	</div>
+
 </div>

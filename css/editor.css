@@ -10,10 +10,10 @@
 }
 
 .editor-post-title__block .editor-post-title__input {
-    font-family: 'span', georgia, times, serif;
-    font-size: 48px;
+    font-family: 'bennet-display', georgia, times, serif;
+    font-size: 40px;
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
     line-height: 1.1em;
 }
 
@@ -35,9 +35,19 @@
                 inset 0px -1.3em 0px 0px rgb(128, 0, 0, 0.25);
 }
 
+.editor-subtitle {
+    font-family: 'pt-serif-pro', 'PT Serif', georgia, times, serif;
+    margin: 0;
+    padding: 0;
+    font-size: 18.5px;
+    line-height: 1.4em;
+    color: #5c5c5c;
+    font-weight: normal;
+    cursor: pointer;
+}
 
 .wp-block[data-type="core/heading"] h2 {
-    font-family: 'span', serif;
+    font-family: 'bennet-display', serif;
     font-weight: normal;
     font-size: 32px;
     margin-top: 20px;

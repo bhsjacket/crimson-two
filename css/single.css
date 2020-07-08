@@ -1,5 +1,5 @@
 #single {
-    margin-top: calc(var(--gap) * 2);
+    margin-top: 50px;
     padding: 0 var(--gap);
 }
 
@@ -12,27 +12,111 @@
     font-family: var(--display);
     font-weight: normal;
     line-height: 1.1em;
-    font-size: 48px;
-    font-style: normal;
+    font-size: 40px;
+    font-style: italic;
+
     margin: 0;
 }
 
-.article-meta {
+.headline .subheadline {
+    font-family: var(--font);
+    padding: 0;
+    margin: 15px 0 23px 0;
+    font-size: 18.5px;
+    line-height: 1.4em;
+    color: var(--dark-gray);
+}
+
+.article-meta .meta-top {
+	display: flex;
+	align-items: center;
+}
+
+.article-meta .avatars > img {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	border: solid 2.5px white;
+	margin-left: -2.5px;
+    display: block;
+}
+
+.article-meta .avatars > img:not(:first-of-type) {
+	margin-left: -20px;
+}
+
+.article-meta .avatars {
+	margin-right: 10px;
+}
+
+.article-meta .byline {
+	font-family: var(--sans);
+	margin: 0;
+}
+
+.article-meta .byline > a {
+	color: black;
+    font-family: var(--sans);
+    box-shadow: none!important;
+    text-decoration: underline!important;
+    text-decoration-color: var(--gray)!important;
+}
+
+.article-meta .meta-bottom {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: var(--gap);
+	margin-top: 10px;
+	align-items: center;
+}
+
+.article-meta .meta-bottom-left > time {
+	font-family: var(--sans);
+}
+
+.article-meta .meta-bottom-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.article-meta .meta-bottom-right > a {
+	color: black;
+	display: block;
+	margin-left: 10px;
+	background-color: #e7e7e7;
+	padding: 6.5px;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.article-meta .meta-bottom-right > a:hover {
+	background-color: #d1d1d1;
+}
+
+.compact-article-meta {
     display: flex;
     align-items: center;
     padding: var(--gap) 0;
 }
 
-.byline {
+.compact-article-meta .byline {
     display: flex;
     align-items: center;
 }
 
-.byline .avatars {
+.compact-article-meta .byline .avatars {
     display: inline-block;
     margin-right: 5px;
 }
-.byline img {
+.compact-article-meta .byline img {
     width: 30px;
     border-radius: 100%;
     border: 3px solid white;
@@ -40,30 +124,44 @@
     display: inline-block;
 }
 
-.byline img:not(:first-child) {
+.compact-article-meta .byline img:not(:first-child) {
     margin-left: -20px;
     transition: all 0.2s;
 }
 
-.byline .byline-authors,
-.byline .byline-authors a,
-.byline-in {
+.compact-article-meta .byline .byline-authors,
+.compact-article-meta .byline .byline-authors a {
     font-family: var(--sans);
 }
 
-.byline .byline-authors a {
+.compact-article-meta .byline .byline-authors a {
     text-decoration: underline;
     text-decoration-color: #999999;
     color: black;
 }
 
-.byline .byline-authors a:hover {
+.compact-article-meta .byline .byline-authors a:hover {
     text-decoration: none;
 }
 
-.post-date {
+.compact-article-meta .post-date {
     font-family: var(--sans);
     margin-left: auto;
+}
+
+.article-section {
+    font-family: var(--display-alt);
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: var(--gap);
+    display: block;
+    width: fit-content;
+    transition: all 0.2s;
+}
+
+.article-section:hover {
+    color: var(--accent);
 }
 
 .featured-image {
@@ -137,7 +235,6 @@
     padding: var(--gap) 0 0;
     display: grid;
     grid-gap: var(--gap);
-    margin-bottom: var(--gap)!important;
 }
 
 .recommended-post img {
@@ -145,7 +242,7 @@
 }
 
 .recommended-post-title {
-    font-family: var(--display);
+    font-family: var(--font);
     font-size: 24px;
     display: inline;
     margin-right: 10px;
@@ -161,5 +258,11 @@
 @media all and (max-width: 750px) {
     .headline > h1 {
         font-size: 38px;
+    }
+    .headline .subheadline {
+        font-size: 18px;
+    }
+    #single {
+        margin-top: var(--gap);
     }
 }

@@ -24,14 +24,15 @@
     --pale-accent: var(--pale-red);
 
     --light: #e7e7e7;
+    --lighter: #f7f6f6;
     --pale: #f9f9f9;
     --gray: #808080;
     --dark-gray: #5c5c5c;
 
     --font: 'pt-serif-pro', 'PT Serif', georgia, times, serif;
     --sans: 'pt-sans-pro', 'PT Sans', 'Source Sans Pro', 'Roboto', sans-serif;
-    --display: 'span', georgia, times, serif;
-    --display-alt: 'span-condensed', var(--display);
+    --display: 'bennet-display', georgia, times, serif;
+    --display-alt: 'bennet-display-condensed', var(--display);
 
     --gap: 15px;
     --small-gap: 6px;

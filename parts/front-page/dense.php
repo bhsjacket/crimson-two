@@ -65,7 +65,7 @@ $main_query = new WP_Query( $main_query );
             <div class="dense-left-bottom-title">
                 <span class="article-category"><?php echo esc_html( get_the_category()[0]->cat_name ); ?></span>
                 <h2 class="dense-title"><?php echo esc_html( get_the_title() ); ?></h2>
-                <p class="article-excerpt" data-lines="6"><?php echo esc_html( get_field('excerpt') ); ?></p>
+                <p class="article-excerpt" data-lines="6"><?php echo esc_html( get_field('homepage_excerpt') ?? get_field('subheadline') ); ?></p>
             </div>
         </a>
         <?php } wp_reset_postdata(); ?>

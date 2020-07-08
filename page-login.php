@@ -7,16 +7,16 @@
     <link href="<?php echo get_template_directory_uri(); ?>/css/login.css?version=<?php echo uniqid(); ?>" rel="stylesheet">
     <meta name='robots' content='noindex,noarchive'>
 </head>
+
 <?php
-$patterns = [
-    'topo',
-    'arch',
-    'moti',
-    'circ'
-];
-$patterns = $patterns[array_rand($patterns)];
+$coords = file_get_contents('https://ipinfo.io/' . $_SERVER['REMOTE_ADDR'] . '/json');
+$coords = json_decode($coords, true)['loc'];
+$coords = explode(',', $coords);
+$coords = $coords[1] . ',' . $coords[0];
+$backgroundImage = 'https://api.mapbox.com/styles/v1/bhsjacket/ck6zs9l5p142p1jmuiy7tkakg/static/' . $coords . ',13,0/1280x800?access_token=pk.eyJ1IjoiYmhzamFja2V0IiwiYSI6ImNrNnpyYzZpZTBkOWgzZW9ndXMybG01NXoifQ.dTHlIXLy2CKqQeNJyU-KWw';
 ?>
-<body class="<?php echo $patterns; ?>">
+
+<body style="background-image:url(<?php echo $backgroundImage; ?>)">
     <div class="form">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/logos/logo-dark.svg">
         <form id="login" action="/wp-login.php" method="POST">

@@ -14,39 +14,53 @@ score rival,
 sport name
 sport origName
 */
+
+$icons = [
+    'soccer' => 'futbol',
+    'football' => 'football-ball',
+    'tennis' => 'tennis-ball',
+    'swimming' => 'swimmer',
+    'volleyball' => 'volleyball-ball',
+    'basketball' => 'basketball-ball'
+];
+
+if($data['score']['rival'] > $data['score']['bhs']) {
+    $winner = 'rival';
+} else if($data['score']['rival'] == $data['score']['bhs']) {
+    $winner = 'tie';
+} else {
+    $winner = 'bhs';
+}
+
+$backgroundImage = 'https://api.mapbox.com/styles/v1/bhsjacket/ckccs7yk20j4q1iqp7g4lmq86/static/' . $data['gameLocation']['long'] . ',' . $data['gameLocation']['lat'] . ',15,39/300x550?access_token=pk.eyJ1IjoiYmhzamFja2V0IiwiYSI6ImNrNnpyYzZpZTBkOWgzZW9ndXMybG01NXoifQ.dTHlIXLy2CKqQeNJyU-KWw';
+
 ?>
 
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/parts/front-page/dynamic-content/sports.css">
 
-<div class="sports-dc sport-<?php echo strtolower( trim( preg_replace( '/[^A-Za-z0-9-]+/', '-', $data['sport']['origName'] ), '-' ) ); ?>">
+<style>
+    .rival-abbr:before {
+        background: linear-gradient(180deg, <?php echo $data['rival']['colors'][0] ?> 50%, <?php echo $data['rival']['colors'][1] ?> 50%);
+    }
+</style>
 
-    <span class="sports-date"><?php echo $data['formattedDate']; ?></span>
+<div class="sports-scores" data-winner="<?php echo $winner; ?>" style="background-image:url('<?php echo $backgroundImage; ?>')">
 
-    <div class="final-score">
+    <div class="sports-scores-top">
+        <span><?php echo $data['formattedDate']; ?></span>
+        <i class="far fa-<?php echo $icons[$data['sport']['origName']] ?? 'no-icon'; ?>"></i>
+        <span><?php echo $data['sport']['name']; ?></span>
+    </div>
 
-        <div class="score rival-score">
-
-            <h1 class="score-text"><?php echo $data['score']['rival']; ?></h1>
-
+    <div class="scores">
+        <div class="rival-score">
+            <h3 class="rival-abbr"><?php echo $data['rival']['acronym']; ?></h3>
+            <h2 class="rival-score-number"><?php echo $data['score']['rival']; ?></h2>
         </div>
-
-        <div class="score home-score">
-
-            <h1 class="score-text"><?php echo $data['score']['bhs']; ?></h1>
-
+        <div class="bhs-score">
+            <h3 class="bhs-abbr">BHS</h3>
+            <h2 class="bhs-score-number"><?php echo $data['score']['bhs']; ?></h2>
         </div>
-
     </div>
-
-    <div class="rival">
-        <h2 class="rival-name"><?php echo $data['rival']['name']; ?></h2>
-        <span class="sports-location"><?php echo $data['rival']['location'] ?></span>
-    </div>
-    <span class="sports-vs">vs</span>
-    <div class="home">
-        <h2 class="home-name">Berkeley High School</h2>
-        <span class="sports-location">Berkeley, CA</span>
-    </div>
-    <a target="_blank" href="<?php echo $data['url']; ?>" class="sports-button">More Information</a>
 
 </div>

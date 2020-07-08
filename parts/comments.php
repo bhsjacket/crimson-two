@@ -1,4 +1,4 @@
-<div class="comment-policy">
+<div class="comment-policy" id="comments">
     <p>We provide the opportunity to comment in order to foster a healthy debating environment and reserve the right to reject comments that stray away from that objective. <a href="https://berkeleyhighjacket.com/editorial-policies/" target="_blank">Read our full policy →</a></p>
 </div>
 <div id="disqus_thread">

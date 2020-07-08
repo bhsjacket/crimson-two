@@ -44,9 +44,9 @@ if( substr($url, -7, -6) == '-') {
     </div>
     <div class="podcast-bottom">
         <div class="podcast-bottom-left">
-            <i class="far fa-undo"></i>
-            <i class="fas fa-play"></i>
-            <i class="far fa-redo"></i>
+            <i title="-10 Seconds" alt="Skip Backwards 10 Seconds" class="far fa-undo"></i>
+            <i title="Play/Pause" alt="Play/Pause" class="fas fa-play"></i>
+            <i title="+10 Seconds" alt="Skip Forwards 10 Seconds" class="far fa-redo"></i>
         </div>
         <div class="podcast-bottom-right">
             <span class="podcast-time">XX:XX / XX:XX</span>
