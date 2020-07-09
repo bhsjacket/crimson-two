@@ -26,7 +26,7 @@ $ac_data = $ac_data[0]['attributes'];
 
     <h2 class="section-header">Covid-19</h2>
     <div class="chart">
-        <canvas height="115px" id="chart"></canvas>
+        <svg class="berkeley-sparkline" width="245" height="93" stroke-width="3"></svg>
         <span class="chart-stat"><?php echo $total_cases; ?></span>
         <div class="chart-dot"></div>
     </div>
@@ -64,51 +64,10 @@ $ac_data = $ac_data[0]['attributes'];
 </a>
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/Chart.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/sparkline.js"></script>
 
 <script>
-$(document).ready(function(){
-    Chart.defaults.global.animation.duration = 0;
-    var chartId = $('#chart');
-    var chart = new Chart(chartId, {
-        type: 'line',
-        data: {
-            labels: ['<?php echo $labels; ?>'],
-            datasets: [{
-                lineTension: 0,
-                data: [<?php echo $cases; ?>],
-                label: 'Total Cases in Berkeley',
-                borderColor: '#d48585',
-                fill: 'none',
-            }]
-        },
-        options: {
-            layout: {
-                padding: {
-                    bottom: 2
-                }
-            },
-            legend: {
-                display: false
-            },
-            elements: {
-                point:{
-                    radius: 0,
-                }
-            },
-            scales: {
-                yAxes: [{
-                    display: false,
-                    ticks: {
-                        stepSize: 1
-                    }
-                }],
-                xAxes: [{
-                    display: false
-                }]
-            },
-            responsive: true,
-            maintainAspectRatio: true,
-        }
-    });
-});
+
+sparkline.sparkline(document.querySelector('.berkeley-sparkline'), [<?php echo $cases; ?>]);
+
 </script>

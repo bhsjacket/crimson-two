@@ -1,5 +1,5 @@
 .sports-scores {
-    height: 100%;
+    height: calc(100% - 30px);
     padding: var(--gap);
     display: flex;
     flex-direction: column;

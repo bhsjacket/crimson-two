@@ -9,4 +9,20 @@
     cursor: pointer!important; /* Replaces drag handle, better UX */
 }
 
+.edit-post-meta-boxes-area.is-side:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-image: url('../assets/ornament.svg');
+    background-size: 35%;
+    background-position: center 60%;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+}
+
+.postbox.acf-postbox.seamless {
+    padding: 0 15px!important;
+}
+
 .components-panel__body.block-editor-block-inspector__advanced { display: none!important; } /* Hides advanced block options */

@@ -14,8 +14,9 @@
     position: relative;
 }
 
-#chart {
-    pointer-events: none;
+.berkeley-sparkline {
+    stroke: #d48585;
+    fill: none;
 }
 
 .chart-stat {

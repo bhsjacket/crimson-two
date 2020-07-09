@@ -1,6 +1,7 @@
 <?php
 $data = file_get_contents( 'https://api.berkeleyhighjacket.com/sports/' );
 $data = json_decode( $data, true );
+
 /*
 formattedDate,
 url,
