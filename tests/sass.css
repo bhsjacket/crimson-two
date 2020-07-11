@@ -1,0 +1,13 @@
+.parent div {
+  width: 100%;
+  height: 10px;
+}
+
+.parent .child {
+  background-color: red;
+}
+
+.parent .sibling {
+  background-color: blue;
+}
+/*# sourceMappingURL=sass.css.map */

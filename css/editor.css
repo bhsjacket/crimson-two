@@ -12,7 +12,7 @@
 
 /* Change title typography */
 .editor-post-title__block .editor-post-title__input {
-    font-family: 'bennet-display', georgia, times, serif;
+    font-family: var(--display);
     font-size: 40px;
     font-weight: normal;
     font-style: italic;
@@ -21,7 +21,7 @@
 
 /* Change paragraph typography */
 .wp-block .wp-block-paragraph {
-    font-family: 'pt-serif-pro', 'PT Serif', georgia, times, serif;
+    font-family: var(--font);
     font-size: 17px;
     line-height: 1.5em;
 }
@@ -110,14 +110,14 @@
 
 /* Heading block styles */
 .wp-block[data-type="core/heading"] h2 {
-    font-family: 'bennet-display', serif;
+    font-family: var(--display);
     font-weight: normal;
     font-size: 32px;
     margin-top: 20px;
 }
 
 .wp-block[data-type="core/heading"] h3 {
-    font-family: 'pt-sans-pro', sans-serif;
+    font-family: var(--sans);
     font-weight: normal;
     font-size: 24px;
     border-bottom: solid 1px #e7e7e7;
@@ -125,7 +125,7 @@
 }
 
 .wp-block[data-type="core/heading"] h4 {
-    font-family: 'pt-serif-pro', 'PT Serif', serif;
+    font-family: var(--font);
     font-weight: bold;
     font-size: 24px;
     color: gray;

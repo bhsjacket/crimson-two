@@ -19,7 +19,7 @@
 }
 
 .headline .subheadline {
-    font-family: var(--font);
+    font-family: var(--subheadline);
     padding: 0;
     margin: 15px 0 23px 0;
     font-size: 18.5px;
@@ -150,8 +150,8 @@
 }
 
 .article-section {
-    font-family: var(--display-alt);
-    color: black;
+    font-family: var(--font);
+    color: var(--gray);
     text-decoration: none;
     text-transform: uppercase;
     margin-bottom: var(--gap);

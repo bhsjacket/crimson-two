@@ -1,0 +1,19 @@
+@mixin scale($amount) {
+    -webkit-transform: scale($amount);
+    -ms-transform: scale($amount);
+    transform: scale($amount);
+}
+
+.parent {
+    div {
+        width: 100%;
+        height: 10px;
+    }
+    .child {
+        background-color: red;
+    }
+    .sibling {
+        background-color: blue;
+        @
+    }
+}

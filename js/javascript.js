@@ -107,13 +107,6 @@ $(document).ready(function(){
         if($('.progress-bar').length) {
             var progress = (($(document).scrollTop() - $(".article-content").offset().top) / $(".article-content").height()) * $(window).width();
             $(".progress-bar").width(progress);
-            if (getCookie("article_trigger") == "true") {
-                if (progress >= $(window).width()) {
-                    $(".progress-bar").fadeOut("slow");
-                } else {
-                    $(".progress-bar").fadeIn("slowot");
-                }
-            }
         }
     });
 

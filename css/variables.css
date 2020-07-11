@@ -7,8 +7,8 @@
     --dark-yellow: #e6bc25;
     --pale-yellow: #fffadf;
 
-    --green: #013a32;
-    --dark-green: #002119;
+    --green: #006d67;
+    --dark-green: #00544e;
     --pale-green: #b8dad5;
     
     --blue: #14506e;
@@ -16,7 +16,7 @@
     --pale-blue: #d7eaf3;
     
     --purple: #622956;
-    --dark-purple: #49103D;
+    --dark-purple: #49103d;
     --pale-purple: #e7cee1;
 
     --accent: var(--red);
@@ -31,8 +31,9 @@
 
     --font: 'pt-serif-pro', 'PT Serif', georgia, times, serif;
     --sans: 'pt-sans-pro', 'PT Sans', 'Source Sans Pro', 'Roboto', sans-serif;
-    --display: 'bennet-display', georgia, times, serif;
-    --display-alt: 'bennet-display-condensed', var(--display);
+    --display: 'span', georgia, times, serif;
+    --display-alt: 'span-condensed', var(--display);
+    --subheadline: var(--font);
 
     --gap: 15px;
     --small-gap: 6px;

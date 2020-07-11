@@ -88,6 +88,15 @@ blockquote {
     margin-right: 0;
 }
 
+blockquote > cite {
+    font-family: var(--sans);
+    font-size: 18px;
+    font-style: normal;
+    margin-left: 12px;
+    color: var(--gray);
+    white-space: nowrap;
+}
+
 blockquote:before {
     content: '“';
     position: absolute;

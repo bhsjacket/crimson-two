@@ -22,6 +22,7 @@
     font-size: 14px;
     margin-bottom: var(--gap);
     display: block;
+    font-family: var(--sans);
 }
 
 .article-excerpt {
@@ -123,55 +124,6 @@ section.dense {
     }
 }
 
-/* ROW */
-.row-inner,
-.row.three-columns > .row-inner {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: var(--gap);
-}
-
-.row.row-background {
-    background-color: var(--pale);
-    padding: var(--gap);
-    padding-bottom: calc(var(--gap) * 1.25);
-    padding-top: calc(var(--gap) / 1.25);
-}
-
-.row.row-background.alert-background {
-    background-color: var(--pale-accent);
-}
-
-.row.two-columns > .row-inner {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.row.four-columns > .row-inner {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.row.five-columns > .row-inner {
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.row-item {
-    color: black;
-    text-decoration: none;
-    height: fit-content;
-}
-
-.row-item:hover > .row-title {
-    opacity: var(--opacity);
-}
-
-.row-title {
-    margin: var(--small-gap) 0;
-    padding: 0;
-    font-size: 24px;
-    font-family: var(--display-alt);
-    transition: all 0.2s;
-}
-
 .section-header {
     margin: 0;
     padding: 0;
@@ -206,17 +158,6 @@ section.dense {
 
 .section-header.black-line:after {
     background-color: black;
-}
-
-@media all and (max-width: 850px) {
-    .row > .row-inner {
-        grid-template-columns: repeat(2, 1fr)!important;
-    }
-    
-    .row.five-columns > .row-inner > .row-item:last-child,
-    .row.three-columns > .row-inner > .row-item:last-child {
-        display: none;
-    }
 }
 
 /* COLUMNS */
@@ -419,4 +360,33 @@ section.dense {
     .tc-left-article:last-child {
         display: grid;
     }
+}
+
+/* ROW */
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: var(--gap);
+}
+
+.row img {
+    width: 100%;
+}
+
+.row-title {
+    font-family: var(--display);
+    margin: 10px 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.row .article-excerpt {
+    font-size: 15px;
+}
+
+.row .article-meta {
+    display: block;
+    margin-top: 10px;
 }
