@@ -22,6 +22,7 @@ $('.style-guide-color').mouseleave(function(){
 })
 
 $(document).ready(function(){
+	$('.style-guide-content > p').attr('contenteditable', 'true').attr('data-return', 'allowed'); // Make page content editable
 	setInterval(function(){
 		$('[data-shuffle-font="true"]').each(function(){
 			var randomBoolean = Math.random() >= 0.5;
@@ -34,6 +35,6 @@ $(document).ready(function(){
 	}, 400)
 })
 
-$('[contenteditable="true"]:not([data-return="allowed"])').keypress(function(event) {
+$(document).on('keypress', '[contenteditable="true"]:not([data-return="allowed"])', function(event) {
 	return event.which != 13;
 })

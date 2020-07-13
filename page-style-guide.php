@@ -10,6 +10,14 @@
 
         </div>
 
+        <div class="style-guide-content">
+
+            <?php while(have_posts()): the_post() ?>
+                <?php the_content(); ?>
+            <?php endwhile; ?>
+
+        </div>
+
         <div class="style-guide-color-chips">
 
             <div class="style-guide-primary-colors">
@@ -103,7 +111,7 @@
         </div>
 
         <div class="style-guide-components">
-            <blockquote contenteditable="true">It was a mistake to meddle in our affairs. I shall now have to dispose of you. Fortunately, I happen to be medical superintendent of a private mental institution: rate a special institution. Not all of my patients are insane when they are admitted.</blockquote>
+            <blockquote contenteditable="true">It was a mistake to meddle in our affairs. I shall now have to dispose of you. Fortunately, I happen to be medical superintendent of a private mental institution: rather a special institution. Not all of my patients are insane when they are admitted.</blockquote>
             <p contenteditable="true" data-return="allowed">It is a truth universally acknowledged, that a <a>single man</a> in possession of a good fortune, must be in want of a wife. However little known the feelings or views of such a man may be on <a>his first entering a neighbourhood</a>, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.</p>
 
             <img class="zoom featured-image" src="<?php echo get_template_directory_uri(); ?>/assets/404-small.jpg">
@@ -128,6 +136,8 @@
             </div>
 
         </div>
+
+        <h2 class="style-guide-section" data-shuffle-font="true" contenteditable="true">“Class with some sass”</h2>
 
     </main>
 

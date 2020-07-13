@@ -20,6 +20,13 @@ main#style-guide {
     margin-left: 4px;
 }
 
+.style-guide-content {
+    font-size: 17px;
+    max-width: var(--normal);
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
 .style-guide-byline {
     font-family: var(--sans);
     font-size: 16px;

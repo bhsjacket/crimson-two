@@ -58,7 +58,7 @@ function allowed_block_types( $allowed_blocks ) {
 		'core-embed/reddit',
 		'core-embed/instagram',
 		'core-embed/facebook',
-		'acf/quote',
+		'core/quote',
 		'acf/cta'
 	);
  

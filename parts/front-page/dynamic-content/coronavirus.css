@@ -10,6 +10,8 @@
     text-decoration: none;
 }
 
+.coronavirus-stat-dc .section-header:after { background-color: var(--red); }
+
 .chart {
     position: relative;
 }
@@ -31,7 +33,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: var(--accent);
+    background-color: var(--red);
     position: absolute;
     top: 0;
     right: 0;

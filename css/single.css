@@ -1,13 +1,24 @@
+@import '../css/images.css';
+@import '../css/embeds.css';
+@import '../css/comments.css';
+
+/* CONTAINER */
 #single {
-    margin-top: 50px;
     padding: 0 var(--gap);
-}
-
-#single > * {
     max-width: var(--normal);
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
 }
 
+.article-content {
+    font-size: 17px;
+    line-height: 1.5em;
+}
+
+#single img {
+    max-width: 100%;
+}
+
+/* HEADLINE */
 .headline > h1 {
     font-family: var(--display);
     font-weight: normal;
@@ -18,7 +29,8 @@
     margin: 0;
 }
 
-.headline .subheadline {
+/* SUBHEADLINE */
+.headline > .subheadline {
     font-family: var(--subheadline);
     padding: 0;
     margin: 15px 0 23px 0;
@@ -27,6 +39,23 @@
     color: var(--dark-gray);
 }
 
+/* SECTION/CATEGORY */
+.article-section {
+    font-family: var(--sans);
+    color: var(--gray);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: var(--gap);
+    display: block;
+    width: fit-content;
+    transition: all 0.2s;
+}
+
+.article-section:hover {
+    color: var(--accent);
+}
+
+/* ARTICLE META */
 .article-meta .meta-top {
 	display: flex;
 	align-items: center;
@@ -101,6 +130,7 @@
 	background-color: #d1d1d1;
 }
 
+/* COMPACT ARTICLE META */
 .compact-article-meta {
     display: flex;
     align-items: center;
@@ -149,39 +179,18 @@
     margin-left: auto;
 }
 
-.article-section {
-    font-family: var(--font);
-    color: var(--gray);
-    text-decoration: none;
-    text-transform: uppercase;
-    margin-bottom: var(--gap);
-    display: block;
-    width: fit-content;
-    transition: all 0.2s;
-}
-
-.article-section:hover {
-    color: var(--accent);
-}
-
+/* FEATURED IMAGE */
 .featured-image {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.article-content {
-    font-size: 17px;
-    line-height: 1.5em;
-    max-width: none!important;
+.featured-image-outer {
+    margin-bottom: calc(var(--gap) * 2);
 }
 
-.article-content > * {
-    max-width: var(--normal);
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* AUTHOR BOX */
 .author-boxes {
     margin-top: var(--gap);
     display: grid;
@@ -222,6 +231,7 @@
     width: 100%;
 }
 
+/* RECOMMENDED POSTS */
 .recommended-post {
     display: grid;
     grid-template-columns: 1fr 150px;
@@ -255,6 +265,7 @@
     color: var(--gray);
 }
 
+/* RESPONSIVE */
 @media all and (max-width: 750px) {
     .headline > h1 {
         font-size: 38px;

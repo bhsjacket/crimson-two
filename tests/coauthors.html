@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coauthors API Test</title>
+</head>
+<body>
+
+    <button>Send request</button>
+    <pre></pre>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $('button').click(function(){
+
+            $.ajax({
+                type: 'POST',
+                url: 'https://bhsjacket.local/wp-content/themes/crimson/utilities/get-coauthors.php',
+                data: { 'postId': '578' },
+                success: function(data) {
+                    $('pre').text(data);
+                }
+            })
+
+        })
+
+
+    </script>
+    
+</body>
+</html>

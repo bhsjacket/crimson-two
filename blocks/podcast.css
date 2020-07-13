@@ -3,7 +3,7 @@
 .podcast-player {
     max-width: var(--normal);
     padding: var(--gap);
-    background-color: var(--pale);
+    background-color: var(--lighter);
     margin: 0 auto;
 }
 

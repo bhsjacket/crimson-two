@@ -102,7 +102,6 @@
     
     background-color: var(--lighter)!important;
     border: none!important;
-    outline: none!important;
     cursor: pointer!important;
     
     padding: 10px 15px!important;
@@ -116,7 +115,6 @@
     background-color: var(--accent);
     color: white;
     border: none;
-    outline: none;
     font-family: var(--sans);
     font-size: 17px;
     cursor: pointer;

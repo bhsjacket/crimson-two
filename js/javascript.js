@@ -12,6 +12,29 @@ $(document).ready(function () {
             scrollTop: $( $.attr(this, "href") ).offset().top - 100,
         }, 1500, "swing");
     });
+
+    // Color Easter Egg
+    var easterEggClicks = 0;
+    var currentColor = 0;
+    $('.footer-copyright').click(function(){
+        easterEggClicks++;
+        if(easterEggClicks == 7) {
+            setInterval(function(){
+                var accentColors = [
+                    'yellow-accent',
+                    'green-accent',
+                    'blue-accent',
+                    'purple-accent'
+                ]
+                if(currentColor > accentColors.length) {
+                    currentColor = 0;
+                }
+                $('body').removeClass(accentColors);
+                $('body').addClass(accentColors[currentColor]);
+                currentColor++;
+            }, 300)
+        }
+    })
 });
 
 // Tombstone
@@ -74,9 +97,31 @@ $(document).ready(function(){
         Cookies.set('notification', 'closed', { expires: 1 });
     });
 
+    $('.header-logo').click(function(event){
+        if($('body').hasClass('home')) {
+            event.preventDefault();
+            $("html, body").animate({
+                scrollTop: 0,
+            }, 1000, 'swing', function(){
+                $('.logo-animated').removeClass('logo-animate');
+            });
+        }
+    })
+
     // Change header on scroll
     $(document).scroll(function () {
-        if(!$('body').hasClass('home')) {
+        if($('body').hasClass('home')) { // If Is Homepage
+
+            $(window).bind('mousewheel', function(event) {
+                if (event.originalEvent.wheelDelta >= 0) {
+                    $('.logo-animated').removeClass('logo-animate');
+                }
+                else {
+                    $('.logo-animated').addClass('logo-animate');
+                }
+            });
+
+        } else { // If Isn't Homepage
             if ($(window).width() > 925) {
                 if ($(document).scrollTop() > 400) {
                     $(".header-left, .header-center").fadeOut("fast", function () {

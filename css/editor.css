@@ -17,6 +17,7 @@
     font-weight: normal;
     font-style: italic;
     line-height: 1.1em;
+    padding-left: 20px;
 }
 
 /* Change paragraph typography */
@@ -132,8 +133,128 @@
     margin-top: 20px;
 }
 
+.image-outer > .image {
+    display: block;
+}
 
+blockquote.wp-block-quote {
+    font-family: var(--display);
+    font-size: 28px;
+    font-style: italic;
+    line-height: 1.15em;
+    position: relative;
+    margin-right: 0;
+    margin-top: 34px;
+    margin-bottom: 30px;
+    border: none;
+    padding: 0;
+}
 
+blockquote.wp-block-quote .block-editor-rich-text__editable {
+    display: inline;
+}
+
+blockquote.wp-block-quote p {
+    display: inline;
+    margin: 0;
+    font: inherit;
+}
+
+blockquote.wp-block-quote .wp-block-quote__citation {
+    font-family: var(--sans);
+    font-size: 18px;
+    font-style: normal;
+    margin-left: 12px;
+    color: var(--gray);
+    white-space: nowrap;
+}
+
+blockquote.wp-block-quote:before {
+    content: '“';
+    position: absolute;
+    left: -50px;
+    font-size: 92px;
+    font-weight: bold;
+    font-style: normal;
+    color: var(--accent);
+    top: calc(var(--gap) * 2);
+    line-height: 0;
+}
+
+/* ARTICLE META */
+.article-meta .meta-top {
+	display: flex;
+	align-items: center;
+}
+
+.article-meta .avatars > img {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	border: solid 2.5px white;
+	margin-left: -2.5px;
+    display: block;
+}
+
+.article-meta .avatars > img:not(:first-of-type) {
+	margin-left: -20px;
+}
+
+.article-meta .avatars {
+	margin-right: 10px;
+}
+
+.article-meta .byline {
+	font-family: var(--sans);
+	margin: 0;
+}
+
+.article-meta .byline > a {
+	color: black;
+    font-family: var(--sans);
+    box-shadow: none!important;
+    text-decoration: underline!important;
+    text-decoration-color: var(--gray)!important;
+}
+
+.article-meta .meta-bottom {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: var(--gap);
+	margin-top: 10px;
+	align-items: center;
+}
+
+.article-meta .meta-bottom-left > time {
+	font-family: var(--sans);
+}
+
+.article-meta .meta-bottom-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.article-meta .meta-bottom-right > a {
+	color: black;
+	display: block;
+	margin-left: 10px;
+	background-color: #e7e7e7;
+	padding: 6.5px;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.article-meta .meta-bottom-right > a:hover {
+	background-color: #d1d1d1;
+}
 
 
 
