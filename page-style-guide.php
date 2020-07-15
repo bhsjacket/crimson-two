@@ -98,8 +98,8 @@
 
         <div class="style-guide-fontbook">
 
-            <h2 contenteditable="true" data-shuffle-font="true" class="display-font">Span is for headlines</h2>
-            <h2 contenteditable="true" data-shuffle-font="true" class="display-alt-font">Span Condensed is to mix things up a bit</h2>
+            <h2 contenteditable="true" data-shuffle-font="true" class="display-font">IvyPresto Headline is for BIG text</h2>
+            <h2 contenteditable="true" data-shuffle-font="true" class="display-alt-font">IvyMode is to mix things up a bit</h2>
             <h2 contenteditable="true" data-shuffle-font="true" class="serif-font">PT Serif Pro is for body text and whatever</h2>
             <h2 contenteditable="true" data-shuffle-font="true" class="sans-font">PT Sans Pro should be used sparingly and for labels</h2>
 

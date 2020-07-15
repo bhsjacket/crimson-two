@@ -1,4 +1,7 @@
 <?php
+
+require_once('custom-functions.php');
+
 /**
  * INCLUDING STYLESHEETS & SCRIPTS
  */
@@ -59,7 +62,8 @@ function allowed_block_types( $allowed_blocks ) {
 		'core-embed/instagram',
 		'core-embed/facebook',
 		'core/quote',
-		'acf/cta'
+		'acf/cta',
+		'acf/staff'
 	);
  
 }
@@ -72,9 +76,6 @@ function crimson_menus() {
 
 	$locations = array(
 		'sections' => __( 'Sections', 'crimson' ),
-		'secondary' => __( 'Secondary', 'crimson' ),
-        'tertiary' => __( 'Tertiary', 'crimson' ),
-        'columnists' => __('Columnists', 'crimson'),
 	);
 	register_nav_menus( $locations );
 
@@ -277,7 +278,7 @@ function crimson_columns() {
 		'description'           => 'Columns',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'revisions', 'custom-fields', 'author', 'excerpt' ),
-		'taxonomies'            => array( 'columnist' ),
+		'taxonomies'            => array( 'issue' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -287,7 +288,7 @@ function crimson_columns() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => 'column',
+		'has_archive'           => 'columns',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -332,113 +333,3 @@ function create_issue_tax() {
 
 }
 add_action( 'init', 'create_issue_tax' );
-
-/**
- * Get featured image file
- * 
- * @param string The thumbnail size
- * @param int The post ID
- * @return string The URL of the image file
- */
-function getFeaturedImageFile( $size = 'medium', $id = null ) {
-	if($id == null) {
-		$id = get_the_ID();
-	}
-	if( has_post_thumbnail($id) ) {
-		$image = get_post_thumbnail_id($id);
-		$image = wp_get_attachment_image_src($image, $size);
-		return $image[0];
-	} else {
-		return false;
-	}
-}
-
-/**
- * Get featured image caption
- *
- * @param int $id
- * @return mixed Returns the escaped caption, or false if there is no featured image or caption
- */
-function getFeaturedImageCaption( $id = null ) {
-	if($id == null) {
-		$id = get_the_ID();
-	}
-	if( has_post_thumbnail($id) ) {
-		$caption = get_field('featured_image_caption', $id);
-		if( empty($caption) ) {
-			return false;
-		} else {
-			return esc_html( $caption );
-		}
-	} else {
-		return false;
-	}
-}
-
-/**
- * Get featured image credit
- *
- * @param int $id
- * @return mixed Returns the escaped caption, or false if there is no featured image or caption
- */
-function getFeaturedImageCredit( $id = null ) {
-	if($id == null) {
-		$id = get_the_ID();
-	}
-	if( has_post_thumbnail($id) ) {
-		$credit = get_field('featured_image_author', $id);
-		if( empty($credit) ) {
-			return false;
-		} else {
-			return esc_html( $credit );
-		}
-	} else {
-		return false;
-	}
-}
-
-/**
- * Get featured image alt text
- *
- * @param int $id
- * @return mixed Returns the alt text if there is any, return false if there isn't any available
- */
-function getFeaturedImageAlt( $id = null ) {
-	if($id == null) {
-		$id = get_the_ID();
-	}
-	if( has_post_thumbnail($id) ) {
-		$alt = getFeaturedImageCaption($id);
-		if( !$alt ) {
-			$alt = getFeaturedImageCredit($id);
-			if( !$alt ) {
-				return false;
-			} else {
-				$alt = 'Image by ' . getFeaturedImageCredit($id);
-			}
-		}
-		return esc_html( $alt );
-	} else {
-		return false;
-	}
-}
-
-/**
- * Get the excerpt of a post
- *
- * @param int $id
- * @return mixed Returns a string if there is an excerpt or a subheadline, returns false if there isn't
- */
-function getExcerpt($id = null) {
-	if($id == null) {
-		$id = get_the_ID();
-	}
-	$excerpt = get_field('homepage_excerpt', $id);
-	if( empty($excerpt) ) {
-		$excerpt = get_field('subheadline', $id);
-		if( empty($excerpt) ) {
-			$excerpt = false;
-		}
-	}
-	return esc_html($excerpt);
-}

@@ -39,7 +39,6 @@ section:last-child {
 }
 
 /* DENSE */
-
 section.dense {
     display: grid;
     grid-template-columns: 1fr 275px;
@@ -161,7 +160,6 @@ section.dense {
 }
 
 /* COLUMNS */
-
 .columns-inner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -255,7 +253,6 @@ section.dense {
 }
 
 /* TWO COLUMNS */
-
 .two-columns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -363,7 +360,6 @@ section.dense {
 }
 
 /* ROW */
-
 .row {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -389,4 +385,9 @@ section.dense {
 .row .article-meta {
     display: block;
     margin-top: 10px;
+}
+
+.row-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }

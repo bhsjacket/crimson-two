@@ -197,16 +197,20 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: var(--gap);
     border: solid 1px var(--light);
+    padding: var(--gap);
 }
 
 .author-box {
     color: black;
     text-decoration: none;
-    padding: 15px;
     display: grid;
     grid-template-columns: 48px 1fr;
     grid-gap: var(--gap);
     align-items: center;
+}
+
+.author-box:hover .author-box-name {
+    opacity: var(--opacity);
 }
 
 .author-box-name,
@@ -220,6 +224,7 @@
 
 .author-box-name {
     font-size: 17px;
+    transition: all 0.2s;
 }
 
 .author-box-position {

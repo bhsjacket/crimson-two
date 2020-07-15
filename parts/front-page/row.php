@@ -14,7 +14,15 @@ expects:
 'color' (string)
 */
 
+
+/* require_once('../../../../../wp-load.php');
+echo '<style>section.row{max-width:1140px;margin:0 auto}</style>'; */
 $params = get_query_var('params');
+/* $params = [
+    'category' => 'news',
+    'posts' => '4',
+    'color' => 'red-accent'
+]; */
 
 $args_query = array(
 	'post_type' => $params['post_types'] ?? array('post'),

@@ -12,9 +12,12 @@
     <?php } else { ?>
     <link href="<?php echo get_template_directory_uri(); ?>/css/single.css?version=<?php echo uniqid(); ?>" rel="stylesheet">
     <?php } ?>
+    <?php if(is_author()) { ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/author.css?version=<?php echo uniqid(); ?>">
+    <?php } ?>
     
     <link href="<?php echo get_template_directory_uri(); ?>/css/libs/balloon.min.css" rel="stylesheet">
-    <link href="<?php echo get_template_directory_uri(); ?>/css/libs/swiper.min.css" rel="stylesheet">
+    <!-- <link href="<?php echo get_template_directory_uri(); ?>/css/libs/swiper.min.css" rel="stylesheet"> -->
 
     <!-- Favicon & App Icons -->
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicon.png">
