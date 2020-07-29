@@ -2,7 +2,7 @@ $(document).ready(function () {
     // Medium zoom
     mediumZoom('.zoom', {
         margin: 60,
-        background: 'rgba(0,0,0,0.75)',
+        background: 'rgba(255, 255, 255, 0.75)'
     });
 
     // Animate Anchor Link Scroll
@@ -117,7 +117,9 @@ $(document).ready(function(){
                     $('.logo-animated').removeClass('logo-animate');
                 }
                 else {
-                    $('.logo-animated').addClass('logo-animate');
+                    if( $(document).scrollTop() > 500 ) {
+                        $('.logo-animated').addClass('logo-animate');
+                    }
                 }
             });
 

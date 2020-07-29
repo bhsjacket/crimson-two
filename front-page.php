@@ -19,7 +19,10 @@ Color Values:
 while ( have_rows('sections', 'option') ) : the_row();
 
     if( get_row_layout() == 'dense' ): // Dense Layout
-        set_query_var( 'params', get_sub_field( 'dynamic_content' ) );
+        set_query_var( 'params', [
+            'dynamic_content' => get_sub_field( 'dynamic_content' ),
+            'reverse' => get_sub_field('reverse'),
+        ] );
         get_template_part( 'parts/front-page/dense' );
 
     elseif( get_row_layout() == 'row' ): // Row Layout
@@ -47,7 +50,7 @@ while ( have_rows('sections', 'option') ) : the_row();
             'color' => get_sub_field( 'color' ) ?? 'red-accent',
             'tag' => get_sub_field( 'tag' ) ?? '',
             'category' => get_sub_field( 'category' ) ?? '',
-            'offset' => get_sub_field( 'offset' ) ?? 0,
+            'offset' => get_sub_field( 'offset' ),
             'position' => get_sub_field( 'position' ) ?? 'large-on-right',
         ] );
         get_template_part( 'parts/front-page/two-columns' );
@@ -62,4 +65,6 @@ endwhile;
 ?>
 
 </main>
+
+<script src="<?php echo get_template_directory_uri(); ?>/js/front-page.js"></script>
 <?php get_footer(); ?>

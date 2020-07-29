@@ -1,5 +1,5 @@
 <?php
-const apiKey = 'AIzaSyAC427s1d19T8WpNgy_uYiGeOSmvuPXsm4';
+const ApiKey = 'AIzaSyAC427s1d19T8WpNgy_uYiGeOSmvuPXsm4';
 $videoId = 'ymRqYz-Mxnw';
 
 $url = 'https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=' . $videoId . '&key=' . apiKey;

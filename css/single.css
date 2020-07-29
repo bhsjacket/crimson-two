@@ -24,7 +24,6 @@
     font-weight: normal;
     line-height: 1.1em;
     font-size: 40px;
-    font-style: italic;
 
     margin: 0;
 }
@@ -56,6 +55,10 @@
 }
 
 /* ARTICLE META */
+.article-meta {
+    margin-bottom: 40px;
+}
+
 .article-meta .meta-top {
 	display: flex;
 	align-items: center;

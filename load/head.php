@@ -1,3 +1,5 @@
+<?php date_default_timezone_set( get_option('timezone_string') ); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
     <link href="<?php echo get_template_directory_uri(); ?>/css/dark-mode.css?version=<?php echo uniqid(); ?>" rel="stylesheet">
     <?php if(is_front_page()) { ?>
     <link href="<?php echo get_template_directory_uri(); ?>/css/front-page.css?version=<?php echo uniqid(); ?>" rel="stylesheet">
-    <?php } else { ?>
+    <?php } else if( is_singular() ) { ?>
     <link href="<?php echo get_template_directory_uri(); ?>/css/single.css?version=<?php echo uniqid(); ?>" rel="stylesheet">
     <?php } ?>
     <?php if(is_author()) { ?>
@@ -25,8 +27,6 @@
     <!-- Font Awesome & Fonts -->
     <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/load.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/erm4tbu.css">
-    <!-- Testing Fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/kai5nku.css">
 
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
 

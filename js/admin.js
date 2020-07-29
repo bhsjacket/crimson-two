@@ -28,7 +28,7 @@ wp.domReady(function(){
 
     // Add WYSIWYG subtitle
     var subtitleText = jQuery(subtitleField).val();
-    var subtitleHTML = '<h2 class="editor-subtitle" contenteditable>' + subtitleText + '</h2>';
+    var subtitleHTML = '<h2 class="editor-subtitle" contenteditable="plaintext-only">' + subtitleText + '</h2>';
     jQuery('.wp-block.editor-post-title__block').append(subtitleHTML);
     
     // Change WYSIWYG subtitle when field changes

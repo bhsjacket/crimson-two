@@ -9,13 +9,13 @@ body.error404 {
 
 main#error {
     height: 100vh;
-    background-image: url(<?php echo get_template_directory_uri(); ?>/assets/404.jpg);
+    background-image: url('<?php echo get_template_directory_uri(); ?>/assets/404.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
 
 main#error > h1 {
-    font-family: var(--display-alt);
+    font-family: var(--display);
     font-style: italic;
     color: white;
     margin: 0;

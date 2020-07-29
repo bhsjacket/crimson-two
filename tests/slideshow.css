@@ -1,0 +1,7 @@
+.slideshow {
+    position: relative;
+}
+
+.slideshow > img {
+    position: absolute;
+}

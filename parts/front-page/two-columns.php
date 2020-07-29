@@ -14,7 +14,7 @@ $title = $params['title'];
 $left_query = array(
 	'post_type' => $params['post_types'] ?? array('post'),
 	'post_status' => array('publish'),
-	'posts_per_page' => 3,
+	'posts_per_page' => 2,
     'nopaging' => false,
     'order' => 'DESC',
     'category_name' => $params['category_slug'] ?? '',
@@ -32,7 +32,7 @@ $right_query = array(
     'order' => 'DESC',
     'category' => $params['category_slug'] ?? '',
     'tag' => $params['tag'] ?? '',
-    'offset' => (int) $params['offset'] + 3 ?? '3'
+    'offset' => (int) $params['offset'] + 2 ?? '2'
 );
 
 $right_query = new WP_Query( $right_query ); ?>
@@ -59,10 +59,10 @@ $right_query = new WP_Query( $right_query ); ?>
 
     <?php while ( $right_query->have_posts() ) { $right_query->the_post(); ?>   
     <a href="<?php echo get_permalink(); ?>" class="tc-right">
-        <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'three-two')[0]; ?>">
-        <div class="tc-right-meta">
-            <h2 class="tc-right-title"><?php echo esc_html( get_the_title() ); ?></h2>
-            <p class="article-excerpt" data-lines="5"><?php echo esc_html( get_field('homepage_excerpt') ?? get_field('subheadline') ); ?></p>
+        <?php the_post_thumbnail('three-two'); ?>
+        <div class="tc-right-meta<?php if( get_field('homepage_excerpt') ) { echo ' has-excerpt'; }; ?>">
+            <h2 class="tc-right-title" data-lines="1"><?php echo esc_html( get_the_title() ); ?></h2>
+            <p class="article-excerpt" data-lines="3"><?php echo esc_html( get_field('homepage_excerpt') ?? get_field('subheadline') ); ?></p>
         </div>
     </a>
     <?php } wp_reset_postdata(); ?>

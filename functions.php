@@ -56,14 +56,14 @@ function allowed_block_types( $allowed_blocks ) {
 		'acf/image-gallery',
 		'acf/advertisement',
 		'acf/podcast',
-		'core-embed/youtube',
 		'core-embed/twitter',
 		'core-embed/reddit',
 		'core-embed/instagram',
 		'core-embed/facebook',
 		'core/quote',
 		'acf/cta',
-		'acf/staff'
+		'acf/staff',
+		'acf/video'
 	);
  
 }
