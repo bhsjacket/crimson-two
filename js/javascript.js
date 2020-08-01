@@ -37,9 +37,6 @@ $(document).ready(function () {
     })
 });
 
-// Tombstone
-$('body:not(.page) .article-content > p:last-child').append(' &#x25C6;');
-
 // Header
 $(document).ready(function(){
     // Various toggles

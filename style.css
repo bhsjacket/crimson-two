@@ -118,7 +118,7 @@ blockquote:before {
     font-weight: bold;
     font-style: normal;
     color: var(--accent);
-    top: calc(var(--gap) * 2);
+    top: var(--double-gap);
     line-height: 0;
 }
 
@@ -193,7 +193,7 @@ img[data-credit]:after {
 /* Footer */
 #footer {
     border-top: solid 1px var(--light);
-    padding: calc(var(--gap) * 2) var(--gap);
+    padding: var(--double-gap) var(--gap);
 }
 
 .footer-inner {

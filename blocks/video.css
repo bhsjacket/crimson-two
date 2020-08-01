@@ -17,10 +17,10 @@
 .video-overlay {
     position: absolute;
     bottom: 0;
-    padding: calc(var(--gap) * 2);
+    padding: var(--double-gap);
     display: grid;
     grid-template-columns: 32px 1fr;
-    grid-gap: calc(var(--gap) * 2);
+    grid-gap: var(--double-gap);
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
     width: -webkit-fill-available;
 }

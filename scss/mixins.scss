@@ -1,0 +1,46 @@
+@mixin gridBorder($position, $gap: var(--gap), $color: var(--light), $borderStyle: 'single') {
+    position: relative;
+
+    @if $gap == 'double' {
+        $gap: var(--double-gap);
+    }
+
+    $calculation: calc( -1 * #{$gap} / 2 - 0.5px );
+
+    @if $borderStyle == 'double' {
+        $calculation: calc( -1 * #{$gap} / 2 - 2.5px );
+    }
+
+    &:not(:last-child):after {
+        content: '';
+        background-color: $color;
+        width: 100%;
+        height: 1px;
+        display: block;
+        position: absolute;
+        @if $position == 'bottom' {
+            bottom: $calculation;
+        } @else if $position == 'top' {
+            top: $calculation;
+        } @else if $position == 'left' {
+            top: 0;
+            width: 1px;
+            height: 100%;
+            left: $calculation;
+        } @else if $position == 'right' {
+            top: 0;
+            width: 1px;
+            height: 100%;
+            right: $calculation;
+        } @else {
+            @error 'Invalid position value.';
+        }
+
+        @if $borderStyle == 'double' {
+            background: none;
+            border-top: double 4px $color;
+        } @else if $borderStyle != 'single' {
+            @error 'Invalid border style value.'
+        }
+    }
+}

@@ -36,7 +36,7 @@
     --subheadline: var(--font);
 
     --gap: 15px;
-    --small-gap: 6px;
+    --double-gap: calc(var(--gap) * 2);
 
     --normal: 600px;
     --wide: 800px;

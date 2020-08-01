@@ -78,7 +78,7 @@
 .caption-group {
     display: flex;
     margin: 0 auto;
-    margin-bottom: calc(var(--gap) * 2);
+    margin-bottom: var(--double-gap);
     line-height: 1em;
     max-width: var(--normal);
 }
@@ -175,7 +175,7 @@ blockquote.wp-block-quote:before {
     font-weight: bold;
     font-style: normal;
     color: var(--accent);
-    top: calc(var(--gap) * 2);
+    top: var(--double-gap);
     line-height: 0;
 }
 

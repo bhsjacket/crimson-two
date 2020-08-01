@@ -10,6 +10,8 @@
     text-decoration: none;
 }
 
+.coronavirus-stat-dc .section-header { margin-bottom: 10px; }
+
 .coronavirus-stat-dc .section-header:after { background-color: var(--red); }
 
 .chart {

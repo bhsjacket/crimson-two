@@ -8,7 +8,7 @@ align-left
 */
 
 .image-outer {
-	margin: calc(var(--gap) * 2) 0;
+	margin: var(--double-gap) 0;
 }
 
 .image-outer > .image {
