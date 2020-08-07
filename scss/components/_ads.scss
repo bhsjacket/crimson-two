@@ -1,0 +1,31 @@
+.ad-container {
+    background-color: var(--pale);
+    border-top: solid 1px var(--light);
+    border-bottom: solid 1px var(--light);
+    padding: var(--gap) 0;
+    margin: var(--double-gap) 0;
+    text-align: center;
+
+    .ad-label {
+        font-size: 12px;
+        font-family: var(--sans);
+        margin-bottom: var(--gap);
+        display: block;
+        text-transform: uppercase;
+        color: var(--gray);
+        line-height: 1em;
+    }
+
+    a {
+        max-width: var(--wide);
+        display: block;
+        margin: 0 auto;
+
+        img {
+            margin: 0 auto;
+            display: block;
+            padding: 0 var(--gap);
+            box-sizing: border-box;
+        }
+    }
+}

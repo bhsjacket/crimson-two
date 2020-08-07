@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main id="error">
-    <h1 class="glitch">No page found</h1>
+    <h1>Page not found</h1>
 </main>
 <style>
 body.error404 {

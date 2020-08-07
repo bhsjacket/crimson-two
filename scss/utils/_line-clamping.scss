@@ -1,0 +1,17 @@
+[data-lines] {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+[data-lines="1"] { -webkit-line-clamp: 1; }
+[data-lines="2"] { -webkit-line-clamp: 2; }
+[data-lines="3"] { -webkit-line-clamp: 3; }
+[data-lines="4"] { -webkit-line-clamp: 4; }
+[data-lines="5"] { -webkit-line-clamp: 5; }
+[data-lines="6"] { -webkit-line-clamp: 6; }
+[data-lines="7"] { -webkit-line-clamp: 7; }
+[data-lines="8"] { -webkit-line-clamp: 8; }
+[data-lines="9"] { -webkit-line-clamp: 9; }
+[data-lines="10"] { -webkit-line-clamp: 10; }

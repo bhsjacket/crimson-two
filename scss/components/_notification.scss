@@ -1,0 +1,34 @@
+#notification {
+    background-color: var(--accent);
+    padding: 0 var(--gap);
+    top: 0;
+    height: initial;
+    display: block;
+    color: white;
+    text-decoration: none;
+
+    .notification-inner {
+        max-width: var(--width);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+
+        .notification-text {
+            text-decoration: none;
+            font-family: var(--sans);
+            color: white;
+        }
+        
+        .notification-close {
+            color: white;
+            margin-left: auto;
+            cursor: pointer;
+            padding: 10px 14px;
+            transition: background 0.2s;
+        
+            &:hover {
+                background-color: var(--dark-accent);
+            }
+        }
+    }
+}

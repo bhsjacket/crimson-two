@@ -8,7 +8,7 @@
     $calculation: calc( -1 * #{$gap} / 2 - 0.5px );
 
     @if $borderStyle == 'double' {
-        $calculation: calc( -1 * #{$gap} / 2 - 2.5px );
+        $calculation: calc( -1 * #{$gap} / 2 - 2px );
     }
 
     &:not(:last-child):after {
@@ -18,6 +18,8 @@
         height: 1px;
         display: block;
         position: absolute;
+        pointer-events: none;
+        
         @if $position == 'bottom' {
             bottom: $calculation;
         } @else if $position == 'top' {
@@ -38,7 +40,9 @@
 
         @if $borderStyle == 'double' {
             background: none;
-            border-top: double 4px $color;
+            border-top: solid 1px $color;
+            border-bottom: solid 1px $color;
+            height: 2px;
         } @else if $borderStyle != 'single' {
             @error 'Invalid border style value.'
         }

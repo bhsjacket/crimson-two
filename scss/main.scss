@@ -1,0 +1,28 @@
+/*
+Theme Name: Crimson Rewritten
+Author: Jerome Paulos
+Author URI: https://jeromepaulos.com
+Version: 2.1.3
+Description: Let's try this again 🤞
+*/
+
+// Utilities
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/global';
+@import 'utils/typography';
+@import 'utils/line-clamping';
+
+// Components
+@import 'components/ads';
+@import 'components/blockquote';
+@import 'components/notification';
+@import 'components/images';
+@import 'components/embeds';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// Templates
+@import 'templates/search';

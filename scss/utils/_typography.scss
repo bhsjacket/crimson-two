@@ -1,0 +1,46 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li, span, a, label {
+    font-family: var(--font);
+}
+
+h2 {
+    font-family: var(--display), serif;
+    font-weight: normal;
+    font-size: 32px;
+    padding-top: 30px;
+}
+
+h3 {
+    font-family: var(--sans), sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    border-bottom: solid 1px var(--light);
+    padding-top: 30px;
+}
+
+h4 {
+    font-family: var(--font), serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: gray;
+    padding-top: 30px;
+}
+
+p {
+    > a {
+        box-shadow: inset 0px -1px 0px 0px var(--accent);
+        transition: all 0.2s;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            box-shadow: inset 0px -1px 0px 0px var(--accent), inset 0px -1.3em 0px 0px rgb(128, 0, 0, 0.25);
+            transition: all 0.2s;
+        }
+    }
+}

@@ -1,42 +1,24 @@
-<?php get_header(); ?>
+<?php
+/* if( get_field('template') !== 'full-bleed' ) {
+    get_header();
+} else {
+    get_template_part('load/head');
+} */
+get_header();
+?>
 <?php while(have_posts()): the_post() ?>
 
-<main id="single">
+<main id="single" data-template="<?php echo get_field('template'); ?>">
 
-    <header class="article-header<?php if( empty( get_field('subheadline') ) ) { echo ' has-subheadline'; }; ?>">
+    <?php
 
-        <?php if( is_singular('column') ) { ?>
-        <a href="<?php echo get_post_type_archive_link('column'); ?>" class="article-section">Column</a>
-        <?php } else { ?>
-        <a href="<?php echo esc_url(get_category_link( get_the_category()[0]->term_id )); ?>" class="article-section"><?php echo esc_html( get_the_category()[0]->name ); ?></a>
-        <?php } ?>
+    if( get_field('template') == 'full-bleed' && has_post_thumbnail() ) {
+        get_template_part('parts/single/full-bleed-header');
+    } else {
+        get_template_part('parts/single/standard-header');
+    }
 
-        <div class="headline">
-            <h1><?php echo esc_html( get_the_title() ); ?></h1>
-            <?php if(!empty( get_field('subheadline') )) { ?>
-            <h2 class="subheadline"><?php echo esc_html( get_field('subheadline') ); ?></h2>
-            <?php } ?>
-        </div>
-
-        <?php if( !is_singular( 'page' ) && empty( get_field('subheadline') ) ) { ?>
-            <?php get_template_part('parts/compact-article-meta'); ?>
-        <?php } ?>
-
-        <?php if( has_post_thumbnail() ) { ?>
-        <div class="featured-image-outer">
-            <img alt="<?php echo esc_html( get_field('featured_image_caption') ); ?>" class="featured-image zoom" src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'large', false)[0]; ?>">
-            <div class="caption-group">
-                <p class="caption-content"><?php echo esc_html( get_field('featured_image_caption') ); ?></p>
-                <p class="caption-credit"><?php echo esc_html( get_field('featured_image_author') ); ?></p>
-            </div>
-        </div>
-        <?php } ?>
-
-        <?php if( !is_singular( 'page' ) && !empty( get_field('subheadline') ) ) { ?>
-            <?php get_template_part('parts/article-meta'); ?>
-        <?php } ?>
-
-    </header>
+    ?>
 
     <div class="article-content">
         <?php the_content(); ?>
@@ -78,9 +60,13 @@
         <?php } wp_reset_postdata(); ?>
     </div>
 
-    <?php if( !is_singular( 'page' ) ) { ?>
-        <?php get_template_part( 'parts/comments' ); ?>
-    <?php } ?>
+    <?php
+    
+    if( !is_singular( 'page' ) ) {
+        get_template_part( 'parts/single/comments' );
+    }
+
+    ?>
 
 
 </main>

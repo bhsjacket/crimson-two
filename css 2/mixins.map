@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "mixins.css",
+	"sources": [
+		"../scss/mixins.scss"
+	],
+	"sourcesContent": [
+		"@mixin gridBorder($position, $gap: var(--gap), $color: var(--light)) {\n    position: relative;\n\n    &:after {\n        content: '';\n        width: 1px;\n        background-color: var(--light);\n        height: 100%;\n        position: absolute;\n        top: 0;\n        $position: calc( -1 * $gap / 2 );\n    }\n}"
+	],
+	"names": [],
+	"mappings": ""
+}

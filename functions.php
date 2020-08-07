@@ -108,9 +108,6 @@ function custom_theme_features()  {
 	// Add theme support for Automatic Feed Links
 	add_theme_support( 'automatic-feed-links' );
 
-	// Add theme support for Post Formats
-	add_theme_support( 'post-formats', array( 'gallery' ) );
-
 	// Add theme support for Featured Images
 	add_theme_support( 'post-thumbnails' );
 

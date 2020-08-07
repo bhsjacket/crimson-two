@@ -1,0 +1,44 @@
+blockquote {
+    font-family: var(--display);
+    font-size: 28px;
+    font-style: italic;
+    line-height: 1.15em;
+    position: relative;
+    margin-right: 0;
+    margin-top: 34px;
+    margin-bottom: 30px;
+
+    > {
+        p {
+            display: inline;
+            margin: 0;
+            font: inherit;
+        }
+
+        cite {
+            font-family: var(--sans);
+            font-size: 18px;
+            font-style: normal;
+            margin-left: 12px;
+            color: var(--gray);
+            white-space: nowrap;
+        }
+    }
+
+    &:before {
+        content: '“';
+        position: absolute;
+        left: -50px;
+        font-size: 92px;
+        font-weight: bold;
+        font-style: normal;
+        color: var(--accent);
+        top: var(--double-gap);
+        line-height: 0;
+    }
+
+    * {
+        font-family: inherit;
+        font-size: inherit;
+    }
+}

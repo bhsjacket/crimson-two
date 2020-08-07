@@ -1,0 +1,43 @@
+html {
+    background-color: var(--accent);
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    min-height: 100vh;
+}
+
+::selection {
+    color: white;
+    background-color: var(--accent);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--light);
+}
+
+button,
+.button,
+input,
+select,
+[class*=button] {
+    outline: none;
+}
+
+.screen-reader-text { display: none; }
+
+// PLUGIN OVERRIDES
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+    z-index: 9999;
+}
+
+[aria-label][data-balloon-pos]:after {
+    font-family: var(--font)!important;
+    color: white!important;
+    font-size: 13px!important;
+}
