@@ -60,5 +60,5 @@ if( substr($url, -7, -6) == '-') {
 <?php } ?>
 
 <script>
-url = '<?php echo $podcast['audio']; ?>'; // pass URL to podcast.js
+podcastAudioURL = '<?php echo $podcast['audio']; ?>'; // pass URL to podcast.js
 </script>

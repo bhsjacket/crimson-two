@@ -43,6 +43,7 @@
             border-top: solid 1px $color;
             border-bottom: solid 1px $color;
             height: 2px;
+            left: 0;
         } @else if $borderStyle != 'single' {
             @error 'Invalid border style value.'
         }

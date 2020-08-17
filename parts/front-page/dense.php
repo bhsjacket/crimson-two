@@ -53,7 +53,7 @@ $main_query = new WP_Query( $main_query );
 
             <a class="small-item" href="<?php echo get_permalink(); ?>">
                 <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'thumbnail')[0]; ?>" class="small-item-image">
-                <h2 data-lines="3" class="small-item-title"><span class="article-category"><?php echo esc_html( get_the_category()[0]->cat_name ); ?></span><?php echo esc_html( get_the_title() ); ?></h2>
+                <h2 data-lines="3" class="small-item-title"><span class="article-category"><?php echo esc_html( getSection() ); ?></span><?php echo esc_html( get_the_title() ); ?></h2>
             </a>
 
             <?php } wp_reset_postdata(); ?>
@@ -72,7 +72,7 @@ $main_query = new WP_Query( $main_query );
             <?php the_post_thumbnail('three-two'); ?>
             <?php } ?>
             <div class="dense-left-bottom-title">
-                <span class="article-category"><?php echo esc_html( get_the_category()[0]->cat_name ); ?></span>
+                <span class="article-category"><?php echo esc_html( getSection() ); ?></span>
                 <h2 class="dense-title"><?php echo esc_html( get_the_title() ); ?></h2>
                 <p class="article-excerpt" data-lines="6"><?php echo esc_html( get_field('homepage_excerpt') ?? get_field('subheadline') ); ?></p>
             </div>

@@ -84,7 +84,7 @@ $query = new WP_Query( $query_args );
         <a class="article" href="<?php echo get_permalink(); ?>">
             <?php the_post_thumbnail('small-three-two'); ?>
             <div class="article-info">
-                <span class="article-section"><?php echo get_the_category()[0]->cat_name; ?></span>
+                <span class="article-section"><?php echo getSection(); ?></span>
                 <h2 class="article-title"><?php echo get_the_title(); ?></h2>
                 <span class="article-meta">By <?php coauthors(); ?> on <?php echo get_the_date('F j, Y'); ?></span>
             </div>

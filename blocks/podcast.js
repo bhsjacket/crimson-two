@@ -18,7 +18,7 @@ function updateProgressBar() {
     $('.seek').css('background-image', 'linear-gradient(90deg, var(--gray) ' + progress + '%, rgb(0,0,0,0) ' + progress + '%)');
 }
 
-var podcast = new Audio(url);
+var podcast = new Audio(podcastAudioURL);
 
 $(document).on('click', '.fa-play', function(){ podcast.play(); }); // play
 $(document).on('click', '.fa-pause', function(){ podcast.pause(); }); // pause

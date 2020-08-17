@@ -1,0 +1,166 @@
+.weather {
+    height: calc(100% - 30px)!important;
+    padding: var(--gap);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weather .section-header { white-space: nowrap; }
+
+.weather.morning { background-color: var(--pale-blue); }
+.weather.morning .section-header:after { background-color: var(--blue); }
+
+.weather.evening { background-color: var(--pale-orange); }
+.weather.evening .section-header:after { background-color: var(--orange); }
+
+.weather.night {
+    background-color: var(--dark-blue);
+    color: white;
+}
+.weather.night .article-title { color: white; }
+.weather.night .wind-vane img { filter: invert(); }
+.weather.night .section-header:after { background-color: white; }
+
+.weather .temp {
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    line-height: 1;
+}
+
+.weather .temp-grid {
+    grid-gap: 0;
+    margin: 10px 0;
+}
+.weather .temp-grid > * { align-self: center; }
+
+.weather .weather-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.weather .weather-stat {
+    font-family: var(--sans);
+    display: block;
+}
+
+.weather .wind-vane {
+    display: inline-block;
+    margin-right: 5px;
+    user-select: none;
+}
+.weather .wind-vane img {
+    width: 12px!important;
+    -webkit-user-drag: none;
+}
+
+.weather .weather-text {
+    font-size: 18px;
+    font-family: var(--sans);
+    margin: 10px 0;
+}
+
+.weather .weather-forecast {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-right: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(8, 75px);
+    grid-gap: 10px;
+}
+
+.weather img[data-weather_icon="drizzle"],
+.weather img[data-weather_icon="sun"] { transform: scale(0.9); }
+
+.weather .forecast-wrapper {
+    height: 90px;
+    position: relative;
+}
+
+.weather .forecast-wrapper:after {
+    content: '';
+    width: 20px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.weather.morning .forecast-wrapper:after { background-image: linear-gradient(to right, rgba(0,0,0,0), var(--pale-blue)); }
+.weather.evening .forecast-wrapper:after { background-image: linear-gradient(to right, rgba(0,0,0,0), var(--pale-orange)); }
+.weather.night .forecast-wrapper:after { background-image: linear-gradient(to right, rgba(0,0,0,0), var(--dark-blue)); }
+
+.weather .forecast-day {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.05);
+    padding: 5px 0;
+}
+
+.weather .forecast-day span { font-family: var(--sans); }
+.weather .forecast-day .temp-low { color: var(--gray); }
+
+.weather .forecast-day img {
+    margin: 0 auto!important;
+    width: 50%!important;
+}
+
+.weather .weather-article-item {
+    text-decoration: none;
+    color: black;
+    background-color: rgba(0,0,0,0.05);
+
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+}
+
+.weather .weather-article-item .article-title {
+    margin: 0;
+    padding: 0 14px;
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.1em;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.weather .weather-articles-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.weather.morning .weather-articles-wrapper { height: 50px; }
+.weather.evening .weather-articles-wrapper,
+.weather.night .weather-articles-wrapper { height: 128px; }
+
+.weather .weather-articles-wrapper:after {
+    content: '';
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+    position: absolute;
+}
+.weather.morning .weather-articles-wrapper:after { background-image: linear-gradient(to bottom, rgba(0,0,0,0), var(--pale-blue)); }
+.weather.weather.evening .weather-articles-wrapper:after { background-image: linear-gradient(to bottom, rgba(0,0,0,0), var(--pale-orange)); }
+.weather.weather.night .weather-articles-wrapper:after { background-image: linear-gradient(to bottom, rgba(0,0,0,0), var(--dark-blue)); }
+
+.weather .weather-articles {
+    overflow: auto;
+    height: 100%;
+}
+
+.weather .scroll-fix-hidden {
+    opacity: 0;
+    width: 10px;
+    height: 5px;
+}

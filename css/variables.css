@@ -3,6 +3,10 @@
     --dark-red: #670000;
     --pale-red: #fce1e1;
 
+    --orange: #BA611C;
+    --dark-orange: #A14803;
+    --pale-orange: #ffe4cd;
+
     --yellow: #ffd53e;
     --dark-yellow: #e6bc25;
     --pale-yellow: #fffadf;
@@ -34,6 +38,8 @@
     --display: 'ivypresto-headline', georgia, times, serif;
     --display-alt: 'ivymode', var(--display);
     --subheadline: var(--font);
+
+    --display-alt: var(--display);
 
     --gap: 15px;
     --double-gap: calc(var(--gap) * 2);

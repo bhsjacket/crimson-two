@@ -33,13 +33,5 @@
     <!-- wp_head(); -->
     <?php wp_head(); ?>
 </head>
-<?php
-$bodyClasses = get_body_class();
-foreach( $bodyClasses as $class ) {
-    $classes = $classes . $class . ' ';
-}
-if($_COOKIE['dark-mode'] == 'true') {
-    $classes = $classes . 'jkt-dark-theme';
-}
-?>
-<body class="<?php echo $classes ?>">
+
+<body <?php body_class(); ?>>

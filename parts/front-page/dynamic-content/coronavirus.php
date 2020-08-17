@@ -16,7 +16,7 @@ $labels = implode("','", $labels);
 
 $ac_data = file_get_contents('https://jeromepaulos.com/bhsjacket/coronavirus/data.php?data=alameda');
 $ac_data = json_decode($ac_data, true);
-$ac_data = array_reverse($ac_data);
+@$ac_data = array_reverse($ac_data);
 $ac_data = $ac_data[0]['attributes'];
 ?>
 
@@ -63,7 +63,6 @@ $ac_data = $ac_data[0]['attributes'];
 
 </a>
 
-<script src="<?php echo get_template_directory_uri(); ?>/js/Chart.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/sparkline.js"></script>
 
 <script>

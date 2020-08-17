@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 17 17">
+    <g fill="#ffffff">
+        <path d="M7.299 5.308v6.067h2.085V5.308z"></path>
+        <circle cx="1.043" cy="7.773" r="1.043"></circle>
+        <circle cx="1.043" cy="8.91" r="1.043"></circle>
+        <path d="M0 7.773h2.085V8.91H0z"></path>
+        <circle cx="15.64" cy="8.91" r="1.043"></circle>
+        <circle cx="15.64" cy="7.773" r="1.043"></circle>
+        <path d="M16.683 8.909h-2.085V7.772h2.085z"></path>
+        <circle cx="4.645" cy="11.185" r="1.043"></circle>
+        <circle cx="4.645" cy="12.323" r="1.043"></circle>
+        <path d="M3.602 11.185h2.085v1.137H3.602z"></path>
+        <circle cx="4.645" cy="4.36" r="1.043"></circle>
+        <circle cx="4.645" cy="8.057" r="1.043"></circle>
+        <path d="M3.602 4.36h2.085v3.72H3.602z"></path>
+        <circle cx="12.038" cy="5.498" r="1.043"></circle>
+        <circle cx="12.038" cy="4.36" r="1.043"></circle>
+        <path d="M13.08 5.498h-2.085V4.361h2.085z"></path>
+        <circle cx="8.341" cy="2.18" r="1.043"></circle>
+        <circle cx="8.341" cy="1.043" r="1.043"></circle>
+        <path d="M9.383 2.179H7.298V1.042h2.085z"></path>
+        <circle cx="8.341" cy="15.64" r="1.043"></circle>
+        <circle cx="8.341" cy="14.503" r="1.043"></circle>
+        <path d="M9.383 15.639H7.298v-1.137h2.085z"></path>
+        <circle cx="12.038" cy="12.323" r="1.043"></circle>
+        <circle cx="12.038" cy="8.626" r="1.043"></circle>
+        <path d="M13.08 12.322h-2.085V8.625h2.085z"></path>
+        <circle cx="8.341" cy="5.308" r="1.043"></circle>
+        <circle cx="8.341" cy="11.375" r="1.043"></circle>
+    </g>
+</svg>
