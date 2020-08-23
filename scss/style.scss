@@ -1,0 +1,53 @@
+/*!
+Theme Name: Crimson Rewritten
+Author: Jerome Paulos
+Author URI: https://jeromepaulos.com
+Version: 2.1.3
+Description: Let's try this again 🤞
+*/
+
+// Temporary Styles
+.article-meta {
+    .meta-top {
+        .avatars {
+            display: none; // Hide avatars until more authors have them
+        }
+    }
+}
+
+// Utilities
+@import 'utils/variables'; // Sass Variables
+@import 'utils/mixins'; // Sass Mixins
+@import 'utils/global'; // Global Styles
+@import 'utils/typography'; // Typography
+@import 'utils/line-clamping'; // Line Cutoff
+@import 'utils/grids'; // Grids
+
+// Components
+@import 'components/ads'; // Ad Sections
+@import 'components/blockquote'; // Blockquote
+@import 'components/notification'; // Notification Bar
+@import 'components/images'; // Images
+@import 'components/embeds'; // Social Media Embeds
+@import 'components/article-stream'; // Basic Article Stream
+@import 'components/post-page-navigation'; // Base Post Page Navigation
+
+// Layout
+@import 'layout/header'; // Site Header
+@import 'layout/footer'; // Site Footer
+
+// Misc. Templates
+@import 'templates/search'; // Search Results
+@import 'templates/author'; // Author Archives
+@import 'templates/archives/section'; // Post Archives
+
+// Single Post, Page, & Column
+@import 'templates/single/single'; // Single Post
+@import 'templates/single/recommended-slider'; // Recommended Post Slider
+
+// Front Page
+@import 'front-page'; // Front Page Styles
+@import 'templates/front-page/row'; // Row Section
+@import 'templates/front-page/centered'; // Centered Section
+
+// Libraries
