@@ -50,7 +50,7 @@ $content = rtrim($content);
             <?php if( is_singular('column') ) { ?>
             <a href="<?php echo get_post_type_archive_link('column'); ?>" class="article-section">Column</a>
             <?php } else { ?>
-            <a href="<?php echo esc_url(get_category_link( get_the_category()[0]->term_id )); ?>" class="article-section"><?php echo esc_html( get_the_category()[0]->name ); ?></a>
+            <a href="<?php echo esc_url(get_category_link( get_the_category()[0]->term_id )); ?>" class="article-section"><?php echo esc_html( getSection() ); ?></a>
             <?php } ?>
             <h1><?php echo esc_html( get_the_title() ); ?></h1>
             <?php if(!empty( get_field('subheadline') )) { ?>
