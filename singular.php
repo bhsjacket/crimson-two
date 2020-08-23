@@ -1,11 +1,44 @@
+<?php get_header(); ?>
+
+<?php if( get_field('template') != 'full-bleed' && get_post_type() == 'post' ) { ?>
+
 <?php
-/* if( get_field('template') !== 'full-bleed' ) {
-    get_header();
-} else {
-    get_template_part('load/head');
-} */
-get_header();
+    $query = new WP_Query([
+        'post_type' => ['post'],
+        'post_status' => ['publish'],
+        'posts_per_page' => 8,
+        'ignore_sticky_posts' => true,
+        'nopaging' => false,
+        'post__not_in' => [get_the_ID()],
+    ]);
 ?>
+
+<div class="recommended-slider-wrapper">
+    <div class="recommended-slider at-start">
+        <div class="recommended-prev recommended-control">
+            <i class="far fa-chevron-left"></i>
+        </div>
+
+        <div class="slider-wrapper">
+            <div class="recommended-slides">
+
+                <?php while($query->have_posts()) { $query->the_post(); ?>
+                <a class="recommended-article" href="<?php echo get_permalink(); ?>">
+                    <?php the_post_thumbnail('thumbnail'); ?>
+                    <h2 data-lines="3" class="article-title"><span class="article-category"><?php echo getSection(); ?></span><?php echo get_the_title(); ?></h2>
+                </a>
+                <?php } wp_reset_postdata(); ?>
+
+            </div>
+        </div>
+
+        <div class="recommended-next recommended-control">
+            <i class="far fa-chevron-right"></i>
+        </div>
+    </div>
+</div>
+<?php } ?>
+
 <?php while(have_posts()): the_post() ?>
 
 <main id="single" data-template="<?php echo get_field('template'); ?>">
@@ -37,28 +70,6 @@ get_header();
         <?php } ?>
     </div>
     <?php } ?>
-    <div class="recommended-posts"<?php if( count( @get_coauthors() ) == 1 ) { echo ' style="border-top: solid 1px var(--light)"'; } ?>>
-        <?php
-        $args_recommended_posts = array(
-            'post_type' => array( 'post', 'gallery' ),
-            'post_status' => array( 'publish' ),
-            'posts_per_page' => 2,
-            'nopaging' => false,
-            'ignore_sticky_posts' => true,
-            'order' => 'DESC',
-            'post__not_in' => array( get_the_ID() )
-        );
-        $recommended_posts = new WP_Query( $args_recommended_posts );
-        while ( $recommended_posts->have_posts() ) { $recommended_posts->the_post(); ?>
-        <a href="<?php echo get_permalink(); ?>" class="recommended-post">
-            <div>
-                <h1 class="recommended-post-title"><?php echo get_the_title(); ?></h1>
-                <span class="recommended-post-date"><?php echo get_the_date(); ?></span>
-            </div>
-            <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'three-two', false)[0]; ?>">
-        </a>
-        <?php } wp_reset_postdata(); ?>
-    </div>
 
     <?php
     
