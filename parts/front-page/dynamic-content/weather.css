@@ -139,9 +139,7 @@
     position: relative;
     overflow: hidden;
 }
-.weather.morning .weather-articles-wrapper { height: 50px; }
-.weather.evening .weather-articles-wrapper,
-.weather.night .weather-articles-wrapper { height: 128px; }
+.weather .weather-articles-wrapper { height: 128px; }
 
 .weather .weather-articles-wrapper:after {
     content: '';
@@ -157,6 +155,7 @@
 .weather .weather-articles {
     overflow: auto;
     height: 100%;
+    grid-gap: 11px;
 }
 
 .weather .scroll-fix-hidden {

@@ -41,7 +41,8 @@ function getWeatherIcon($id, $returnName = false) {
         '11d' => 'storm',
         '11n' => 'storm',
         '50d' => 'fog',
-        '50n' => 'fog'
+        '50n' => 'fog',
+        'smoke' => 'fire'
     ];
     if($returnName) {
         return $iconIndex[$id];
@@ -69,6 +70,21 @@ if ($currentTime > $morningStart && $currentTime < $morningEnd) {
 
 $weatherDescription = str_replace( ['few clouds: 11-25%', 'scattered clouds: 25-50%', 'broken clouds: 51-84%', 'overcast clouds: 85-100%', 'broken clouds'], ['few clouds', 'scattered clouds', 'partly cloudy', 'overcast', 'overcast'], $data['current']['weather'][0]['description'] );
 $weatherDescription = ucfirst($weatherDescription);
+
+if( $weatherDescription == 'Smoke' ) {
+    $aqi = file_get_contents('https://airnowgovapi.com/reportingarea/get?latitude=37.8677468&longitude=-122.2714278&stateCode=CA&maxDistance=20');
+    $aqi = json_decode($aqi, true);
+    foreach($aqi as $day) {
+        if( new DateTime($day['issueDate']) == new DateTime('today') || new DateTime($day['validDate']) == new DateTime('today') ) {
+            $aqi = null;
+            $aqi = $day['aqi'];
+            break;
+        }
+    }
+
+    $icon = getWeatherIcon('smoke');
+    $weatherDescription = $aqi . ' AQI' ?? 'Wildfire smoke';
+}
 
 foreach( $data['daily'] as $day ) {
     $forecast[] = [
@@ -132,10 +148,6 @@ $weatherQuery = new WP_Query([
             <div class="forecast-day scroll-fix-hidden"></div>
         </div>
     </div>
-    
-    <?php if( $isMorning ) { ?>
-    <p class="weather-text">Today will have a high of <strong><?php echo k2f($data['daily'][0]['temp']['max']); ?> degrees</strong> and a low of <?php echo k2f($data['daily'][0]['temp']['min']); ?> degrees. Here are our recent headlines:</p>
-    <?php } ?>
 
     <div class="weather-articles-wrapper">
         <div class="weather-articles grid">
