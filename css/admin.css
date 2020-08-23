@@ -30,3 +30,27 @@
 }
 
 .components-panel__body.block-editor-block-inspector__advanced { display: none!important; } /* Hides advanced block options */
+
+/* Edit Flow Status Hacks */
+.components-panel__body.edit-post-post-status > .components-panel__row:not(.edit-post-post-visibility):not(.edit-post-post-schedule):not(.edit-flow-extended-post-status),
+.edit-flow-extended-post-status-note { display: none!important; }
+
+.edit-flow-extended-post-status h4 {
+    margin: 0!important; /* Fix "Double Margin" */
+
+    text-indent: -9999px!important;
+    line-height: 0!important;
+}
+
+/* Replace Text (Hack level 100) */
+.edit-flow-extended-post-status h4:after {
+    content: 'Post Status';
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+    font-weight: normal;
+}
+
+/* Hide status box title and fix padding */
+.components-panel__body.edit-post-post-status { padding-top: 21px!important; }
+.components-panel__body.edit-post-post-status .components-panel__body-title { display: none!important; }

@@ -32,7 +32,7 @@
 }
 
 .comment-policy p > a {
-    box-shadow: none;
+    box-shadow: none!important;
     font-family: var(--sans);
     color: var(--accent);
 }
