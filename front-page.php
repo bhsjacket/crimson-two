@@ -133,7 +133,13 @@ $rowSections = [
         <div class="dense-right dynamic-content" style="height:100%">
 
             <?php
+            if( rand(0, 4) == 4 ) {
+                get_template_part('parts/front-page/dynamic-content/podcast');
+            } else {
+                get_template_part('parts/front-page/dynamic-content/coronavirus');
+            }
 
+            /*
             $timeZone = new DateTimeZone('America/Los_Angeles');
             $currentTime = new DateTime('now', $timeZone);
             $morningStart = DateTime::createFromFormat('H:i a', '6:30 am', $timeZone);
@@ -149,7 +155,7 @@ $rowSections = [
                     get_template_part('parts/front-page/dynamic-content/coronavirus');
                 }
             }
-
+            */
             ?>
 
         </div>
