@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     // Medium zoom
     mediumZoom('.zoom', {
@@ -154,35 +153,4 @@ $(document).ready(function(){
             $(".progress-bar").width(progress);
         }
     });
-
-    // Dark Mode
-    $('.dark-mode-toggle').click(function(){
-        if( Cookies.get('dark-mode') == 'true' ) {
-            Cookies.remove('dark-mode');
-            $('body').removeClass('jkt-dark-theme');
-        } else {
-            Cookies.set('dark-mode', 'true');
-            $('body').addClass('jkt-dark-theme');
-        }
-    })
-
-    // Tagline Cycler
-    var i = -1;
-    var taglines = [
-        'La Voz de los Estudiantes',
-        '学生的声音',
-        'La Voix des Étudiants',
-        'صوت الطلاب',
-        'The Voice of the Students',
-        'छात्रों की आवाज',
-        'Die Stimme der Schüler',
-        'Η φωνή των μαθητών',
-        'The Voice of the Students',
-        'Голос студентов'
-    ]
-    setInterval(function(){
-        $('.footer-tagline').fadeOut('fast', function() {
-            $(this).text( taglines[(++i) % taglines.length] ).fadeIn('fast');
-        });
-    }, 2000)
 })

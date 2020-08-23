@@ -1,70 +1,70 @@
 <?php
-$topQuery = new WP_Query([
+
+$topArticle = new WP_Query([
+    'cat' => $wp_query->get_queried_object_id(),
     'post_type' => ['post'],
     'post_status' => ['publish'],
-    'posts_per_page' => 4,
-    'offset' => 0,
-    'order' => 'DESC',
-    'cat' => $wp_query->get_queried_object_id()
+    'posts_per_page' => 1,
+    'nopaging' => false
 ]);
 
-$bottomQuery = new WP_Query([
-    'post_type' => ['post'],
-    'post_status' => ['publish'],
-    'posts_per_page' => 6,
-    'offset' => 4,
-    'order' => 'DESC',
-    'cat' => $wp_query->get_queried_object_id()
-]);
+if( get_query_var('paged') === 0 ) {
+    $articleStream = new WP_Query([
+        'offset' => 1,
+        'cat' => $wp_query->get_queried_object_id(),
+        'posts_per_page' => 9
+    ]);
+} else {
+    $articleStream = $wp_query;
+}
+
 ?>
 
 <?php get_header(); ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/section.css">
-
-<?php if($topQuery->have_posts()): ?>
 
 <main id="section-archive">
 
-    <div class="section-top">
+    <?php if( get_query_var('paged') === 0 ) { ?>
 
-    <?php while($topQuery->have_posts()): $topQuery->the_post(); ?>
-
-        <div class="section-top-item">
-            <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
-            <a href="<?php echo get_permalink(); ?>"><h2 class="article-title"><?php echo get_the_title(); ?></h2></a>
-            <p class="article-meta">By <?php coauthors_posts_links(); ?> on <?php echo get_the_date(); ?></p>
-            <p class="article-excerpt"><?php echo esc_html( get_field('homepage_excerpt') ); ?></p>
+    <section class="top-article">
+        <div class="top-article-inner">
+            <?php while( $topArticle->have_posts() ) { $topArticle->the_post(); ?>
+                <a href="<?php get_permalink(); ?>" class="grid four-three double-gap">
+                    <?php the_post_thumbnail('three-two'); ?>
+                    <div>
+                        <h2 class="article-title"><?php echo get_the_title(); ?></h2>
+                        <p class="article-excerpt">
+                            <span class="article-date"><?php echo get_the_date('F j, Y'); ?></span>
+                            <?php echo getExcerpt(); ?>
+                        </p>
+                    </div>
+                </a>
+            <?php } ?>
         </div>
+    </section>
 
-    <?php endwhile; wp_reset_postdata(); ?>
-
-    </div>
+    <?php } ?>
 
     <div class="article-stream">
-
-        <?php while($bottomQuery->have_posts()): $bottomQuery->the_post(); ?>
-        <article class="article-stream-item">
-            <a href="<?php echo get_permalink(); ?>">
-                <?php the_post_thumbnail('small-three-two'); ?>
-            </a>
-            <div class="article-info">
-                <a href="<?php echo get_permalink(); ?>">
+        <?php while( $articleStream->have_posts() ) { $articleStream->the_post(); ?>
+            <a class="stream-item" data-type="<?php echo get_post_type(); ?>" href="<?php echo get_permalink(); ?>">
+                <div class="article-info">
+                    <span class="article-section"><?php echo getSection(); ?></span>
                     <h2 class="article-title"><?php echo get_the_title(); ?></h2>
-                </a>
-                <p class="article-meta">By <?php coauthors_posts_links(); ?> on <?php echo get_the_date(); ?></p>
-                <p class="article-excerpt" data-lines="3"><?php echo esc_html( get_field('homepage_excerpt') ); ?></p>
-            </div>
-        </article>
-        <?php endwhile; ?>
-
+                    <p class="article-excerpt">
+                        <span class="article-date"><?php echo get_the_date(); ?></span>
+                        <?php echo getExcerpt(); ?>
+                    </p>
+                </div>
+                <?php get_post_type() == 'column' ? theColumnImage() : the_post_thumbnail('small-three-two'); ?>
+            </a>
+        <?php } ?>
+        <div class="navigation">
+            <div class="previous-page"><?php previous_posts_link( '&laquo; Previous Page' ); ?></div>
+            <div class="next-page"><?php next_posts_link( 'Next Page &raquo;', '' ); ?></div>
+        </div>
     </div>
-    
+
 </main>
-
-<?php else: ?>
-
-    <p style="background-color:var(--pale-red);padding:var(--gap);max-width:var(--normal);margin:100px auto;">Something went very wrong. Please contact us if this problem persists.</p>
-
-<?php endif; ?>
 
 <?php get_footer(); ?>
