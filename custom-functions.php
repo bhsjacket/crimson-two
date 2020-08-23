@@ -10,5 +10,25 @@ function academicYear(DateTime $userDate) {
 }
 
 function getSection($post = \false) {
-    return get_field('kicker') ?? get_the_category($post)[0]->cat_name;
+    if( get_post_type($post) == 'column' ) {
+        return 'Column - ' . get_the_author_meta('display_name');
+    }
+    
+    if(empty( get_field('kicker', $post) )) {
+        return get_the_category($post)[0]->cat_name;
+    } else {
+        return get_field('kicker', $post);
+    }
+}
+
+function getExcerpt($post = \false) {
+    return get_field('homepage_excerpt', $post);
+}
+
+function theColumnImage($post = \false) {
+    if( has_post_thumbnail() ) {
+        the_post_thumbnail('thumbnail');
+    } else {
+        echo '<img class="columnist-image" src="' . get_avatar_url(get_the_author_meta('ID')) . '">';
+    }
 }
