@@ -97,7 +97,6 @@ add_filter('coauthors_meta_box_context', 'cap_context');
 // register image size
 add_image_size( 'three-two', 1200, 800, true ); // 3:2 ratio
 add_image_size( 'small-three-two', 600, 400, true ); // smaller 3:2 ratio
-add_image_size( 'reasonable', 900 ); // 900px width
 
 remove_image_size('1536x1536');
 remove_image_size('2048x2048');
