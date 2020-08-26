@@ -137,7 +137,7 @@ jQuery(document).on('click', '.editor-image', function(){
 })
 
 // Remove Editor Panels (https://developer.wordpress.org/block-editor/components/panel/)
-// wp.data.dispatch('core/edit-post').removeEditorPanel('post-status'); // Status and Visibility
+wp.data.dispatch('core/edit-post').removeEditorPanel('post-status'); // Status and Visibility
 wp.data.dispatch('core/edit-post').removeEditorPanel('taxonomy-panel-category'); // Categories
 wp.data.dispatch('core/edit-post').removeEditorPanel('taxonomy-panel-issue'); // Issue Taxonomy
 wp.data.dispatch('core/edit-post').removeEditorPanel('taxonomy-panel-post_tag'); // Tags
