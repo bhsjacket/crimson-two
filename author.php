@@ -76,11 +76,11 @@ function stringToColorCode($str) {
 
     </header>
 
-    <div class="search-results">
+    <div class="article-stream">
 
     <?php if( have_posts() ) { ?>
         <?php while( have_posts() ) { the_post(); ?>
-            <a class="search-result" data-type="<?php echo get_post_type(); ?>" href="<?php echo get_permalink(); ?>">
+            <a class="stream-item" data-type="<?php echo get_post_type(); ?>" href="<?php echo get_permalink(); ?>">
                 <div class="article-info">
                     <span class="article-section"><?php echo getSection(); ?></span>
                     <h2 class="article-title"><?php echo get_the_title(); ?></h2>
@@ -99,6 +99,7 @@ function stringToColorCode($str) {
     <?php } else { ?>
         <p>No results found.</p>
     <?php } ?>
+    <p style="font-family: 'pt-sans-pro', 'PT Sans', sans-serif;font-style:italic;background-color:#e7e7e7;padding:15px;">We are currently experiencing issues with our attribution system. If you don't see an article you were expecting, please search our website with the button in the top right.</p>
 
 </main>
 
