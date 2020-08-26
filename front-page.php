@@ -76,12 +76,13 @@ $s3_3 = getPosts(2, 3, 'features');
 $rowSections = [
     [
         'title' => false,
-        'category' => 'news'
+        'category' => 'news',
+        'class' => 'no-border'
     ],
     [
         'title' => 'Coronavirus Coverage',
         'tag' => 'coronavirus',
-        'class' => 'highlighted'
+        'class' => 'highlighted no-border'
     ],
     [
         'title' => false,
