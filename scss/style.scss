@@ -6,17 +6,9 @@ Version: 2.1.3
 Description: Let's try this again 🤞
 */
 
-// Temporary Styles
-.article-meta {
-    .meta-top {
-        .avatars {
-            display: none; // Hide avatars until more authors have them
-        }
-    }
-}
-
 // Utilities
 @import 'utils/variables'; // Sass Variables
+@import '../css/variables.css'; // CSS Variables
 @import 'utils/mixins'; // Sass Mixins
 @import 'utils/global'; // Global Styles
 @import 'utils/typography'; // Typography
@@ -31,6 +23,7 @@ Description: Let's try this again 🤞
 @import 'components/embeds'; // Social Media Embeds
 @import 'components/article-stream'; // Basic Article Stream
 @import 'components/post-page-navigation'; // Base Post Page Navigation
+@import 'components/comments'; // Comments
 
 // Layout
 @import 'layout/header'; // Site Header
@@ -51,3 +44,13 @@ Description: Let's try this again 🤞
 @import 'templates/front-page/centered'; // Centered Section
 
 // Libraries
+
+// Temporary Styles
+@import 'templates/front-page/election-corner';
+.article-meta {
+    .meta-top {
+        .avatars {
+            display: none; // Hide avatars until more authors have them
+        }
+    }
+}
