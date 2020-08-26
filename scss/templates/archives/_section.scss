@@ -1,6 +1,7 @@
+// category.php
+
 #section-archive {
     .top-article {
-        background-color: var(--dark-gray);
         background-color: var(--dark-gray);
         margin-bottom: var(--gap);
 
@@ -29,6 +30,9 @@
             }
 
             .article-excerpt {
+                margin-top: var(--gap);
+                color: white;
+
                 .article-date {
                     font-family: var(--sans);
                     font-weight: bold;
@@ -59,5 +63,40 @@
         max-width: var(--normal);
         margin: 0 auto;
         padding: var(--gap);
+    }
+}
+
+.archive.category.category-sports {
+    #section-archive {
+        .top-article {
+            background-color: var(--dark-green);
+        }
+    }
+}
+
+.archive.category.category-entertainment {
+    #section-archive {
+        .top-article {
+            background-color: var(--dark-purple);
+        }
+    }
+}
+
+.archive.category.category-opinion,
+.archive.category.category-editorial {
+    #section-archive {
+        .top-article {
+            background-color: black;
+        }
+    }
+}
+
+.archive.category.category-features,
+.archive.category.category-multimedia,
+.archive.category.category-photo {
+    #section-archive {
+        .top-article {
+            background-color: var(--dark-blue);
+        }
     }
 }
