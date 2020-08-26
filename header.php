@@ -43,9 +43,9 @@
                 )); ?>
             </ul>
 			<?php if(is_user_logged_in()) { ?>
-			<a href="<?php echo wp_logout_url(get_site_url()) ?>" class="login-link">Logout</a>
+			<a href="<?php echo wp_logout_url( get_site_url() ); ?>" class="login-link">Logout</a>
 			<?php } else { ?>
-            <a href="/login?token=<?php echo uniqid(); ?>" class="login-link">Login</a>
+            <a href="<?php echo wp_login_url(); ?>" class="login-link">Login</a>
 			<?php } ?>
         </div>
     </div>
