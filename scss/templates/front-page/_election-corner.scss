@@ -1,0 +1,73 @@
+#front-page {
+    .election-corner {
+        position: relative;
+
+        .section-header {
+            margin-bottom: -3px;
+            margin-left: 13px;
+            line-height: 0.7em;
+            border: solid 3px white;
+            position: relative;
+            width: fit-content;
+
+            &:after {
+                content: none;
+            }
+        }
+
+        .election-corner__illustration {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            transform: translateY(-43%);
+
+            svg {
+                height: 70px;
+                width: auto;
+                fill: var(--blue);
+            }
+        }
+
+        .election-corner__inner {
+            border: solid 2px var(--pale-blue);
+            padding: var(--gap);
+
+            .election-corner__large-article {
+                align-items: center;
+
+                .article-info {
+                    .article-title {
+                        line-height: 1.15em;
+                        margin: 0;
+                        margin-top: -6px;
+                        font-size: 28px;
+                    }
+        
+                    .article-excerpt {
+                        font-size: 15px;
+                        line-height: 1.4em;
+        
+                        .article-date {
+                            font-family: var(--sans);
+                            color: var(--gray);
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .election-corner__small-article {
+                display: grid;
+                grid-template-columns: 60px 1fr;
+                align-items: center;
+                gap: var(--gap);
+
+                .article-title {
+                    font-family: var(--font);
+                    margin: 0;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
