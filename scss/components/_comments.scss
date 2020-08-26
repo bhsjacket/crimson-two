@@ -1,0 +1,37 @@
+#disqus_thread {
+    user-select: none;
+    position: relative;
+
+    a {
+        color: var(--accent);
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        height: 55px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background: white;
+    }
+}
+
+.comment-policy {
+    font-size: 17px;
+    line-height: 1.5em;
+    border: solid 1px var(--light);
+    margin: var(--gap) auto!important;
+
+    p {
+        font-style: italic;
+        margin: 0;
+        padding: var(--gap);
+
+        a {
+            box-shadow: none!important;
+            font-family: var(--sans);
+            color: var(--accent);
+        }
+    }
+}
