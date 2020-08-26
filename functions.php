@@ -274,7 +274,6 @@ function crimson_columns() {
 		'description'           => 'Columns',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'revisions', 'custom-fields', 'author', 'excerpt' ),
-		'taxonomies'            => array( 'issue' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -293,39 +292,3 @@ function crimson_columns() {
 
 }
 add_action( 'init', 'crimson_columns', 0 );
-
-// Add Issue Taxonomy
-function create_issue_tax() {
-
-	$labels = array(
-		'name'              => 'Issues', 'taxonomy general name',
-		'singular_name'     => 'Issue', 'taxonomy singular name',
-		'search_items'      => 'Search Issues',
-		'all_items'         => 'All Issues',
-		'parent_item'       => 'Parent Issue',
-		'parent_item_colon' => 'Parent Issue:',
-		'edit_item'         => 'Edit Issue',
-		'update_item'       => 'Update Issue',
-		'add_new_item'      => 'Add New Issue',
-		'new_item_name'     => 'New Issue Name',
-		'menu_name'         => 'Issue',
-	);
-	$args = array(
-		'labels' => $labels,
-		'description' => 'Issues',
-		'hierarchical' => true,
-		'public' => true,
-		'publicly_queryable' => true,
-		'show_ui' => true,
-		'show_in_menu' => true,
-		'show_in_nav_menus' => false,
-		'show_tagcloud' => false,
-		'show_in_quick_edit' => true,
-		'show_admin_column' => true,
-		'show_in_rest' => true,
-		'rewrite' => false,
-	);
-	register_taxonomy( 'issue', array('post', 'column'), $args );
-
-}
-add_action( 'init', 'create_issue_tax' );
