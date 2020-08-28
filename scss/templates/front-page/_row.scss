@@ -3,6 +3,10 @@
         &.highlighted {
             padding: var(--gap);
             background-color: var(--pale-accent);
+
+            *:after {
+                content: none;
+            }
             
             &.gray-highlight { background-color: var(--pale); }
         }
