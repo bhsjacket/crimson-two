@@ -1,5 +1,3 @@
-<?php if( function_exists( 'get_coauthors' ) && count( get_coauthors() ) > 1 ) { ?>
-
 <div class="author-boxes">
     <?php foreach( get_coauthors() as $author ) { ?>
     <a href="<?php echo get_author_posts_url( $author->ID ); ?>" class="author-box">
@@ -11,5 +9,3 @@
     </a>
     <?php } ?>
 </div>
-
-<?php } ?>
