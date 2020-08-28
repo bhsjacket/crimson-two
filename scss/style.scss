@@ -37,11 +37,14 @@ Description: Let's try this again 🤞
 // Single Post, Page, & Column
 @import 'templates/single/single'; // Single Post
 @import 'templates/single/recommended-slider'; // Recommended Post Slider
+@import 'templates/single/slideshow'; // Slideshow
 
 // Front Page
 @import 'front-page'; // Front Page Styles
+@import 'templates/front-page/top-story'; // Top Article
 @import 'templates/front-page/row'; // Row Section
 @import 'templates/front-page/centered'; // Centered Section
+@import 'templates/front-page/heap'; // Two-Column Stack
 
 // Libraries
 
