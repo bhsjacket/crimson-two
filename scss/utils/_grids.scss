@@ -49,8 +49,11 @@
             }
         }
     }
+    &.three-four { grid-template-columns: 3fr 4fr; }
+    &.three-five { grid-template-columns: 3fr 5fr; }
     &.four-three { grid-template-columns: 4fr 3fr; }
     &.five { grid-template-columns: repeat(5, 1fr); }
+    &.five-three { grid-template-columns: 5fr 3fr; }
 
     &.double-gap { grid-gap: var(--double-gap); }
 }
