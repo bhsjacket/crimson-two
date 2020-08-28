@@ -34,7 +34,7 @@ while($small_query->have_posts()) { $small_query->the_post();
     $excludedPosts[] = get_the_ID();
 }
 
-function getPosts(int $offset, int $posts, string $category = null, $tag = null) {
+function getPosts(int $posts, string $category = null, $tag = null) {
     global $excludedPosts;
 
     $query = new WP_Query([
@@ -44,13 +44,13 @@ function getPosts(int $offset, int $posts, string $category = null, $tag = null)
         'nopaging' => false,
         'category_name' => $category,
         'tag' => $tag,
-        'offset' => $offset,
         'post__not_in' => $excludedPosts,
     ]);
 
-    while( $query->has_posts() ): $query->the_post();
+    while( $query->have_posts() ) {
+        $query->the_post();
         $excludedPosts[] = get_the_ID();
-    endwhile;
+    }
 
     return $query;
 }
@@ -65,13 +65,17 @@ function getColumns(int $posts, int $offset = 0) {
     ]);
 }
 
-$s2_1 = getPosts(0, 1);
-$s2_2 = getPosts(1, 2);
+$s2_1 = getPosts(1);
+$s2_2 = getPosts(2);
 $s2_3 = getColumns(5);
 
-$s3_1 = getPosts(1, 1, 'features');
+$s3_1 = getPosts(1, 'features');
 $s3_2 = getColumns(2, 5);
-$s3_3 = getPosts(2, 3, 'features');
+$s3_3 = getPosts(3, 'features');
+
+$s4_1 = getPosts(1);
+$s4_2 = getPosts(1);
+$s4_3 = getPosts(2);
 
 $rowSections = [
     [
@@ -96,10 +100,10 @@ $rowSections = [
 
 <main id="front-page">
 
-    <section class="dense">
+    <section class="top-story">
 
-        <div class="dense-left">
-            <div class="dense-left-top">
+        <div class="top-story__left">
+            <div class="top-story__left-top">
                 <?php while($small_query->have_posts()) { $small_query->the_post(); ?>
 
                 <a class="small-item" href="<?php echo get_permalink(); ?>">
@@ -111,27 +115,27 @@ $rowSections = [
             </div>
 
             <?php while($main_query->have_posts()) { $main_query->the_post(); ?>
-            <a class="dense-left-bottom" href="<?php echo get_permalink(); ?>">
+            <div class="top-story__left-bottom">
                 <?php if( $slideshow = get_field('slideshow') ) { ?>
-                <div class="slideshow">
+                <a href="<?php echo get_permalink(); ?>" class="slideshow">
                     <?php $slideshow = array_slice($slideshow, 0, 5); // Only the first five images ?>
                     <?php foreach($slideshow as $image) { ?>
                     <img src="<?php echo $image['sizes']['three-two']; ?>" alt="">
                     <?php } ?>
-                </div>
+                </a>
                 <?php } else { ?>
                 <?php the_post_thumbnail('three-two'); ?>
                 <?php } ?>
-                <div class="dense-left-bottom-title">
+                <a href="<?php echo get_permalink(); ?>" class="top-story__left-bottom-title">
                     <span class="article-category"><?php echo esc_html( getSection() ); ?></span>
-                    <h2 class="dense-title"><?php echo esc_html( get_the_title() ); ?></h2>
+                    <h2 class="top-story__title"><?php echo esc_html( get_the_title() ); ?></h2>
                     <p class="article-excerpt" data-lines="6"><?php echo esc_html( get_field('homepage_excerpt') ?? get_field('subheadline') ); ?></p>
-                </div>
-            </a>
+                </a>
+            </div>
             <?php } wp_reset_postdata(); ?>
         </div>
 
-        <div class="dense-right dynamic-content" style="height:100%">
+        <div class="top-story__right dynamic-content" style="height:100%">
 
             <?php
             if( rand(0, 4) == 4 ) {
@@ -287,9 +291,36 @@ $rowSections = [
     </section>
     <?php } ?>
 
+    <section class="grid four-three borders double-gap heap">
 
+        <?php while( $s4_1->have_posts() ) { $s4_1->the_post() ?>
+        <a class="centered" href="<?php echo get_permalink(); ?>">
+            <?php the_post_thumbnail('three-two'); ?>
+            <h2 class="article-title"><?php echo get_the_title(); ?></h2>
+            <p class="article-excerpt"><?php echo getExcerpt(); ?></p>
+        </a>
+        <?php } ?>
 
+        <div class="grid one-one double-stack borders double-gap">
 
+            <?php while( $s4_2->have_posts() ) { $s4_2->the_post() ?>
+            <a class="stack-item grid one-one align-middle horizontal-item" href="<?php echo get_permalink(); ?>">
+                <?php the_post_thumbnail('small-three-two'); ?>
+                <h2 class="article-title"><?php echo get_the_title(); ?></h2>
+            </a>
+            <?php } ?>
+
+            <?php while( $s4_3->have_posts() ) { $s4_3->the_post() ?>
+            <a class="stack-item" href="<?php echo get_permalink(); ?>">
+                <?php the_post_thumbnail('small-three-two'); ?>
+                <h2 class="article-title"><?php echo get_the_title(); ?></h2>
+                <p class="article-excerpt"><?php echo getExcerpt(); ?></p>
+            </a>
+            <?php } ?>
+
+        </div>
+
+    </section>
 
 </main>
 
