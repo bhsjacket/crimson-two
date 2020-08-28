@@ -11,16 +11,10 @@
         <h2 class="subheadline"><?php echo esc_html( get_field('subheadline') ); ?></h2>
     </div>
 
-    <?php if( has_post_thumbnail() ) { ?>
-    <div class="featured-image-outer <?php echo get_field('image_size') ?? 'align-normal'; ?>">
-        <?php the_post_thumbnail('large', [
-            'class' => 'featured-image zoom'
-        ]) ?>
-        <div class="caption-group">
-            <p class="caption-content"><?php echo esc_html( get_field('featured_image_caption') ); ?></p>
-            <p class="caption-credit"><?php echo esc_html( get_field('featured_image_author') ); ?></p>
-        </div>
-    </div>
+    <?php if( get_field('slideshow') && isShown('slideshow') ) { ?>
+        <?php get_template_part('parts/single/slideshow'); ?>
+    <?php } else if( has_post_thumbnail() && ( !get_field('slideshow') || !isShown('slideshow') ) ) { ?>
+        <?php get_template_part('parts/single/featured-image'); ?>
     <?php } ?>
 
     <?php if( !is_singular('page') ) { ?>
