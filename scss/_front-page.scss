@@ -203,7 +203,7 @@
         .article-title {
             font-family: var(--display);
             font-weight: normal;
-            font-size: 21px;
+            font-size: 19px;
             margin: 0;
         }
         
@@ -240,14 +240,15 @@
 
             .article-title {
                 margin: 0;
-                font-size: 21px;
+                font-size: 19px;
                 padding: 0;
+                line-height: 1.25em;
             }
 
             .columnist {
                 line-height: 1em;
                 color: var(--gray);
-                font-size: 21px;
+                font-size: 17px;
                 margin: 0;
                 margin-bottom: 4px;
                 padding: 0;
