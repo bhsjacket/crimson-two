@@ -37,6 +37,11 @@
             text-decoration: none;
             align-items: center;
 
+            &.the-doug-border {
+                padding-top: var(--gap);
+                border-top: solid 1px var(--light);
+            }
+
             .slideshow {
                 position: relative;
                 width: 100%;
