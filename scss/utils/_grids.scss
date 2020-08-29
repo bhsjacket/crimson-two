@@ -26,6 +26,24 @@
             grid-template-columns: 1fr;
         }
     }
+    &.two-one-one {
+        grid-template-columns: 2fr 1fr 1fr;
+        
+        @media all and (max-width: 775px) {
+            grid-template-columns: repeat(2, 1fr);
+
+            > *:nth-child(2).stack { display: none; }
+        }
+
+        @media all and (max-width: 550px) {
+            > * { grid-column: span 2; }
+            > *:nth-child(3).columnist-stack {
+                border-top: double 4px var(--gray);
+                margin-top: -15px;
+                padding-top: 15px;
+            }
+        }
+    }
     &.two-three { grid-template-columns: 2fr 3fr; }
     &.two-two-one { grid-template-columns: 2fr 2fr 1fr; }
     &.three-one { grid-template-columns: 3fr 1fr; }
