@@ -115,7 +115,7 @@ $rowSections = [
             </div>
 
             <?php while($main_query->have_posts()) { $main_query->the_post(); ?>
-            <div class="top-story__left-bottom">
+            <div class="top-story__left-bottom the-doug-border">
                 <?php if( $slideshow = get_field('slideshow') ) { ?>
                 <a href="<?php echo get_permalink(); ?>" class="slideshow">
                     <?php $slideshow = array_slice($slideshow, 0, 5); // Only the first five images ?>
@@ -167,7 +167,7 @@ $rowSections = [
 
     </section>
 
-    <section class="grid three-two-three double-gap borders no-border">
+    <section class="grid two-one-one double-gap borders no-border">
 
         <?php while($s2_1->have_posts()) { $s2_1->the_post(); ?>
         <a class="centered" href="<?php echo get_permalink(); ?>">
