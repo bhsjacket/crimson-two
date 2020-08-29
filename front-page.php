@@ -304,9 +304,12 @@ $rowSections = [
         <div class="grid one-one double-stack borders double-gap">
 
             <?php while( $s4_2->have_posts() ) { $s4_2->the_post() ?>
-            <a class="stack-item grid one-one align-middle horizontal-item" href="<?php echo get_permalink(); ?>">
+            <a class="stack-item grid one-one align-middle horizontal-item double-gap" href="<?php echo get_permalink(); ?>">
                 <?php the_post_thumbnail('small-three-two'); ?>
-                <h2 class="article-title"><?php echo get_the_title(); ?></h2>
+                <div>
+                    <span class="article-category"><?php echo getSection(); ?></span>
+                    <h2 class="article-title"><?php echo get_the_title(); ?></h2>
+                </div>
             </a>
             <?php } ?>
 
@@ -314,7 +317,7 @@ $rowSections = [
             <a class="stack-item" href="<?php echo get_permalink(); ?>">
                 <?php the_post_thumbnail('small-three-two'); ?>
                 <h2 class="article-title"><?php echo get_the_title(); ?></h2>
-                <p class="article-excerpt"><?php echo getExcerpt(); ?></p>
+                <p class="article-excerpt" data-lines="5"><?php echo getExcerpt(); ?></p>
             </a>
             <?php } ?>
 
