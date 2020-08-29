@@ -73,5 +73,5 @@ function theColumnImage($post = \false) {
  * @return boolean
  */
 function isShown( $component, $post = \false ) {
-    return !in_array( $component, get_field('hide_elements', $post) );
+    return @!in_array( $component, get_field('hide_elements', $post) );
 }
