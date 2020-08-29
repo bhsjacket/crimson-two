@@ -268,7 +268,7 @@ $rowSections = [
     <?php foreach( $rowSections as $section ) { ?>
     <section class="row <?php echo $section['class'] ? ' ' . $section['class'] : ''; ?>">
 
-        <?php $rowQuery = getPosts(0, 4, $section['category'], $section['tag']); ?>
+        <?php $rowQuery = getPosts(4, $section['category'], $section['tag']); ?>
 
         <?php if($section['title']) { ?>
         <h2 class="section-header"><?php echo $section['title']; ?></h2>
