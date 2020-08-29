@@ -36,6 +36,11 @@
                 display: grid;
     
                 &:after { content: none!important; } // Hide extra border
+
+                .article-category {
+                    display: block;
+                    margin-bottom: 5px;
+                }
     
                 .article-title {
                     margin: 0;
