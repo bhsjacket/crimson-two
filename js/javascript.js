@@ -12,29 +12,6 @@ $(document).ready(function () {
             scrollTop: $( $.attr(this, "href") ).offset().top - 100,
         }, 1500, "swing");
     });
-
-    // Color Easter Egg
-    var easterEggClicks = 0;
-    var currentColor = 0;
-    $('.footer-copyright').click(function(){
-        easterEggClicks++;
-        if(easterEggClicks == 7) {
-            setInterval(function(){
-                var accentColors = [
-                    'yellow-accent',
-                    'green-accent',
-                    'blue-accent',
-                    'purple-accent'
-                ]
-                if(currentColor > accentColors.length) {
-                    currentColor = 0;
-                }
-                $('body').removeClass(accentColors);
-                $('body').addClass(accentColors[currentColor]);
-                currentColor++;
-            }, 300)
-        }
-    })
 });
 
 // Header
