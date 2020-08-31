@@ -150,6 +150,10 @@ header.site-header .progress-bar {
 .site-header .search-toggle {
     color: gray;
     padding-right: 0;
+
+    &:hover {
+        color: var(--accent);
+    }
 }
 
 .donation-dropdown {
