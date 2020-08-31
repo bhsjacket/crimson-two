@@ -107,6 +107,22 @@
 
             .top-story__left-bottom {
                 display: block;
+
+                &.the-doug-border {
+                    border: none;
+                    padding-top: 0;
+                }
+
+                .slideshow {
+                    img {
+                        opacity: 1!important;
+                        position: static;
+
+                        &:not(:first-child) {
+                            display: none!important;
+                        }
+                    }
+                }
     
                 img {
                     margin-bottom: 6px;
