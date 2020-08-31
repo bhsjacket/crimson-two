@@ -7,8 +7,6 @@ Description: Let's try this again 🤞
 */
 
 // Utilities
-@import 'utils/variables'; // Sass Variables
-@import '../css/variables.css'; // CSS Variables
 @import 'utils/mixins'; // Sass Mixins
 @import 'utils/global'; // Global Styles
 @import 'utils/typography'; // Typography
@@ -38,6 +36,7 @@ Description: Let's try this again 🤞
 @import 'templates/single/single'; // Single Post
 @import 'templates/single/recommended-slider'; // Recommended Post Slider
 @import 'templates/single/slideshow'; // Slideshow
+// @import 'templates/single/slideshow-2'; // Slideshow
 
 // Front Page
 @import 'front-page'; // Front Page Styles
