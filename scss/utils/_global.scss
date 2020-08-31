@@ -35,9 +35,3 @@ select,
 .medium-zoom-image--opened {
     z-index: 9999;
 }
-
-[aria-label][data-balloon-pos]:after {
-    font-family: var(--font)!important;
-    color: white!important;
-    font-size: 13px!important;
-}
