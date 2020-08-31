@@ -15,7 +15,7 @@
 	<div class="meta-bottom">
 
 		<div class="meta-bottom-left">
-			<time aria-label="Published at <?php echo get_the_date('g:i A T'); ?>" data-balloon-pos="down-left" class="post-date"><?php echo get_the_date('F j, Y'); ?></time>
+			<time class="post-date"><?php echo get_the_date('F j, Y'); ?></time>
 		</div>
 
 		<div class="meta-bottom-right">

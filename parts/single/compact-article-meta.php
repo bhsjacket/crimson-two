@@ -15,5 +15,5 @@
         <span class="byline-authors">By <?php coauthors_posts_links(); ?></span>
 
     </div>
-    <span class="post-date" aria-label="Published at <?php echo get_the_date('g:i A T'); ?>" data-balloon-pos="down-right"><?php echo get_the_date(); ?></span>
+    <span class="post-date"><?php echo get_the_date(); ?></span>
 </div>
