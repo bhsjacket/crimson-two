@@ -1,0 +1,152 @@
+// archive.php
+
+#archive {
+    .top-article {
+        background-color: var(--darker-gray);
+        margin-bottom: var(--gap);
+        padding: var(--double-gap);
+
+        .archive-info {
+            color: white;
+            max-width: var(--width);
+            margin: 0 auto;
+            margin-bottom: var(--double-gap);
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+
+            .archive-title {
+                margin: 0;
+                font-size: 42px;
+            }
+
+            .subscribe-button {
+                text-decoration: none;
+                color: white;
+                font-family: var(--sans);
+                margin-left: var(--gap);
+                border: solid 1px white;
+                padding: 7px 10px;
+                transition: background 0.2s;
+
+                &:hover {
+                    background-color: rgba(255,255,255,0.1);
+                }
+            }
+
+            .archive-description {
+                margin: 0;
+                font-family: var(--sans);
+                max-width: 400px;
+            }
+        }
+
+        .top-article-inner {
+            max-width: var(--width);
+            margin: 0 auto;
+            background-color: white;
+
+            .article-info {
+                align-self: center;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .article-title {
+                margin: 0;
+                font-size: 38px;
+                line-height: 1.25em;
+                height: fit-content;
+            }
+
+            .article-excerpt {
+                .article-date {
+                    font-family: var(--sans);
+                    font-weight: bold;
+                }
+            }
+        }
+
+        @media all and (max-width: 950px) {
+            .archive-info {
+                .archive-description {
+                    display: none;
+                }
+            }
+
+            .top-article-inner {
+                .article-info {
+                    padding: var(--gap);
+                    margin-top: calc( var(--gap) * -1 );
+                }
+
+                a {
+                    grid-template-columns: 1fr;
+
+                    .article-title {
+                        border-top: none;
+                        padding-top: 0
+                    }
+                }
+            }
+        }
+    }
+
+    .article-stream {
+        max-width: var(--normal);
+        margin: 0 auto;
+        padding: var(--gap);
+    }
+}
+
+.archive.category.category-sports {
+    #archive {
+        .top-article {
+            background-color: var(--dark-green);
+        }
+    }
+}
+
+.archive.category.category-entertainment {
+    #archive {
+        .top-article {
+            background-color: var(--dark-purple);
+        }
+    }
+}
+
+.archive.category.category-opinion,
+.archive.category.category-editorial {
+    #archive {
+        .top-article {
+            background-color: black;
+        }
+    }
+}
+
+.archive.category.category-features,
+.archive.category.category-multimedia,
+.archive.category.category-photo {
+    #archive {
+        .top-article {
+            background-color: var(--dark-blue);
+        }
+    }
+}
+
+.archive.tag.tag-coronavirus {
+    #archive {
+        .top-article {
+            background-color: var(--dark-red);
+        }
+    }
+}
