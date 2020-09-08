@@ -32,6 +32,14 @@ align-left
     transform: translateX(-50%);
 }
 
+.align-wider {
+    max-width: var(--width);
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .image-outer {
     &.align-full > .caption-group,
     &.align-wide > .caption-group,
