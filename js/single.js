@@ -27,15 +27,15 @@ if( slideshowWrapper ) {
     }
     
     function slideClasses() {
-        if( slideCount > slides.length ) {
-            slideCount = slides.length;
+        if( slideCount > slides.length - 1 ) {
+            slideCount = slides.length - 1;
         }
     
         if( slideCount < 0 ) {
             slideCount = 0;
         }
     
-        if( slideCount == slides.length ) {
+        if( slideCount == slides.length - 1 ) {
             slideshowWrapper.classList.add('at-end');
         } else {
             slideshowWrapper.classList.remove('at-end');
