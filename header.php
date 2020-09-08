@@ -1,6 +1,21 @@
 <?php date_default_timezone_set( get_option('timezone_string') ); ?>
 
 <!DOCTYPE html>
+
+<?php
+$adjectives = [
+    'amazing',
+    'brilliant',
+    'stupid',
+    'clever',
+    'mediocre',
+    'fine',
+    'alright',
+    'talented'
+]
+?>
+<!-- Everything here by the <?php echo $adjectives[array_rand($adjectives)] ?> Jerome Paulos -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
