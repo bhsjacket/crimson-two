@@ -36,7 +36,7 @@ add_filter( 'allowed_block_types', 'allowed_block_types' );
  
 function allowed_block_types( $allowed_blocks ) {
 
-	return array(
+	return [
 		'core/paragraph',
 		'core/heading',
 		'core/list',
@@ -52,7 +52,8 @@ function allowed_block_types( $allowed_blocks ) {
 		'core/quote',
 		'acf/cta',
 		'acf/staff',
-		'acf/video'
-	);
+		'acf/video',
+		'acf/advanced-iframe'
+	];
  
 }
