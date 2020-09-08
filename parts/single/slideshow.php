@@ -1,8 +1,3 @@
-<noscript>
-    <?php get_template_part('parts/single/featured-image'); ?>
-    <style> .slideshow-wrapper { display: none!important; } </style>
-</noscript>
-
 <div class="slideshow-wrapper at-start">
 
     <div class="slideshow">
