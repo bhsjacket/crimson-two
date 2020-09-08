@@ -30,7 +30,7 @@ $query = new WP_Query( $args_query );
             </a>
             <a href="<?php echo get_permalink(); ?>"><h2 class="row-title"><?php echo get_the_title(); ?></h2></a>
             <span class="article-meta">By <?php coauthors_posts_links(); ?>, <?php echo get_the_date('F j'); ?></span>
-            <p class="article-excerpt"><?php echo get_field('homepage_excerpt'); ?></p>
+            <p class="article-excerpt"><?php echo getExcerpt(); ?></p>
 
         </div>
 

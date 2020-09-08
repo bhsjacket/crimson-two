@@ -31,7 +31,7 @@ $color_index = 0; // colors start at 0
         if( has_excerpt() && $quote !== true ) {
             $quote = true; // prevent another quote column from being made
             $classes = 'column-has-quote ' . $colors[$color_index]; // add has-quote class
-            $title = '“' . get_field('homepage_excerpt') ?? get_field('subheadline') . '”'; // title is actually the quote with curly quotes
+            $title = '“' . getExcerpt() ?? get_field('subheadline') . '”'; // title is actually the quote with curly quotes
         } else {
             $classes = $colors[$color_index]; // the CSS classes are just the random accent color
             $title = get_the_title(); // the title is just the title

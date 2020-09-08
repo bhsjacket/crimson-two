@@ -60,9 +60,9 @@ $right_query = new WP_Query( $right_query ); ?>
     <?php while ( $right_query->have_posts() ) { $right_query->the_post(); ?>   
     <a href="<?php echo get_permalink(); ?>" class="tc-right">
         <?php the_post_thumbnail('three-two'); ?>
-        <div class="tc-right-meta<?php if( get_field('homepage_excerpt') ) { echo ' has-excerpt'; }; ?>">
+        <div class="tc-right-meta<?php if( getExcerpt() ) { echo ' has-excerpt'; }; ?>">
             <h2 class="tc-right-title" data-lines="1"><?php echo esc_html( get_the_title() ); ?></h2>
-            <p class="article-excerpt" data-lines="3"><?php echo esc_html( get_field('homepage_excerpt') ?? get_field('subheadline') ); ?></p>
+            <p class="article-excerpt" data-lines="3"><?php echo esc_html( getExcerpt() ?? get_field('subheadline') ); ?></p>
         </div>
     </a>
     <?php } wp_reset_postdata(); ?>

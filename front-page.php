@@ -129,7 +129,7 @@ $rowSections = [
                 <a href="<?php echo get_permalink(); ?>" class="top-story__left-bottom-title">
                     <span class="article-category"><?php echo esc_html( getSection() ); ?></span>
                     <h2 class="top-story__title"><?php echo esc_html( get_the_title() ); ?></h2>
-                    <p class="article-excerpt" data-lines="6"><?php echo esc_html( get_field('homepage_excerpt') ?? get_field('subheadline') ); ?></p>
+                    <p class="article-excerpt" data-lines="6"><?php echo esc_html( getExcerpt() ?? get_field('subheadline') ); ?></p>
                 </a>
             </div>
             <?php } wp_reset_postdata(); ?>
@@ -174,7 +174,7 @@ $rowSections = [
             <?php the_post_thumbnail('small-three-two'); ?>
             <span class="article-category"><?php echo getSection(); ?></span>
             <h1 class="article-title"><?php echo get_the_title(); ?></h1>
-            <p class="article-excerpt"><?php echo get_field('homepage_excerpt'); ?></p>
+            <p class="article-excerpt"><?php echo getExcerpt(); ?></p>
         </a>
         <?php } wp_reset_postdata(); ?>
 
@@ -221,9 +221,9 @@ $rowSections = [
             <div class="standard grid one-two align-middle">
                 
                 <a href="<?php echo get_permalink(); ?>" class="article-info">
-                    <span class="article-category"><?php echo get_categories()[0]->cat_name; ?></span>
+                    <span class="article-category"><?php echo getSection(); ?></span>
                     <h1 class="article-title"><?php echo get_the_title(); ?></h1>
-                    <p class="article-excerpt"><?php get_field('homepage_excerpt'); ?></p>
+                    <p class="article-excerpt"><?php getExcerpt(); ?></p>
                 </a>
 
                 <a href="<?php echo get_permalink(); ?>">
@@ -282,7 +282,7 @@ $rowSections = [
                     <?php the_post_thumbnail('three-two'); ?>
                     <span class="article-category"><?php echo getSection(); ?></span>
                     <h2 class="article-title"><?php echo get_the_title(); ?></h2>
-                    <p class="article-excerpt"><?php echo get_field('homepage_excerpt'); ?></p>
+                    <p class="article-excerpt"><?php echo getExcerpt(); ?></p>
                 </article>
             </a>
             <?php } wp_reset_postdata(); ?>
