@@ -30,7 +30,8 @@ Description: Let's try this again 🤞
 // Misc. Templates
 @import 'templates/search'; // Search Results
 @import 'templates/author'; // Author Archives
-@import 'templates/archives/section'; // Post Archives
+@import 'templates/archives/archive'; // Post Archives
+@import 'templates/archives/column-archive'; // Column Archive
 
 // Single Post, Page, & Column
 @import 'templates/single/single'; // Single Post
