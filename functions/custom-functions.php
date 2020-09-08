@@ -46,7 +46,11 @@ function getSection($post = \false) {
  * @return string
  */
 function getExcerpt($post = \false) {
-    return get_field('homepage_excerpt', $post);
+    if(empty( get_field('homepage_excerpt', $post) )) {
+        return get_field('subheadline');
+    } else {
+        return get_field('homepage_excerpt', $post);
+    }
 }
 
 /**
