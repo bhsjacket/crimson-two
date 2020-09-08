@@ -1,6 +1,6 @@
 <?php
 
-require_once('functions/custom-functions.php'); // Custom Utility
+require_once('functions/custom-functions.php'); // Custom Utility Functions
 require_once('functions/enqueue.php'); // Enqueue Assets
 require_once('functions/head.php'); // Cleanup Auto-Generated <head> Tag
 require_once('functions/editors.php'); // Customize Editors
