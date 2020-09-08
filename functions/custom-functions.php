@@ -27,7 +27,7 @@ function academicYear(DateTime $userDate) {
  */
 function getSection($post = \false) {
     if( get_post_type($post) == 'column' ) {
-        return 'Column - ' . get_the_author_meta('display_name');
+        return get_the_author_meta('display_name');
     }
     
     if(empty( get_field('kicker', $post) )) {
