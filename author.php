@@ -99,7 +99,7 @@ function stringToColorCode($str) {
     <?php } else { ?>
         <p>No results found.</p>
     <?php } ?>
-    <p style="font-family: 'pt-sans-pro', 'PT Sans', sans-serif;font-style:italic;background-color:#e7e7e7;padding:15px;">We are currently experiencing issues with our attribution system. If you don't see an article you were expecting, please search our website with the button in the top right.</p>
+    <p style="margin:0;font-family:'pt-sans-pro','PT Sans',sans-serif;font-style:italic;background-color:#e7e7e7;padding:15px;">We are currently experiencing issues with our attribution system. If you don't see an entry you were expecting, please search our website with the button in the top right.</p>
 
 </main>
 
