@@ -2,38 +2,6 @@
 
 $excludedPosts = [];
 
-$main_query = new WP_Query([
-    'post_type' => ['post'],
-    'post_status' => ['publish'],
-    'posts_per_page' => 1,
-    'meta_key' => '_thumbnail_id',
-    'nopaging' => false,
-    'tax_query' => [
-        [
-            'taxonomy' => 'syndication',
-            'field' => 'slug',
-            'terms' => ['front-feature'],
-        ],
-    ],
-]);
-
-while($main_query->have_posts()) { $main_query->the_post();
-    $excludedPosts[] = get_the_ID();
-}
-
-$small_query = new WP_Query([
-    'post_type' => ['post'],
-	'post_status' => ['publish'],
-    'posts_per_page' => 3,
-    'meta_key' => '_thumbnail_id',
-    'nopaging' => false,
-    'post__not_in' => $excludedPosts,
-]);
-
-while($small_query->have_posts()) { $small_query->the_post();
-    $excludedPosts[] = get_the_ID();
-}
-
 function getPosts(int $posts, string $category = null, $tag = null) {
     global $excludedPosts;
 
@@ -65,6 +33,9 @@ function getColumns(int $posts, int $offset = 0) {
     ]);
 }
 
+$s1_2 = getPosts(1);
+$s1_1 = getPosts(3);
+
 $s2_1 = getPosts(1);
 $s2_2 = getPosts(2);
 $s2_3 = getColumns(5);
@@ -89,6 +60,10 @@ $rowSections = [
         'class' => 'highlighted no-border'
     ],
     [
+        'title' => 'Election Corner',
+        'class' => 'highlighted gray-highlight no-border'
+    ],
+    [
         'title' => false,
         'category' => 'sports'
     ],
@@ -104,7 +79,7 @@ $rowSections = [
 
         <div class="top-story__left">
             <div class="top-story__left-top">
-                <?php while($small_query->have_posts()) { $small_query->the_post(); ?>
+                <?php while($s1_1->have_posts()) { $s1_1->the_post(); ?>
 
                 <a class="small-item" href="<?php echo get_permalink(); ?>">
                     <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'thumbnail')[0]; ?>" class="small-item-image">
@@ -114,13 +89,12 @@ $rowSections = [
                 <?php } wp_reset_postdata(); ?>
             </div>
 
-            <?php while($main_query->have_posts()) { $main_query->the_post(); ?>
+            <?php while($s1_2->have_posts()) { $s1_2->the_post(); ?>
             <div class="top-story__left-bottom the-doug-border">
                 <?php if( $slideshow = get_field('slideshow') ) { ?>
                 <a href="<?php echo get_permalink(); ?>" class="slideshow">
                     <?php $slideshow = array_slice($slideshow, 0, 5); // Only the first five images ?>
                     <?php foreach($slideshow as $image) { ?>
-                    <img src="<?php echo $image['sizes']['three-two']; ?>" alt="">
                     <?php } ?>
                 </a>
                 <?php } else { ?>
