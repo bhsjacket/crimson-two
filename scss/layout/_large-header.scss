@@ -1,0 +1,122 @@
+body { min-height: 50vh; } html { background: white; }
+// REMOVE THIS WHEN DONE ^^^
+
+#large-header {
+    .header-inner {
+        max-width: var(--width);
+        margin: 0 auto;
+
+        .header-top {
+            display: flex;
+            align-items: center;
+
+            .small-menu {
+                width: 100%;
+
+                ul {
+                    padding: 0;
+                    list-style: none;
+
+                    li {
+                        display: inline;
+                        padding-right: var(--gap);
+                        &:last-child { padding-right: 0; }
+
+                        a {
+                            color: var(--gray);
+                            text-decoration: none;
+                            transition: all 0.2s;
+
+                            &:hover {
+                                color: var(--accent);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .header-button-group {
+                width: 100%;
+                text-align: right;
+
+                .header-cta-button {
+                    background-color: var(--accent);
+                    padding: 10px 15px;
+                    color: white;
+                    cursor: pointer;
+                    text-decoration: none;
+                    transition: background-color 0.2s;
+
+                    &:hover {
+                        background-color: var(--dark-accent);
+                    }
+                }
+
+                .search-icon {
+                    color: var(--gray);
+                    cursor: pointer;
+                    transition: color 0.2s;
+                    margin-left: var(--gap);
+
+                    &:hover {
+                        color: var(--accent);
+                    }
+                }
+            }
+        }
+
+        .header-logo {
+            display: grid;
+            grid-template-columns: 1fr 600px 1fr;
+            align-items: center;
+
+            .header-tagline,
+            .header-date {
+                color: var(--gray);
+            }
+
+            .header-date { text-align: right; }
+
+            .header-tagline {
+                font-style: italic;
+            }
+            
+            img {
+                max-width: 600px;
+            }
+        }
+    }
+
+    .site-sections {
+        border-bottom: solid 1px var(--light);
+        border-top: solid 1px var(--light);
+        text-align: center;
+        padding: calc( var(--gap) / 1.5 );
+
+        .site-sections-inner {
+            max-width: var(--width);
+            margin: 0 auto;
+
+            ul {
+                padding: 0;
+                list-style: none;
+                margin: 0;
+
+                li {
+                    display: inline;
+                    padding: 0 calc( var(--gap) / 2 );
+                }
+            }
+
+            a {
+                color: var(--gray);
+                text-decoration: none;
+                transition: color 0.2s;
+
+                &:hover {
+                    color: var(--accent);
+                }
+            }
+        }
+    }
+}
