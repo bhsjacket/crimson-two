@@ -10,6 +10,26 @@ align-left
 .image-outer {
     margin: var(--double-gap) 0;
 
+    @media all and (min-width: 850px) {
+        &.align-center.vertical-image {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: var(--gap);
+            align-items: flex-end;
+    
+            .caption-group {
+                display: block;
+                margin: 0;
+                
+                .caption-credit {
+                    margin-top: 10px;
+                    margin-bottom: -1px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
     > .image {
         display: block;
         margin: 0;
@@ -22,6 +42,21 @@ align-left
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+
+    .caption-group {
+        @media all and (min-width: 1000px) {
+            position: absolute;
+            display: block;
+            width: calc((100vw - var(--normal)) / 2 - var(--gap) * 3);
+
+            .caption-content, .caption-credit {
+                max-width: 300px;
+                margin-left: auto;
+                text-align: left;
+                margin-top: calc( var(--gap) / 2 );
+            }
+        }
+    }
 }
 
 .align-wide {
