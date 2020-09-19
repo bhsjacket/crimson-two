@@ -31,7 +31,7 @@ header.site-header .progress-bar {
     padding: 0 15px;
 }
 
-.header-inner {
+.site-header .header-inner {
     max-width: var(--width);
     width: 100%;
     display: flex;
@@ -317,6 +317,12 @@ header.site-header .progress-bar {
 
 .sticky-sections-left {
     width: 70%;
+
+    .currently-reading {
+        span {
+            color: var(--gray);
+        }
+    }
 }
 
 .sticky-sections-right {
