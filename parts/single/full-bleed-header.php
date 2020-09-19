@@ -4,42 +4,6 @@
     background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', false)[0]; ?>)
 }
 
-<?php if( $slideshow = get_field('slideshow') ) { ?>
-.full-bleed-header {
-    animation-name: slideshowBackground;
-    animation-duration: <?php echo count($slideshow) * 3; ?>s;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-    animation-delay: 1s;
-}
-
-<?php
-$content = '';
-foreach($slideshow as $slide) { $content .= 'url(' . $slide['url'] . ') '; }
-$content = rtrim($content);
-?>
-
-/* Preload images for slideshow */
-.full-bleed-header:after {
-   position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-   content: <?php echo $content ?>;
-}
-
-@keyframes slideshowBackground {
-    <?php
-    foreach($slideshow as $index => $slide) {
-        $percentage = ($index / count($slideshow)) * 100;
-        $url = $slide['url'] ?>
-
-    <?php echo $percentage ?>% {
-        background-image: url(<?php echo $url; ?>)
-    }
-
-    <?php } ?>
-}
-<?php } ?>
-
-
 </style>
 
 <header class="full-bleed-header align-full">
