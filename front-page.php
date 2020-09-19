@@ -114,31 +114,8 @@ $rowSections = [
 
         <div class="top-story__right dynamic-content" style="height:100%">
 
-            <?php
-            if( rand(0, 4) == 4 ) {
-                get_template_part('parts/front-page/dynamic-content/podcast');
-            } else {
-                get_template_part('parts/front-page/dynamic-content/coronavirus');
-            }
-
-            /*
-            $timeZone = new DateTimeZone('America/Los_Angeles');
-            $currentTime = new DateTime('now', $timeZone);
-            $morningStart = DateTime::createFromFormat('H:i a', '6:30 am', $timeZone);
-            $morningEnd = DateTime::createFromFormat('H:i a', '10:30 am', $timeZone);
-            $eveningStart = DateTime::createFromFormat('H:i a', '5:00 pm', $timeZone);
-            $nightEnd = DateTime::createFromFormat('H:i a', '10:00 pm', $timeZone);
-            if ($currentTime > $morningStart && $currentTime < $morningEnd || $currentTime > $eveningStart && $currentTime < $nightEnd) {
-                get_template_part('parts/front-page/dynamic-content/weather');
-            } else {
-                if( rand(0, 7) == 7 ) {
-                    get_template_part('parts/front-page/dynamic-content/podcast');
-                } else {
-                    get_template_part('parts/front-page/dynamic-content/coronavirus');
-                }
-            }
-            */
-            ?>
+            <?php $dynamicContent = get_field('dynamic_content_image', 'option') ? 'image' : get_field('dynamic_content', 'option') ?? 'podcast';
+            get_template_part('parts/front-page/dynamic-content/' . $dynamicContent); ?>
 
         </div>
 
