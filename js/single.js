@@ -109,18 +109,18 @@ if( recommendedSlider ) {
     
         control.addEventListener('click', event => {
     
-            var scrollPosition = sliderWrapper.scrollLeft;
-            var controlButton = event.target.closest('.recommended-control');
-            var articleWidth = recommendedSlider.querySelector('.recommended-article').offsetWidth + 15;
+            var scrollPosition = sliderWrapper.scrollLeft,
+                controlButton = event.target.closest('.recommended-control'),
+                amountToScroll = recommendedSlider.querySelector('.recommended-article').offsetWidth * 2 + 15;
     
             if( controlButton.classList.contains('recommended-next') ) {
                 recommendedSlider.querySelector('.slider-wrapper').scroll({
-                    left: scrollPosition + articleWidth,
+                    left: scrollPosition + amountToScroll,
                     behavior: 'smooth'
                 })
             } else if( controlButton.classList.contains('recommended-prev') ) {
                 recommendedSlider.querySelector('.slider-wrapper').scroll({
-                    left: scrollPosition - articleWidth,
+                    left: scrollPosition - amountToScroll,
                     behavior: 'smooth'
                 })
             }

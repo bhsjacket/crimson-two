@@ -2,7 +2,7 @@
     padding: var(--gap);
     background-color: var(--pale);
     border-bottom: solid 1px var(--light);
-    
+
     .recommended-slider {
         max-width: var(--width);
         margin: 0 auto;
@@ -70,7 +70,7 @@
         }
     
         .slider-wrapper {
-            overflow: auto;
+            overflow: hidden;
 
             scrollbar-width: none;
             &::-webkit-scrollbar {
