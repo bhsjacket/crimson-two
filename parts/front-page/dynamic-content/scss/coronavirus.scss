@@ -1,0 +1,86 @@
+.coronavirus-stat-dc {
+    background-color: var(--lighter);
+    height: calc(100% - 30px);
+    padding: var(--gap);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
+    text-decoration: none;
+    .chart {
+        position: relative;
+        width: 100%;
+        height: 95px;
+    }
+
+    .section-header {
+        margin-bottom: 10px;
+
+        &:after {
+            background-color: var(--red);
+        }
+    }
+    
+    .berkeley-sparkline {
+        stroke: var(--red);
+        fill: none;
+    }
+    
+    .chart-stat {
+        position: absolute;
+        right: 13px;
+        top: -16px;
+        font-family: var(--sans);
+        font-size: 16px;
+    }
+    
+    .chart-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--red);
+        position: absolute;
+        top: 2px;
+        right: 1px;
+    }
+    
+    .coronavirus-divider {
+        height: 1px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.175);
+    }
+    
+    .coronavirus-title {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        border: none;
+    }
+    
+    .coronavirus-stats {
+        display: flex;
+        margin-top: 5px;
+    }
+    
+    .coronavirus-stat {
+        display: flex;
+        flex-direction: column;
+    
+        &:last-child {
+            text-align: right;
+            width: 100%;
+        }
+    }
+    
+    .stat-number {
+        font-family: var(--display-alt);
+        font-size: 32px;
+        white-space: nowrap;
+    }
+    
+    .stat-label {
+        font-family: var(--sans);
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}
