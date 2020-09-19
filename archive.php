@@ -9,7 +9,7 @@ $topArticle = new WP_Query([
     'nopaging' => false
 ]);
 
-if( get_query_var('paged') === 0 ) {
+if( get_query_var('paged') === 0 && get_post_type() !== 'column' ) {
     $articleStream = new WP_Query([
         'offset' => 1,
         'cat' => $wp_query->query_vars['cat'],
@@ -26,17 +26,12 @@ if( get_query_var('paged') === 0 ) {
 
 <main id="archive">
 
-    <?php if( get_query_var('paged') === 0 ) { ?>
+    <?php if( get_query_var('paged') === 0 && get_post_type() !== 'column' ) { ?>
 
     <section class="top-article">
         <div class="archive-info">
             <div>
-                <?php if( $wp_query->query_vars['cat'] ) { ?>
-                <h2 class="archive-title"><?php echo get_the_category()[0]->name; ?></h2>
-                <?php } ?>
-                <?php if( $wp_query->query_vars['tag'] ) { ?>
-                <h2 class="archive-title"><?php echo get_the_tags()[0]->name; ?></h2>
-                <?php } ?>
+                <h2 class="archive-title"><?php echo $wp_query->queried_object->name; ?></h2>
                 <p class="archive-description"><?php echo strip_tags( get_the_archive_description() ); ?></p>
             </div>
             <a href="https://blogtrottr.com/?subscribe=https://<?php echo str_replace( '//', '/', $_SERVER['HTTP_HOST'] . strtok(strtok($_SERVER['REQUEST_URI'], '?'), '#') . '/feed' ); ?>" class="subscribe-button" target="_blank">Get email updates</a>
