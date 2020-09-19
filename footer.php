@@ -29,7 +29,7 @@
                         <ul class="footer-legal">
                             <li><a href="/policies">Editorial Policies</a></li>
                             <li><a href="/policies/privacy-policy">Privacy Policy</a></li>
-                            <li><a href="/login">Login</a></li>
+                            <li><a href="<?php echo wp_login_url(); ?>">Login</a></li>
                         </ul>
                     </div>
                 </div>
