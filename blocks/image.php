@@ -1,4 +1,6 @@
 <?php
+$image = get_field('image');
+
 if( $block['align'] === '' ) {
     $alignment = 'align-center';
 } else {
@@ -6,12 +8,16 @@ if( $block['align'] === '' ) {
 }
 
 if($alignment == 'align-full') {
-    $imageUrl = get_field('image')['url'];
+    $imageUrl = $image['url'];
 } else {
-    $imageUrl = get_field('image')['sizes']['large'];
+    $imageUrl = $image['sizes']['large'];
 }
+
+$width = $image['width'];
+$height = $image['height'];
+
 ?>
-<div class="image-outer <?php echo $alignment; ?>">
+<div class="image-outer <?php echo $alignment; echo $width / $height <= 0.8 ? ' vertical-image' : null; ?>">
     <img alt="<?php echo get_field( 'caption' ); ?>" class="image zoom" src="<?php echo esc_url( $imageUrl ); ?>">
     <div class="caption-group">
         <p class="caption-content"><?php echo get_field( 'caption' ); ?></p>
