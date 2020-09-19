@@ -95,10 +95,13 @@ $rowSections = [
                 <a href="<?php echo get_permalink(); ?>" class="slideshow">
                     <?php $slideshow = array_slice($slideshow, 0, 5); // Only the first five images ?>
                     <?php foreach($slideshow as $image) { ?>
+                    <img src="<?php echo $image['sizes']['small-three-two']; ?>">
                     <?php } ?>
                 </a>
                 <?php } else { ?>
-                <?php the_post_thumbnail('three-two'); ?>
+                <a href="<?php echo get_permalink(); ?>">
+                    <?php the_post_thumbnail('small-three-two'); ?>
+                </a>
                 <?php } ?>
                 <a href="<?php echo get_permalink(); ?>" class="top-story__left-bottom-title">
                     <span class="article-category"><?php echo esc_html( getSection() ); ?></span>
