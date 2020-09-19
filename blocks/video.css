@@ -3,7 +3,7 @@
     cursor: pointer;
     margin: 30px 0;
 
-    background-color: var(--dark-accent);
+    background-color: var(--gray);
     background-image: url('../assets/loader.svg');
     background-repeat: no-repeat;
     background-position: center;
