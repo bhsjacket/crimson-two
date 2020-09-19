@@ -1,2 +1,2 @@
 <?php
-$data = file_get_contents('')
+$data = file_get_contents('');
