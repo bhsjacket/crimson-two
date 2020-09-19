@@ -25,16 +25,18 @@ Description: Let's try this again 🤞
 
 // Layout
 @import 'layout/header'; // Site Header
+// @import 'layout/large-header'; // Large Header
 @import 'layout/footer'; // Site Footer
 
 // Misc. Templates
 @import 'templates/search'; // Search Results
-@import 'templates/author'; // Author Archives
+@import 'templates/archives/author-archive'; // Author Archives
 @import 'templates/archives/archive'; // Post Archives
-@import 'templates/archives/column-archive'; // Column Archive
+@import 'templates/archives/column-archive'; // Post Archives
 
 // Single Post, Page, & Column
 @import 'templates/single/single'; // Single Post
+@import 'templates/single/full-bleed-header'; // Full Bleed Header
 @import 'templates/single/recommended-slider'; // Recommended Post Slider
 @import 'templates/single/slideshow'; // Slideshow
 // @import 'templates/single/slideshow-2'; // Slideshow
