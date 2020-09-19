@@ -82,14 +82,14 @@ $adjectives = [
                 </div>
                 <div class="donation-dropdown-right">
                     <div class="donation-dropdown-form">
-                        <form action="https://jeromepaulos.com/bhsjacket/donation/donation.php" method="post" target="_blank">
+                        <form action="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=bhsasb@berkeley.net&item_name=Donation%20to%20the%20Berkeley%20High%20Jacket%20newspaper&currency_code=USD" method="post" target="_blank">
                             <input type="hidden" name="page" value="<?php echo get_site_url() . $_SERVER['REQUEST_URI']; ?>">
                             <select name="amount">
                                 <option value="10.00">$10</option>
                                 <option value="25.00" selected>$25</option>
                                 <option value="50.00">$50</option>
                                 <option value="100.00">$100</option>
-                                <option value="Other">Other</option>
+                                <option value=" ">Other</option>
                             </select>
                             <input type="submit" value="Support the Jacket">
                         </form>
