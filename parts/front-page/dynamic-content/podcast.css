@@ -60,6 +60,7 @@
 }
 
 .podcast-header { position: relative; }
+.podcast-header .section-header { margin-top: -5px; }
 .podcast-header .section-header:after { background-color: var(--green); }
 
 .podcast-levels {
