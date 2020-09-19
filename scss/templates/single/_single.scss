@@ -7,48 +7,6 @@
 
 }
 
-[data-template="full-bleed"] {
-    margin-top: 0!important;
-
-    .full-bleed-header {
-        height: calc( 100vh - 52px );
-        min-height: 600px;
-        width: 100vw;
-
-        background-size: cover;
-        background-position: center;
-        backface-visibility: hidden;
-        
-        .gradient-overlay {
-            padding: 50px;
-            box-sizing: border-box;
-            height: 100%;
-            display: grid;
-            align-items: flex-end;
-
-            background: linear-gradient(184deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.75) 100%);
-        }
-
-        .headline {
-            max-width: 600px;
-            color: white;
-
-            .article-section {
-                color: white;
-            }
-
-            .subheadline {
-                color: white;
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    .article-meta {
-        margin-top: 30px;
-    }
-}
-
 
 
 
@@ -253,6 +211,25 @@
 
 .featured-image-outer {
     margin-bottom: var(--double-gap);
+
+    @media all and (min-width: 850px) {
+        &.vertical-image {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: var(--gap);
+            align-items: flex-end;
+    
+            .caption-group {
+                display: block;
+                
+                .caption-credit {
+                    margin-top: 10px;
+                    margin-bottom: -1px;
+                    text-align: left;
+                }
+            }
+        }
+    }
 }
 
 /* AUTHOR BOX */
