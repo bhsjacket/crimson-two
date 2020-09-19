@@ -11,7 +11,7 @@ setInterval( () => {
     currentSlide = (currentSlide != slides.length - 1) ? currentSlide + 1 : 0;
     slides[currentSlide].style.opacity = 1;
 
-}, 3000 )
+}, 4000 )
 
 function setSlideshowSize() {
     slideshow.style.height = getComputedStyle( slides[currentSlide] ).height;
