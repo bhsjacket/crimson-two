@@ -73,7 +73,7 @@ $(document).ready(function(){
 
     // Change header on scroll
     $(document).scroll(function () {
-        if(!$('body').hasClass('home')) { // If Isn't Homepage
+        if($('body').hasClass('single-post') || $('body').hasClass('single-column')) { // If Isn't Homepage
             if ($(window).width() > 925) {
                 if ($(document).scrollTop() > 400) {
                     $(".header-left, .header-center").fadeOut("fast", function () {

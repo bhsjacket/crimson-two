@@ -127,14 +127,15 @@ $adjectives = [
         <div class="sticky-sections">
             <div class="sticky-sections-inner">
                 <div class="sticky-sections-left">
+                    <p class="currently-reading"><span>Currently reading:</span> <?php echo get_the_title(); ?></p>
                     <?php
-                    wp_nav_menu(array(
+                    /* wp_nav_menu(array(
                         'menu' => wp_get_nav_menu_name( 'sections' ),
                         'menu_class' => "menu-items",
                         'container' => "nav",
                         'container_id' => "menu",
                         'depth' => "1",
-                    )); ?>
+                    )); */ ?>
                 </div>
                 <div class="sticky-sections-right">
                     <ul>
