@@ -37,6 +37,7 @@
 .video-thumbnail {
     display: block;
     -webkit-user-drag: none;
+    width: 100%;
 }
 
 .video-play {
