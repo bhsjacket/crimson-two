@@ -1,5 +1,6 @@
 <?php
 if($is_preview) { echo '<style>.call-to-action{pointer-events:none}</style>'; }
+if(!$is_preview) { echo '<style>.cta-error{display:none}</style>'; }
 
 $type = get_field('cta');
 if($type == 'podcast') { ?>
@@ -28,7 +29,7 @@ if($type == 'podcast') { ?>
 
 <?php } else if($type == 'newsletter') { ?>
 
-<p style="background-color:var(--pale-red);padding:var(--gap);">Do not use this block externally yet.</p>
+<p class="cta-error" style="background-color:var(--pale-red);padding:var(--gap);">Do not use this block externally yet.</p>
 
 <div class="call-to-action newsletter-cta">
     <i class="far fa-envelope-open"></i>
@@ -49,14 +50,14 @@ if($type == 'podcast') { ?>
 
 <?php } else if($type == 'donate') { ?>
 
-    <p style="background-color:var(--pale-red);padding:var(--gap);">This layout is not available yet. Do not use this block.</p>
+    <p class="cta-error" style="background-color:var(--pale-red);padding:var(--gap);">This layout is not available yet. Do not use this block.</p>
 
 <?php } else if($type == 'subscribe') { ?>
 
-    <p style="background-color:var(--pale-red);padding:var(--gap);">This layout is not available yet. Do not use this block.</p>
+    <p class="cta-error" style="background-color:var(--pale-red);padding:var(--gap);">This layout is not available yet. Do not use this block.</p>
 
 <?php } else { ?>
 
-    <p style="background-color:var(--pale-red);padding:var(--gap);">Oops! Something isn't right! Make sure that a valid call to action is selected.</p>
+    <p class="cta-error" style="background-color:var(--pale-red);padding:var(--gap);">Oops! Something isn't right! Make sure that a valid call to action is selected.</p>
     
 <?php } ?>
