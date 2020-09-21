@@ -26,7 +26,7 @@ $(document).ready( () => {
     } else {
         $.ajax({
             method: 'GET',
-            url: 'https://bhsjacket.local/coronavirus/coronavirus-data/api.php',
+            url: 'https://multimedia.berkeleyhighjacket.com/2020/coronavirus/api.php',
             success: data => {
                 setData(data);
             }
