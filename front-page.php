@@ -2,7 +2,7 @@
 
 $excludedPosts = [];
 
-function getPosts(int $posts, string $category = null, $tag = null) {
+function getPosts(int $posts, string $category = null, $tag = null, $tagNotIn = null, $categoryNotIn = null) {
     global $excludedPosts;
 
     $query = new WP_Query([
@@ -13,6 +13,8 @@ function getPosts(int $posts, string $category = null, $tag = null) {
         'category_name' => $category,
         'tag' => $tag,
         'post__not_in' => $excludedPosts,
+        'tag__not_in' => $tagNotIn,
+        'category__not_in' => $categoryNotIn
     ]);
 
     while( $query->have_posts() ) {
@@ -33,8 +35,48 @@ function getColumns(int $posts, int $offset = 0) {
     ]);
 }
 
-$s1_2 = getPosts(1);
+$s1_2 = new WP_Query([
+    'post_type' => ['post'],
+    'post_status' => ['publish'],
+    'posts_per_page' => 1,
+    'nopaging' => true,
+    'meta_key' => 'is_front_feature',
+    'meta_value' => true
+]);
+$excludedPosts[] = $s1_2->posts[0]->ID;
+
 $s1_1 = getPosts(3);
+
+$row_news = getPosts(4, 'news', null, [ get_term_by('slug', 'local-elections', 'post_tag')->term_id, get_term_by('slug', 'coronavirus', 'post_tag')->term_id ]);
+$row_coronavirus = getPosts(4, null, 'coronavirus', [ get_term_by('slug', 'local-elections', 'post_tag')->term_id ]);
+$row_elections = getPosts(4, null, 'local-elections');
+$row_sports = getPosts(4, 'sports');
+
+$rowSections = [
+    [
+        'title' => false,
+        'category' => 'news',
+        'class' => 'no-border',
+        'query' => $row_news
+    ],
+    [
+        'title' => 'Coronavirus Coverage',
+        'tag' => 'coronavirus',
+        'class' => 'highlighted no-border',
+        'query' => $row_coronavirus
+    ],
+    [
+        'title' => 'Election Corner',
+        'tag' => 'local-elections',
+        'class' => 'highlighted gray-highlight no-border',
+        'query' => $row_elections
+    ],
+    [
+        'title' => false,
+        'category' => 'sports',
+        'query' => $row_sports
+    ],
+];
 
 $s2_1 = getPosts(1);
 $s2_2 = getPosts(2);
@@ -47,27 +89,6 @@ $s3_3 = getPosts(3, 'features');
 $s4_1 = getPosts(1);
 $s4_2 = getPosts(1);
 $s4_3 = getPosts(2);
-
-$rowSections = [
-    [
-        'title' => false,
-        'category' => 'news',
-        'class' => 'no-border'
-    ],
-    [
-        'title' => 'Coronavirus Coverage',
-        'tag' => 'coronavirus',
-        'class' => 'highlighted no-border'
-    ],
-    [
-        'title' => 'Election Corner',
-        'class' => 'highlighted gray-highlight no-border'
-    ],
-    [
-        'title' => false,
-        'category' => 'sports'
-    ],
-];
 
 ?>
 
@@ -121,7 +142,7 @@ $rowSections = [
 
     </section>
 
-    <section class="grid two-one-one double-gap borders no-border">
+    <section class="grid two-one-one double-gap borders">
 
         <?php while($s2_1->have_posts()) { $s2_1->the_post(); ?>
         <a class="centered" href="<?php echo get_permalink(); ?>">
@@ -167,62 +188,8 @@ $rowSections = [
 
     <section class="ad-container"></section>
 
-    <section class="grid two-one double-gap borders">
-
-        <div class="grid double-gap">
-
-            <?php while($s3_1->have_posts()) { $s3_1->the_post(); ?>
-            <div class="standard grid one-two align-middle">
-                
-                <a href="<?php echo get_permalink(); ?>" class="article-info">
-                    <span class="article-category"><?php echo getSection(); ?></span>
-                    <h1 class="article-title"><?php echo get_the_title(); ?></h1>
-                    <p class="article-excerpt"><?php getExcerpt(); ?></p>
-                </a>
-
-                <a href="<?php echo get_permalink(); ?>">
-                    <?php the_post_thumbnail('small-three-two'); ?>
-                </a>
-
-            </div>
-            <?php } wp_reset_postdata(); ?>
-
-            <div class="columnist-stack grid one-one double-gap borders">
-
-                <?php while($s3_2->have_posts()) { $s3_2->the_post(); ?>
-                <a href="<?php echo get_permalink(); ?>" class="item">
-                    <img src="<?php echo get_avatar_url( get_the_author_meta('email') ); ?>" class="avatar">
-                    <div class="column-info">
-                        <h2 class="columnist"><?php echo get_the_author_meta('display_name'); ?></h2>
-                        <h2 class="article-title"><?php echo get_the_title(); ?></h2>
-                    </div>
-                </a>
-                <?php } wp_reset_postdata(); ?>
-
-            </div>
-            
-        </div>
-        
-        <div class="stack">
-            
-            <?php while($s3_3->have_posts()) { $s3_3->the_post(); ?>
-            <a href="<?php echo get_permalink(); ?>" class="stack-item grid two-three">
-                <div>
-                    <span class="article-category"><?php echo get_categories()[0]->cat_name; ?></span>
-                    <h2 class="article-title"><?php echo get_the_title(); ?></h2>
-                </div>
-                <?php the_post_thumbnail('small-three-two'); ?>
-            </a>
-            <?php } wp_reset_postdata(); ?>
-
-        </div>
-
-    </section>
-
     <?php foreach( $rowSections as $section ) { ?>
     <section class="row <?php echo $section['class'] ? ' ' . $section['class'] : ''; ?>">
-
-        <?php $rowQuery = getPosts(4, $section['category'], $section['tag']); ?>
 
         <?php if($section['title']) { ?>
         <h2 class="section-header"><?php echo $section['title']; ?></h2>
@@ -230,7 +197,7 @@ $rowSections = [
 
         <div class="inner grid one-one-one-one borders double-gap" data-section="<?php echo $section['slug']; ?>">
 
-            <?php while( $rowQuery->have_posts() ) { $rowQuery->the_post(); ?>
+            <?php while( $section['query']->have_posts() ) { $section['query']->the_post(); ?>
             <a class="grid row-item" href="<?php echo get_permalink(); ?>">
                 <article class="grid">
                     <?php the_post_thumbnail('three-two'); ?>
