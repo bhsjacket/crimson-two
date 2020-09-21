@@ -1,1 +1,0 @@
-<?php // The Voice of the Students
