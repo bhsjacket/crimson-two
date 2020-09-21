@@ -12,7 +12,7 @@ function stringToColorCode($str) {
 
 ?>
 
-<main id="search">
+<main id="author">
 
     <header class="author-info">
         
@@ -27,26 +27,9 @@ function stringToColorCode($str) {
 
         <div class="author-bio">
 
-            <?php
-            if( $years = get_user_meta($author->ID, 'jacket_years', true) ) {
-                $startYear = substr($years[0], 0, 4);
-                $endYear = substr(array_reverse($years)[0], 0, 4);
-                if($endYear == date('Y')) {
-                    $durationText = 'On staff since ' . $startYear;
-                } else {
-                    $durationText = 'On staff ' . $startYear . '-' . $endYear;
-                }
-            } else {
-                $durationText = false;
-            }
-            ?>
-
             <h2 class="author-name"><?php echo $author->display_name; ?></h2>
             <?php if( $position = get_user_meta($author->ID, 'position', true) ) { ?>
             <span class="author-position"><?php echo $position; ?></span>
-                <?php if( $durationText ) { ?>
-            <span class="author-position"><?php echo $durationText; ?></span>
-                <?php } ?>
             <?php } ?>
             <div class="author-contact">
                 <?php
