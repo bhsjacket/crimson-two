@@ -1,6 +1,10 @@
 <header class="article-header">
 
-    <?php if( is_singular('column') ) { ?>
+    <?php if( is_singular('column') && !has_post_thumbnail() ) { ?>
+    <a href="<?php echo get_post_type_archive_link('column'); ?>" class="article-section">
+        <img class="column-photo" src="<?php echo get_avatar_url( get_the_author_meta('ID'), [ 'size' => 130 ] ); ?>">
+    </a>
+    <?php } elseif( is_singular('column') ) { ?>
     <a href="<?php echo get_post_type_archive_link('column'); ?>" class="article-section">Column</a>
     <?php } else { ?>
     <a href="<?php echo esc_url(get_category_link( get_the_category()[0]->term_id )); ?>" class="article-section"><?php echo esc_html( getSection() ); ?></a>
