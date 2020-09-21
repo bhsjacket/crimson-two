@@ -11,7 +11,14 @@
 
 
 
-
+.article-header {
+    .column-photo {
+        max-width: 130px;
+        border-radius: 50%;
+        border-bottom-left-radius: 0;
+        margin-bottom: 20px;
+    }
+}
 
 .article-content {
     font-size: 17px;
@@ -74,6 +81,7 @@
 
 .article-meta {
     margin-bottom: 40px!important;
+    padding-top: 20px;
 
     .meta-top {
         display: flex;
