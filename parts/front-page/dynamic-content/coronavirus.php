@@ -34,7 +34,7 @@
             </div>
             <div class="coronavirus-stat">
                 <span class="stat-number" data-stat="berkeley-new">??? new</span>
-                <span class="stat-label">since yesterday</span>
+                <span class="stat-label">since prior day</span>
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@
             </div>
             <div class="coronavirus-stat">
                 <span class="stat-number" data-stat="alameda-new">??? new</span>
-                <span class="stat-label">since yesterday</span>
+                <span class="stat-label">since prior day</span>
             </div>
         </div>
     </div>
