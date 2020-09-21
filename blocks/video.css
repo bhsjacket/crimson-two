@@ -81,3 +81,22 @@
     width: 100%;
     height: 400px;
 }
+
+.video-embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: var(--double-gap) 0;
+}
+
+.video-embed-container iframe,
+.video-embed-container object,
+.video-embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
