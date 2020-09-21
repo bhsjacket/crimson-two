@@ -1,91 +1,97 @@
-#search {
+#author {
+    margin: 0 auto;
     margin-top: 50px;
     padding: var(--gap);
-}
+    max-width: var(--normal);
 
-.author-info {
-    position: relative;
-    display: grid;
-    grid-template-columns: 96px 1fr;
-    align-items: flex-start;
-    grid-gap: 25px;
-    margin-bottom: 30px;
-}
-
-.author-name {
-    margin: 0;
-    padding: 0;
-    font-family: var(--display);
-}
-
-.author-top {
-    display: grid;
-    grid-template-columns: 1fr 24px;
-    align-items: center;
-}
-
-.author-contact {
-    margin-top: var(--gap);
-    display: grid;
-    grid-template-columns: repeat(5, 17px);
-    grid-gap: var(--gap);
-
-    > a {
-        color: black;
-        text-decoration: none;
+    .author-info {
+        position: relative;
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        align-items: flex-start;
+        grid-gap: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .article-stream {
+        border-top: solid 1px var(--light);
+        padding-top: 15px;
+    }
+    
+    .author-name {
+        margin: 0;
+        padding: 0;
+        font-family: var(--display);
+    }
+    
+    .author-top {
+        display: grid;
+        grid-template-columns: 1fr 24px;
+        align-items: center;
+    }
+    
+    .author-contact {
+        margin-top: var(--gap);
+        display: grid;
+        grid-template-columns: repeat(5, 17px);
+        grid-gap: var(--gap);
+    
+        > a {
+            color: black;
+            text-decoration: none;
+            font-size: 17px;
+        }
+    }
+    
+    .author-position {
+        font-family: var(--sans);
+        display: block;
+        margin-top: 2px;
+        color: var(--gray);
         font-size: 17px;
     }
-}
-
-.author-position {
-    font-family: var(--sans);
-    display: block;
-    margin-top: 2px;
-    color: var(--gray);
-    font-size: 17px;
-}
-
-.author-bio {
-    font-size: 16px;
-}
-
-.avatar {
-    border-radius: 50%;
-    z-index: 1;
-    position: relative;
-    cursor: pointer;
-
-    &:hover ~ .grad-pennant {
-        animation-name: gradAnimation;
-        animation-duration: 0.25s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    
+    .author-bio {
+        font-size: 16px;
     }
-}
-
-@keyframes gradAnimation {
-    0% {
-        transform: translate(-70%, -50%) rotate(-30deg);
+    
+    .avatar {
+        border-radius: 50%;
+        z-index: 1;
+        position: relative;
+        cursor: pointer;
+    
+        &:hover ~ .grad-pennant {
+            animation-name: gradAnimation;
+            animation-duration: 0.25s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        }
     }
-
-    100% {
-        transform: translate(-70%, -50%) rotate(-40deg);
+    
+    @keyframes gradAnimation {
+        0% {
+            transform: translate(-70%, -50%) rotate(-30deg);
+        }
+    
+        100% {
+            transform: translate(-70%, -50%) rotate(-40deg);
+        }
     }
-}
-
-.grad-pennant {
-    position: absolute;
-    width: 125px;
-    left: 0;
-    top: 0;
-    transform: translate(-70%, -50%) rotate(-30deg);
-    transition: transform 0.2s;
-    transform-origin: bottom right;
-}
-
-@media all and (max-width: 800px) {
+    
     .grad-pennant {
-        display: none;
+        position: absolute;
+        width: 125px;
+        left: 0;
+        top: 0;
+        transform: translate(-70%, -50%) rotate(-30deg);
+        transition: transform 0.2s;
+        transform-origin: bottom right;
+        user-select: none;
+
+        @media all and (max-width: 800px) {
+            display: none;
+        }
     }
 }
