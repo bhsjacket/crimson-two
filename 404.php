@@ -2,6 +2,7 @@
 <main id="error">
     <h1>Page not found</h1>
 </main>
+
 <style>
 body.error404 {
     overflow: hidden;
