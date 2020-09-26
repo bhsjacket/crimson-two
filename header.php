@@ -11,7 +11,12 @@ $adjectives = [
     'mediocre',
     'fine',
     'alright',
-    'talented'
+    'talented',
+    '(CloudFlare\'s slacking if you\'re seeing this)',
+    '(CloudFlare\'s slacking if you\'re seeing this)',
+    '(CloudFlare\'s slacking if you\'re seeing this)',
+    '(CloudFlare\'s slacking if you\'re seeing this)',
+    '(CloudFlare\'s slacking if you\'re seeing this)'
 ]
 ?>
 <!-- Everything here by the <?php echo $adjectives[array_rand($adjectives)] ?> Jerome Paulos -->
@@ -25,6 +30,8 @@ $adjectives = [
 </head>
 
 <body <?php body_class(); ?>>
+
+    <?php get_template_part('parts/newsletter'); // Newsletter Popup ?>
 
     <div class="mobile-menu-outer">
         <div class="mobile-menu">
