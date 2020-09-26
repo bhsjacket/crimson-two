@@ -1,0 +1,111 @@
+.popup {
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.4s;
+    &.hidden {
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+        pointer-events: none;
+        
+        .email-popup {
+            transform: translateY(100px);
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    
+    .email-popup {
+        background-color: white;
+        max-width: var(--normal);
+        width: 100%;
+        padding-bottom: 85px;
+        text-align: center;
+        
+        transition: all 0.4s;
+        position: relative;
+        display: grid;
+        place-items: center;
+        grid-gap: var(--gap);
+        overflow: hidden;
+
+        .close-popup {
+            position: absolute;
+            font-size: 26px;
+            right: 25px;
+            top: 20px;
+            opacity: 0.25;
+            cursor: pointer;
+
+            transition: opacity 0.2s;
+            &:hover { opacity: 0.5; }
+        }
+    
+        #animated-newsletter-icon {
+            max-width: 125px;
+            margin-top: -1px;
+        }
+    
+        .email-heading {
+            font-size: 24px;
+            margin: 0;
+            font-weight: bold;
+        }
+    
+        .email-description {
+            font-family: var(--sans);
+            color: var(--gray);
+            max-width: 400px;
+            margin: 0;
+        }
+
+        .email-form {
+            display: flex;
+            margin-top: 8px;
+
+            input {
+                font-family: var(--sans);
+                font-size: 16px;
+                
+                border: solid 1px var(--gray);
+                border-right: none;
+                padding: 10px 15px;
+                width: 225px;
+            }
+
+            button {
+                font-family: var(--sans);
+                font-size: 15px;
+                font-weight: bold;
+                text-transform: uppercase;
+                
+                padding: 10px 15px;
+                cursor: pointer;
+
+                background-color: var(--orange);
+                border: solid 1px var(--orange);
+                border-left: none;
+                color: white;
+
+                transition: all 0.2s;
+                &:hover {
+                    background-color: var(--dark-orange);
+                    border-color: var(--dark-orange);
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 750px) {
+        display: none;
+    }
+}

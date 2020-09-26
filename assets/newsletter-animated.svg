@@ -1,0 +1,552 @@
+<svg title="Yes, this was made by a student!" id="animated-newsletter-icon" class="not-animated" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="99 -24 1177 1299" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <style>
+        <![CDATA[
+        #animated-newsletter-icon.not-animated,
+        #animated-newsletter-icon.not-animated * {
+            transition: none!important;
+            animation: none!important;
+        }
+
+        #e5zuymrl3tnk2 {
+            animation: e5zuymrl3tnk2_c_o 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk2_c_o {
+            0% {
+                opacity: 0;
+                animation-timing-function: cubic-bezier(0.665000, -0.325000, 0.335000, 0.450000)
+            }
+
+            16.666667% {
+                opacity: 0.070000
+            }
+
+            100% {
+                opacity: 0.070000
+            }
+        }
+
+        #e5zuymrl3tnk6_ts {
+            animation: e5zuymrl3tnk6_ts__ts 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk6_ts__ts {
+            0% {
+                transform: translate(700.252950px, 768.913000px) scale(1, -1);
+                animation-timing-function: cubic-bezier(0.665000, -0.325000, 0.335000, 0.450000)
+            }
+
+            13.333333% {
+                transform: translate(700.252950px, 768.913000px) scale(1, 1)
+            }
+
+            100% {
+                transform: translate(700.252950px, 768.913000px) scale(1, 1)
+            }
+        }
+
+        #e5zuymrl3tnk7_to {
+            animation: e5zuymrl3tnk7_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk7_to__to {
+            0% {
+                transform: translate(97.427130px, 460.904871px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(162.787000px, -187.335000px)
+            }
+
+            100% {
+                transform: translate(162.787000px, -187.335000px)
+            }
+        }
+
+        #e5zuymrl3tnk7_tr {
+            animation: e5zuymrl3tnk7_tr__tr 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk7_tr__tr {
+            0% {
+                transform: rotate(17deg);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: rotate(15.189787deg)
+            }
+
+            100% {
+                transform: rotate(15.189787deg)
+            }
+        }
+
+        #e5zuymrl3tnk8_to {
+            animation: e5zuymrl3tnk8_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk8_to__to {
+            0% {
+                transform: translate(695.085610px, 1179.042997px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(555.456726px, 305.046478px)
+            }
+
+            100% {
+                transform: translate(555.456726px, 305.046478px)
+            }
+        }
+
+        #e5zuymrl3tnk9_to {
+            animation: e5zuymrl3tnk9_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk9_to__to {
+            0% {
+                transform: translate(478.900915px, 1085.901628px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(555.456512px, 621.016998px)
+            }
+
+            100% {
+                transform: translate(555.456512px, 621.016998px)
+            }
+        }
+
+        #e5zuymrl3tnk9_tr {
+            animation: e5zuymrl3tnk9_tr__tr 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk9_tr__tr {
+            0% {
+                transform: rotate(20deg);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+
+        #e5zuymrl3tnk10_to {
+            animation: e5zuymrl3tnk10_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk10_to__to {
+            0% {
+                transform: translate(741.760735px, 1092.710625px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(841.745514px, 282.653496px)
+            }
+
+            100% {
+                transform: translate(841.745514px, 282.653496px)
+            }
+        }
+
+        #e5zuymrl3tnk10_tr {
+            animation: e5zuymrl3tnk10_tr__tr 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk10_tr__tr {
+            0% {
+                transform: rotate(-39deg);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+
+        #e5zuymrl3tnk11_to {
+            animation: e5zuymrl3tnk11_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk11_to__to {
+            0% {
+                transform: translate(830.070927px, 1067.189690px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(672.665283px, 180.278587px)
+            }
+
+            100% {
+                transform: translate(672.665283px, 180.278587px)
+            }
+        }
+
+        #e5zuymrl3tnk11_tr {
+            animation: e5zuymrl3tnk11_tr__tr 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk11_tr__tr {
+            0% {
+                transform: rotate(-90deg);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+
+        #e5zuymrl3tnk12_to {
+            animation: e5zuymrl3tnk12_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk12_to__to {
+            0% {
+                transform: translate(614.906115px, 1086.755428px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(427.233734px, 401.672699px)
+            }
+
+            100% {
+                transform: translate(427.233734px, 401.672699px)
+            }
+        }
+
+        #e5zuymrl3tnk12_tr {
+            animation: e5zuymrl3tnk12_tr__tr 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk12_tr__tr {
+            0% {
+                transform: rotate(100deg);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+
+        #e5zuymrl3tnk13_to {
+            animation: e5zuymrl3tnk13_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk13_to__to {
+            0% {
+                transform: translate(897.229058px, 1005.170930px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(1150.145020px, 305.046295px)
+            }
+
+            100% {
+                transform: translate(1150.145020px, 305.046295px)
+            }
+        }
+
+        #e5zuymrl3tnk13_tr {
+            animation: e5zuymrl3tnk13_tr__tr 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk13_tr__tr {
+            0% {
+                transform: rotate(55deg);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+
+        #e5zuymrl3tnk14_to {
+            animation: e5zuymrl3tnk14_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk14_to__to {
+            0% {
+                transform: translate(455.700051px, 978.282266px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(325.314697px, 577.686127px)
+            }
+
+            100% {
+                transform: translate(325.314697px, 577.686127px)
+            }
+        }
+
+        #e5zuymrl3tnk14_tr {
+            animation: e5zuymrl3tnk14_tr__tr 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk14_tr__tr {
+            0% {
+                transform: rotate(12deg);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+
+        #e5zuymrl3tnk15_to {
+            animation: e5zuymrl3tnk15_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk15_to__to {
+            0% {
+                transform: translate(960.560811px, 1070.492522px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(1031.876984px, 138.273003px)
+            }
+
+            100% {
+                transform: translate(1031.876984px, 138.273003px)
+            }
+        }
+
+        #e5zuymrl3tnk15_tr {
+            animation: e5zuymrl3tnk15_tr__tr 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk15_tr__tr {
+            0% {
+                transform: rotate(15deg);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+
+        #e5zuymrl3tnk16_to {
+            animation: e5zuymrl3tnk16_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk16_to__to {
+            0% {
+                transform: translate(467.588434px, 1106.667448px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(282.488754px, 201.853546px)
+            }
+
+            100% {
+                transform: translate(282.488754px, 201.853546px)
+            }
+        }
+
+        #e5zuymrl3tnk16_tr {
+            animation: e5zuymrl3tnk16_tr__tr 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk16_tr__tr {
+            0% {
+                transform: rotate(-160deg);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+
+        #e5zuymrl3tnk17_to {
+            animation: e5zuymrl3tnk17_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk17_to__to {
+            0% {
+                transform: translate(817.272793px, 1064.592559px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(1053.418182px, 530.950089px)
+            }
+
+            100% {
+                transform: translate(1053.418182px, 530.950089px)
+            }
+        }
+
+        #e5zuymrl3tnk17_tr {
+            animation: e5zuymrl3tnk17_tr__tr 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk17_tr__tr {
+            0% {
+                transform: rotate(15deg);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+
+        #e5zuymrl3tnk18_to {
+            animation: e5zuymrl3tnk18_to__to 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk18_to__to {
+            0% {
+                transform: translate(871.466187px, 1035.462135px);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: translate(932.227020px, 678.591003px)
+            }
+
+            100% {
+                transform: translate(932.227020px, 678.591003px)
+            }
+        }
+
+        #e5zuymrl3tnk18_tr {
+            animation: e5zuymrl3tnk18_tr__tr 3000ms linear 1 normal forwards
+        }
+
+        @keyframes e5zuymrl3tnk18_tr__tr {
+            0% {
+                transform: rotate(-20deg);
+                animation-timing-function: cubic-bezier(0.665000, 0.550000, 0.335000, 1.325000)
+            }
+
+            20% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(0deg)
+            }
+        }
+        ]]>
+    </style>
+    <path id="e5zuymrl3tnk2" d="M480.894000,768.913000L99,-19L1276,-24L875.196000,855L480.894000,768.913000Z" opacity="0" fill="rgb(0,0,0)" stroke="none" stroke-width="1" />
+    <g id="e5zuymrl3tnk3">
+        <rect id="e5zuymrl3tnk4" width="776" height="506.087000" rx="0" ry="0" transform="matrix(1 0 0 1 312 768.91300000000001)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        <polygon id="e5zuymrl3tnk5" points="1088,768.913000 700,1021.957000 312,768.913000" opacity="0.75" fill="rgb(186,97,28)" stroke="none" stroke-width="1" />
+    </g>
+    <g id="e5zuymrl3tnk6_ts" shape-rendering="crispedges" transform="translate(700.252950,768.913000) scale(1,-1)">
+        <polygon id="e5zuymrl3tnk6" points="1088,768.913000 700,515.870000 312,768.913000" transform="translate(-700.252950,-768.913000)" fill="rgb(186,97,28)" stroke="none" stroke-width="1" />
+    </g>
+    <g id="e5zuymrl3tnk7_to" transform="translate(97.427130,460.904871)">
+        <g id="e5zuymrl3tnk7_tr" transform="rotate(17)">
+            <rect id="e5zuymrl3tnk7" width="135" height="135" rx="0" ry="0" transform="scale(0.999934,0.999934) translate(715.346000,448.370000)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        </g>
+    </g>
+    <g id="e5zuymrl3tnk8_to" transform="translate(695.085610,1179.042997)">
+        <circle id="e5zuymrl3tnk8" r="41" transform="translate(0.000274,-0.000478)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+    </g>
+    <g id="e5zuymrl3tnk9_to" transform="translate(478.900915,1085.901628)">
+        <g id="e5zuymrl3tnk9_tr" transform="rotate(20)">
+            <polygon id="e5zuymrl3tnk9" points="652.942000,688.517000 457.971000,711.084000 535.913000,530.950000" transform="translate(-555.456512,-621.016998)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        </g>
+    </g>
+    <g id="e5zuymrl3tnk10_to" transform="translate(741.760735,1092.710625)">
+        <g id="e5zuymrl3tnk10_tr" transform="rotate(-39)">
+            <polygon id="e5zuymrl3tnk10" points="833.746000,346.046000 782.846000,307.422000 790.846000,244.029000 849.746000,219.261000 900.645000,257.886000 892.645000,321.278000" transform="translate(-841.745514,-282.653496)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        </g>
+    </g>
+    <g id="e5zuymrl3tnk11_to" transform="translate(830.070927,1067.189690)">
+        <g id="e5zuymrl3tnk11_tr" transform="rotate(-90)">
+            <path id="e5zuymrl3tnk11" d="M697.243000,124.485000C672.143000,131.885000,659.543000,138.585000,646.443000,151.485000C635.043000,162.785000,631.643000,169.185000,629.843000,182.785000C628.443000,194.485000,629.943000,211.185000,633.943000,226.785000C635.543000,232.885000,637.143000,238.185000,637.443000,238.485000C638.243000,239.285000,655.043000,234.485000,664.643000,230.885000C681.543000,224.385000,690.843000,217.985000,702.343000,205.285000C713.543000,192.885000,717.043000,181.385000,715.743000,162.085000C714.643000,146.885000,709.143000,121.785000,706.743000,121.985000C706.143000,121.985000,701.843000,123.085000,697.243000,124.485000Z" transform="translate(-672.665283,-180.278587)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        </g>
+    </g>
+    <g id="e5zuymrl3tnk12_to" transform="translate(614.906115,1086.755428)">
+        <g id="e5zuymrl3tnk12_tr" transform="rotate(100)">
+            <path id="e5zuymrl3tnk12" d="M441.311000,367.851000C435.348000,366.211000,428.043000,366.340000,422.398000,368.209000L416.616000,370.115000L414.453000,364.992000C410.959000,356.938000,407.041000,352.892000,399.478000,349.202000C390.821000,345.010000,387.236000,345.056000,374.235000,348.976000C358.596000,353.705000,352.342000,359.707000,349.427000,372.413000C347.660000,380.027000,350.965000,391.878000,356.418000,397.478000C363.830000,405.101000,373.213000,408.209000,383.123000,406.105000L388.872000,404.869000L390.309000,411.075000C391.085000,414.382000,393.123000,419.320000,394.874000,421.914000C397.528000,426.166000,398.862000,427.262000,406.615000,431.633000C414.629000,436.151000,415.772000,436.566000,421.367000,436.621000C424.679000,436.651000,429.958000,435.839000,432.917000,434.867000L438.513000,433.086000L439.778000,437.358000C442.064000,444.502000,446.036000,449.267000,453.440000,453.441000C462.288000,458.314000,468.230000,458.565000,480.894000,454.225000C492.828000,450.162000,497.472000,446.811000,501.696000,439.320000C505.527000,432.525000,506.454000,425.586000,504.588000,418.105000C500.805000,403.230000,484.898000,393.573000,470.382000,397.328000L466.072000,398.457000L464.248000,391.918000C461.991000,383.299000,457.214000,376.703000,450.007000,372.180000C446.969000,370.237000,443.038000,368.251000,441.311000,367.851000Z" transform="translate(-427.233734,-401.672699)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        </g>
+    </g>
+    <g id="e5zuymrl3tnk13_to" transform="translate(897.229058,1005.170930)">
+        <g id="e5zuymrl3tnk13_tr" transform="rotate(55)">
+            <path id="e5zuymrl3tnk13" d="M1146.776000,228.773000C1144.576000,229.573000,1141.876000,231.473000,1140.776000,232.973000C1139.676000,234.473000,1137.176000,237.573000,1135.176000,239.973000C1130.576000,245.273000,1128.776000,252.273000,1129.676000,260.973000C1130.076000,264.473000,1130.676000,268.173000,1130.976000,269.073000C1131.376000,270.073000,1129.176000,268.673000,1126.276000,266.073000C1114.476000,255.773000,1103.476000,252.773000,1095.976000,257.873000C1093.976000,259.273000,1092.276000,260.773000,1092.276000,261.273000C1092.276000,261.673000,1090.376000,264.273000,1088.076000,266.873000C1074.876000,281.873000,1080.876000,295.273000,1104.676000,303.373000L1109.576000,304.973000L1104.176000,308.373000C1092.376000,315.673000,1092.176000,315.773000,1083.476000,327.673000C1079.076000,333.673000,1079.376000,339.073000,1084.276000,346.673000C1091.576000,357.573000,1104.476000,356.573000,1118.876000,343.973000L1124.076000,339.373000L1124.776000,342.973000C1125.176000,345.173000,1125.876000,346.373000,1126.576000,346.073000C1131.476000,344.073000,1131.476000,344.073000,1130.976000,345.973000C1127.776000,356.773000,1127.876000,367.773000,1131.376000,374.573000C1136.176000,383.973000,1152.676000,385.173000,1159.376000,376.473000C1160.676000,374.773000,1163.176000,371.773000,1164.976000,369.773000C1169.576000,364.673000,1170.576000,360.573000,1170.076000,349.773000L1169.576000,340.473000L1174.576000,344.973000C1184.176000,353.573000,1194.376000,357.073000,1201.476000,354.073000C1204.776000,352.673000,1208.676000,348.373000,1216.176000,337.773000C1217.476000,335.973000,1218.776000,332.373000,1218.976000,329.973000C1220.076000,320.973000,1211.376000,312.173000,1197.176000,307.673000C1193.976000,306.673000,1191.276000,305.673000,1191.276000,305.373000C1191.276000,304.973000,1193.076000,303.673000,1195.276000,302.373000C1205.776000,296.073000,1208.376000,293.973000,1211.676000,289.573000C1213.676000,286.973000,1216.276000,283.573000,1217.476000,282.073000C1220.976000,277.673000,1220.676000,269.873000,1216.776000,264.273000C1212.176000,257.773000,1209.076000,255.973000,1202.976000,255.973000C1196.776000,256.073000,1190.176000,259.173000,1182.076000,265.773000L1176.476000,270.273000L1175.776000,266.773000C1175.276000,263.973000,1174.776000,263.373000,1173.476000,263.873000C1168.476000,265.973000,1168.376000,265.973000,1169.876000,260.273000C1170.676000,257.373000,1171.276000,251.773000,1171.276000,247.873000C1171.276000,239.373000,1168.476000,232.873000,1163.576000,230.073000C1159.276000,227.573000,1151.676000,226.973000,1146.776000,228.773000Z" transform="translate(-1150.145020,-305.046295)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        </g>
+    </g>
+    <g id="e5zuymrl3tnk14_to" transform="translate(455.700051,978.282266)">
+        <g id="e5zuymrl3tnk14_tr" transform="rotate(12)">
+            <path id="e5zuymrl3tnk14" d="M288.605000,540.818000C283.798000,545.372000,276.809000,561.404000,275.607000,570.448000C274.785000,576.836000,278.579000,586.323000,285.125000,593.944000C293.916000,604.190000,317.095000,620.287000,337.365000,630.185000L347.041000,634.866000L352.892000,622.375000C372.151000,581.803000,379.425000,550.181000,372.658000,536.520000C367.093000,525.199000,351.788000,517.862000,341.162000,521.403000C335.660000,523.237000,329.146000,528.992000,324.845000,535.696000L322.093000,540.092000L317.350000,538.194000C306.598000,533.767000,294.930000,534.810000,288.605000,540.818000Z" transform="translate(-325.314697,-577.686127)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        </g>
+    </g>
+    <g id="e5zuymrl3tnk15_to" transform="translate(960.560811,1070.492522)">
+        <g id="e5zuymrl3tnk15_tr" transform="rotate(15)">
+            <path id="e5zuymrl3tnk15" d="M1035.377000,107.323000C1010.877000,127.423000,990.677000,144.623000,990.577000,145.523000C990.377000,146.423000,988.677000,148.723000,986.777000,150.723000L983.377000,154.223000L983.577000,180.023000L983.877000,205.823000L1029.177000,168.623000C1057.677000,145.023000,1074.377000,130.623000,1074.377000,129.523000C1074.377000,128.523000,1075.777000,126.723000,1077.377000,125.423000L1080.377000,123.023000L1080.177000,96.923000L1079.877000,70.723000L1035.377000,107.323000Z" transform="translate(-1031.876984,-138.273003)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        </g>
+    </g>
+    <g id="e5zuymrl3tnk16_to" transform="translate(467.588434,1106.667448)">
+        <g id="e5zuymrl3tnk16_tr" transform="rotate(-160)">
+            <path id="e5zuymrl3tnk16" d="M201.740000,195.654000C194.202000,204.686000,191.469000,212.334000,190.234000,228.146000C189,243.958000,190.502000,250.818000,197.486000,261.664000C207.059000,276.789000,222.918000,284.267000,240.885000,282.362000C254.847000,280.862000,266.845000,273.267000,274.567000,261.160000C279.032000,254.191000,280.949000,248.244000,281.793000,238.360000L282.493000,231.052000L293.224000,224.260000L303.955000,217.467000L308.674000,219.688000C324.639000,227.334000,345.600000,224.363000,358.582000,212.713000C369.328000,202.953000,373.461000,193.590000,374.823000,175.923000C375.793000,161.935000,374.583000,154.416000,369.911000,145.539000C362.024000,130.648000,346.960000,121.247000,330.625000,121.055000C305.162000,120.840000,285.022000,139.506000,283.112000,165.095000L282.621000,171.797000L271.383000,178.910000C260.145000,186.024000,260.145000,186.024000,257.878000,184.499000C254.272000,182.167000,243.180000,179.602000,236.607000,179.501000C224.014000,179.425000,209.847000,186.025000,201.740000,195.654000Z" transform="translate(-282.488754,-201.853546)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        </g>
+    </g>
+    <g id="e5zuymrl3tnk17_to" transform="translate(817.272793,1064.592559)">
+        <g id="e5zuymrl3tnk17_tr" transform="rotate(15)">
+            <path id="e5zuymrl3tnk17" d="M1054.023000,484.443000C1049.128000,484.064000,1042.044000,484.188000,1038.354000,484.583000C1029.420000,485.661000,1013.768000,490.750000,1007.884000,494.575000C1000.349000,499.382000,988.274000,512.138000,985.636000,518.031000C978.254000,534.066000,987.797000,553.266000,1009.052000,565.212000C1021.408000,572.183000,1026.349000,573.679000,1043.781000,576.106000C1062.996000,578.782000,1070.645000,578.232000,1086.098000,573.115000C1093.726000,570.542000,1097.100000,568.791000,1102.472000,564.289000C1117.744000,551.776000,1121.967000,546.104000,1123.346000,536.200000C1124.615000,527.088000,1122.257000,520.096000,1114.942000,511C1102.627000,495.755000,1080.347000,486.090000,1054.023000,484.443000ZM1059.783000,517.756000C1070.615000,525.524000,1071.612000,543.736000,1061.327000,546.544000C1048.864000,549.756000,1036.986000,537.904000,1038.917000,524.038000C1039.993000,516.312000,1043.323000,514.151000,1052.052000,515.266000C1054.925000,515.666000,1058.408000,516.757000,1059.783000,517.756000Z" transform="translate(-1053.418182,-530.950089)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        </g>
+    </g>
+    <g id="e5zuymrl3tnk18_to" transform="translate(871.466187,1035.462135)">
+        <g id="e5zuymrl3tnk18_tr" transform="rotate(-20)">
+            <path id="e5zuymrl3tnk18" d="M902.077000,644.591000C898.977000,646.791000,895.377000,651.091000,889.677000,659.491000C884.277000,667.491000,881.077000,683.491000,881.077000,702.191000L881.077000,714.791000L883.577000,711.291000C886.677000,707.191000,889.277000,704.991000,894.577000,702.191000C898.377000,700.191000,899.477000,700.091000,921.377000,700.691000C953.077000,701.491000,961.177000,699.991000,967.477000,692.191000C968.977000,690.391000,971.877000,686.791000,974.077000,684.091000C979.577000,677.391000,982.177000,668.691000,982.777000,654.091000L983.377000,642.391000L944.377000,642.391000C905.577000,642.391000,905.377000,642.391000,902.077000,644.591000Z" transform="translate(-932.227020,-678.591003)" fill="rgb(161,72,3)" stroke="none" stroke-width="1" />
+        </g>
+    </g>
+</svg>
