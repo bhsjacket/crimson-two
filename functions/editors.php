@@ -53,7 +53,8 @@ function allowed_block_types( $allowed_blocks ) {
 		'acf/cta',
 		'acf/staff',
 		'acf/video',
-		'acf/advanced-iframe'
+		'acf/advanced-iframe',
+		'acf/audio'
 	];
  
 }
