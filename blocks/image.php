@@ -17,7 +17,7 @@ $width = $image['width'];
 $height = $image['height'];
 
 ?>
-<div class="image-outer <?php echo $alignment; echo $width / $height <= 0.8 ? ' vertical-image' : null; ?>">
+<div class="image-outer <?php echo $alignment; ?>">
     <img alt="<?php echo get_field( 'caption' ); ?>" class="image zoom" src="<?php echo esc_url( $imageUrl ); ?>">
     <div class="caption-group">
         <p class="caption-content"><?php echo get_field( 'caption' ); ?></p>
