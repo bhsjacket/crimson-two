@@ -34,7 +34,7 @@ if( get_query_var('paged') === 0 && get_post_type() !== 'column' ) {
                 <h2 class="archive-title"><?php echo $wp_query->queried_object->name; ?></h2>
                 <p class="archive-description"><?php echo strip_tags( get_the_archive_description() ); ?></p>
             </div>
-            <a href="https://blogtrottr.com/?subscribe=https://<?php echo str_replace( '//', '/', $_SERVER['HTTP_HOST'] . strtok(strtok($_SERVER['REQUEST_URI'], '?'), '#') . '/feed' ); ?>" class="subscribe-button" target="_blank">Get email updates</a>
+            <a href="https://berkeleyhighjacket.com/newsletter" class="subscribe-button" target="_blank">Get email updates</a>
         </div>
         <div class="top-article-inner">
             <?php while( $topArticle->have_posts() ) { $topArticle->the_post(); ?>
