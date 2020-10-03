@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player Block</title>
+
+    <link rel="stylesheet" href="https://bhsjacket.local/wp-content/themes/crimson/style.css">
+    <link rel="stylesheet" href="https://bhsjacket.local/wp-content/themes/crimson/css/variables.css">
+    <link rel="stylesheet" href="https://use.typekit.net/erm4tbu.css">
+    <link rel="stylesheet" href="https://bhsjacket.local/wp-content/themes/crimson/assets/icons/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://bhsjacket.local/wp-content/themes/crimson/assets/icons/css/solid.min.css">
+</head>
+<body>
+    
+    <div class="audio-player loading">
+        <div class="audio-meta">
+            <div class="text">
+                <h2 class="audio-title">This is the audio</h2>
+                <p class="audio-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias amet doloribus delectus accusamus omnis sit itaque eum. Aut, libero illum!</p>
+            </div>
+            <div class="audio-image">
+                <img src="https://picsum.photos/150">
+            </div>
+        </div>        
+        <div class="audio">
+            <audio src="https://d3ctxlq1ktw2nl.cloudfront.net/production/2020-1-14/49017080-44100-2-9aa86856ce626.mp3"></audio>
+            <i class="fas fa-play play-pause"></i>
+            <input type="range" class="audio-progress" value="0">
+            <span class="audio-time">00:00</span>
+        </div>
+    </div>
+
+    <script src="https://bhsjacket.local/wp-content/themes/crimson/blocks/audio.js"></script>
+</body>
+</html>
