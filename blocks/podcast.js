@@ -47,7 +47,7 @@ $('.fa-redo').click(function(){
 podcast.addEventListener('timeupdate', function(event){
     var currentTime = parseInt(podcast.currentTime);
     $('.podcast-time').text(secondsToTime(currentTime) + ' / ' + secondsToTime(podcast.duration));
-    
+
     $('.seek').attr('max', Math.round(podcast.duration));
     $('.seek').val(currentTime);
     updateProgressBar();

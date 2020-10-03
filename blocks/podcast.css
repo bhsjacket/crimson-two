@@ -95,7 +95,7 @@
     height: 3px;
     vertical-align: middle;
     outline: none;
-    background-image: linear-gradient(90deg, var(--gray) 0%, rgb(0,0,0,0) 0%);
+    background-image: linear-gradient(90deg, var(--gray) 0%, rgba(0,0,0,0) 0%);
     cursor: pointer;
 }
 
