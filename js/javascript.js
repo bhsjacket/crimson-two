@@ -70,6 +70,9 @@ $(document).ready(function(){
         });
         Cookies.set('notification', 'closed', { expires: 1 });
     });
+    if( Cookies.get('notification') == 'closed' ) {
+        $('#notification').remove();
+    }
 
     // Change header on scroll
     $(document).scroll(function () {
