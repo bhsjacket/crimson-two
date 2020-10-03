@@ -1,0 +1,119 @@
+.audio-player {
+    background-color: var(--lighter);
+    padding: var(--gap);
+
+    &.loading {
+        .audio, .audio-title, .audio-description, .audio-image {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+
+                background-color: var(--pale);
+                background-image: linear-gradient(to right, var(--lighter) 0%, var(--light) 50%, var(--lighter) 100%);
+                background-size: 400px;
+
+                filter: brightness(0.975);
+
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                animation-name: shimmer;
+                animation-timing-function: linear;
+
+                @keyframes shimmer {
+                    0% {
+                        background-position: -400px 0;
+                    }
+                    
+                    100% {
+                        background-position: 400px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .audio-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        .audio-image {
+            margin-left: var(--gap);
+
+            img {
+                display: block;
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .text {
+            display: grid;
+            grid-gap: 7.5px;
+        }
+
+        .audio-title {
+            font-family: var(--display);
+            margin: 0;
+            font-size: 24px;
+            width: fit-content;
+        }
+
+        .audio-description {
+            font-family: var(--sans);
+            margin: 0;
+        }
+    }
+
+    .audio {
+        display: flex;
+        align-items: center;
+    
+        audio { display: none; }
+    
+        .play-pause {
+            cursor: pointer;
+            transition: color 0.2s;
+            &:hover { color: var(--accent); }
+        }
+    
+        .audio-progress {
+            width: 100%;
+            -webkit-appearance: none;
+            background-color: #c7c7c7;
+            height: 3px;
+            vertical-align: middle;
+            outline: none;
+            background-image: linear-gradient(90deg, var(--gray) 0%, rgba(0,0,0,0) 0%);
+            cursor: pointer;
+            margin: 0 var(--gap);
+    
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                background-color: var(--accent);
+                width: 9px;
+                height: 9px;
+                transform: scale(0);
+                transition: all 0.2s;
+                border-radius: 50%;
+            }
+    
+            &:hover {
+                &::-webkit-slider-thumb {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    
+        .audio-time {
+            font-family: var(--sans);
+        }
+    }
+}
