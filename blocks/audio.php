@@ -1,15 +1,24 @@
+<?php
+
+$title = get_field('title');
+$description = get_field('description');
+
+?>
+
 <noscript>JavaScript is required for this audio player to function.</noscript>
 
 <div class="audio-player loading">
     <div class="audio-meta">
+        <?php if( $title || $description ) { ?>
         <div class="text">
-            <?php if( $title = get_field('title') ) { ?>
+            <?php if( $title ) { ?>
             <h2 class="audio-title"><?php echo $title; ?></h2>
             <?php } ?>
-            <?php if( $description = get_field('description') ) { ?>
+            <?php if( $description ) { ?>
             <p class="audio-description"><?php echo $description; ?></p>
             <?php } ?>
         </div>
+        <?php } ?>
         <?php if( $image = get_field('image') ) { ?>
         <div class="audio-image">
             <img src="<?php echo $image['sizes']['thumbnail']; ?>">
