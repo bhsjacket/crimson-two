@@ -14,8 +14,14 @@ players.forEach(player => {
         timeLabel = player.querySelector('.audio-time');
 
     playPause.addEventListener('click', () => {
-        if (audio.paused) {
+        if(audio.paused) {
             audio.play();
+            players.forEach(subPlayer => {
+                var subAudio = subPlayer.getElementsByTagName('audio')[0];
+                if( subAudio !== audio ) {
+                    subAudio.pause();
+                }
+            })
         } else {
             audio.pause();
         }
