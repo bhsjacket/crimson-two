@@ -41,7 +41,7 @@ $image = $data['episodeImage'] ?? get_template_directory_uri() . '/assets/podcas
             </svg>
         </div>
         <div class="grid podcast-info">
-            <h2 class="podcast-title"><?php echo $title; ?></h2>
+            <h2 class="podcast-title" data-lines="2"><?php echo $title; ?></h2>
             <span class="podcast-date"><?php echo $date->format('F j, Y'); ?></span>
         </div>
     </header>
@@ -69,7 +69,6 @@ $image = $data['episodeImage'] ?? get_template_directory_uri() . '/assets/podcas
 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     var podcastAudioURL = '<?php echo $audio; ?>';
 </script>
