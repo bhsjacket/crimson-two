@@ -1,0 +1,49 @@
+{
+    "key": "group_5efa134a152d7",
+    "title": "Block - Podcast",
+    "fields": [
+        {
+            "key": "field_5efa1353cdbd1",
+            "label": "Anchor URL",
+            "name": "url",
+            "type": "url",
+            "instructions": "Paste the URL of a podcast from Anchor. You can find all of the Jacket's podcasts <a href=\"https:\/\/anchor.fm\/bhsjacket\" target=\"_blank\">here<\/a>. Make sure that it ends in 6 random-looking characters and doesn't have a trailing slash.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "https:\/\/anchor.fm\/bhsjacket\/episodes\/Exclusive-Interview-With-Barbara-Lee-e6fp5f"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/podcast"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1602264972
+}
