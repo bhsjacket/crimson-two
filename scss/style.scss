@@ -8,43 +8,45 @@ Description: A rewrite of Crimson, our all-in-one WordPress theme that handles t
 */
 
 // Utilities
-@import 'utils/mixins'; // Sass Mixins
-@import 'utils/global'; // Global Styles
-@import 'utils/typography'; // Typography
-@import 'utils/line-clamping'; // Line Cutoff
-@import 'utils/grids'; // Grids
+@import 'utilities/mixins'; // Sass Mixins
+@import 'global/global'; // Global Styles
+@import 'utilities/typography'; // Typography
+@import 'utilities/line-clamping'; // Line Cutoff
+@import 'utilities/grids'; // Grids
 
 // Components
-@import 'components/ads'; // Ad Sections
-@import 'components/blockquote'; // Blockquote
-@import 'components/notification'; // Notification Bar
-@import 'components/images'; // Images
-@import 'components/embeds'; // Social Media Embeds
-@import 'components/article-stream'; // Basic Article Stream
-@import 'components/post-page-navigation'; // Base Post Page Navigation
-@import 'components/comments'; // Comments
-@import 'components/email'; // Email Form
+@import 'global/ads'; // Ad Sections
+@import 'global/blockquote'; // Blockquote
+@import 'global/notification'; // Notification Bar
+@import 'global/images'; // Images
+@import 'global/embeds'; // Social Media Embeds
+@import 'global/article-stream'; // Basic Article Stream
+@import 'global/post-page-navigation'; // Base Post Page Navigation
+@import 'global/comments'; // Comments
+@import 'global/email'; // Email Form
 
 // Layout
-@import 'layout/header'; // Site Header
+@import 'global/header'; // Site Header
 // @import 'layout/large-header'; // Large Header
-@import 'layout/footer'; // Site Footer
+@import 'global/footer'; // Site Footer
 
 // Misc. Templates
 @import 'templates/search'; // Search Results
 @import 'templates/archives/author-archive'; // Author Archives
 @import 'templates/archives/archive'; // Post Archives
 @import 'templates/archives/column-archive'; // Post Archives
+@import 'templates/archives/special-issue-archive'; // Special Issue Archive
 
 // Single Post, Page, & Column
 @import 'templates/single/single'; // Single Post
 @import 'templates/single/full-bleed-header'; // Full Bleed Header
 @import 'templates/single/recommended-slider'; // Recommended Post Slider
 @import 'templates/single/slideshow'; // Slideshow
+@import 'templates/single/special-issue-banner'; // Special Issue Banner
 // @import 'templates/single/slideshow-2'; // Slideshow
 
 // Front Page
-@import 'front-page'; // Front Page Styles
+@import 'templates/front-page'; // Front Page Styles
 @import 'templates/front-page/top-story'; // Top Article
 @import 'templates/front-page/row'; // Row Section
 @import 'templates/front-page/centered'; // Centered Section

@@ -289,9 +289,15 @@
 
 /* RESPONSIVE */
 @media all and (max-width: 750px) {
+    .article-header {
+        .article-section {
+            font-size: 16px;
+        }
+    }
+
     .headline {
         > h1 {
-            font-size: 38px;
+            font-size: 36px;
         }
 
         .subheadline {

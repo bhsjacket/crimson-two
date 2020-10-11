@@ -36,7 +36,7 @@ p {
         color: black;
 
         &:hover {
-            box-shadow: inset 0px -1px 0px 0px var(--accent), inset 0px -1.3em 0px 0px rgba(128, 0, 0, 0.25);
+            box-shadow: inset 0px -1px 0px 0px var(--accent), inset 0px -1.3em 0px 0px var(--pale-accent);
             transition: all 0.2s;
         }
     }
