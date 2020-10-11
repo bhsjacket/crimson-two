@@ -64,6 +64,26 @@
             "acfe_textarea_code": 0
         },
         {
+            "key": "field_5f66ac89577ba",
+            "label": "Front Feature",
+            "name": "is_front_feature",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hide-label",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "message": "Front Feature",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5f4357e412fb6",
             "label": "Tags",
             "name": "tags",
@@ -90,24 +110,30 @@
             "multiple": 0
         },
         {
-            "key": "field_5f66ac89577ba",
-            "label": "Front Feature",
-            "name": "is_front_feature",
-            "type": "true_false",
+            "key": "field_5f820a2be1714",
+            "label": "Special Issue",
+            "name": "special_issue",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "hide-label",
+                "class": "",
                 "id": ""
             },
             "acfe_permissions": "",
-            "message": "Front Feature",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "taxonomy": "special-issue",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "multiple": 0
         }
     ],
     "location": [
@@ -151,5 +177,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1602265006
+    "modified": 1602357879
 }
