@@ -1,0 +1,145 @@
+{
+    "key": "group_5f8203355e218",
+    "title": "Special Issues",
+    "fields": [
+        {
+            "key": "field_5f820416eec38",
+            "label": "Year",
+            "name": "year",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1000,
+            "max": 9999,
+            "step": 1
+        },
+        {
+            "key": "field_5f821bc6eda64",
+            "label": "Colors",
+            "name": "color",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_5f821bcdeda65",
+                    "label": "Accent",
+                    "name": "accent",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "default_value": "#800000"
+                },
+                {
+                    "key": "field_5f821d892e301",
+                    "label": "Logo",
+                    "name": "logo",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "default_value": "#000000"
+                },
+                {
+                    "key": "field_5f821bdfeda66",
+                    "label": "Background",
+                    "name": "background",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33.33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "default_value": "#FFFFFF"
+                }
+            ]
+        },
+        {
+            "key": "field_5f826a49760f6",
+            "label": "Custom CSS",
+            "name": "custom_css",
+            "type": "acfe_code_editor",
+            "instructions": "For 99.9% of special issues, all you should be doing is overriding a few CSS variables on the <code>#single<\/code> element: <code>--font<\/code>, <code>--accent<\/code>, etc. Another good one would be the font size on <code>.article-content<\/code>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "mode": "css",
+            "lines": 1,
+            "indent_unit": 4,
+            "maxlength": "",
+            "rows": "",
+            "max_rows": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "special-issue"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1602384157
+}
