@@ -1,0 +1,43 @@
+#special-issue-archive {
+    .special-issue-header {
+        background-color: var(--special-issue-background);
+        color: var(--special-issue-logo);
+        text-align: center;
+        margin-bottom: var(--gap);
+
+        .special-issue-header-inner {
+            max-width: var(--width);
+            margin: 0 auto;
+            padding: var(--double-gap) var(--gap);
+
+            .special-issue-label {
+                font-size: 15px;
+                font-family: var(--font);
+                text-transform: uppercase;
+                margin: 0;
+                color: var(--special-issue-logo);
+
+                .special-issue-year {
+                    font-family: var(--font);
+                    margin-left: 7.5px;
+                    padding-left: 7.5px;
+                    border-left: solid 1px var(--special-issue-accent);
+                    color: var(--special-issue-logo);
+                }
+            }
+
+            .special-issue-name {
+                font-family: var(--display);
+                font-size: 38px;
+                margin: 0;
+                color: var(--special-issue-logo);
+            }
+        }
+    }
+
+    .article-stream {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: var(--gap);
+    }
+}

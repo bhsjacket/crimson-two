@@ -1,26 +1,32 @@
 <?php
 
-/* add_action( 'init', 'create_syndication_taxonomy' );
- 
-function create_syndication_taxonomy() {
- 
-    register_taxonomy('syndication', ['post'], [
+add_action( 'init', 'jkt_taxonomies' );
+function jkt_taxonomies() {
+	// Special Issue Taxonomy
+    register_taxonomy('special-issue', 'post', [
         'labels' => [
-            'name' => 'Syndication Options',
-            'singular_name' => 'Syndication Option'
+            'name' => 'Special Issues',
+            'singular_name' => 'Special Issue',
+            'edit_item' => 'Edit Issue',
+            'add_new_item' => 'Add New Issue',
+            'not_found' => 'No special issues found.',
+            'search_items' => 'Search',
+            'view_item' => 'View Special Issue'
         ],
-        'hierarchical' => true,
+        'hierarchical' => false,
         'show_ui' => true,
         'show_admin_column' => false,
-        'query_var' => true,
-        'rewrite' => ['slug' => 'crimson-syndication'],
+        'query_var' => false,
+        'rewrite' => [
+            'slug' => 'special',
+            'with_front' => false
+        ],
     ]);
- 
-} */
+}
 
-// COLUMN POST TYPE
-function crimson_columns() {
-
+add_action( 'init', 'jkt_post_types' );
+function jkt_post_types() {
+	// Column Post Type
 	register_post_type( 'column',  [
 		'labels' => [
             'name' => 'Columns',
@@ -42,6 +48,4 @@ function crimson_columns() {
 		'publicly_queryable' => true,
 		'capability_type' => 'page',
     ] );
-
 }
-add_action( 'init', 'crimson_columns', 0 );
