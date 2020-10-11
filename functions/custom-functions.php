@@ -43,7 +43,7 @@ function getSection($post = \false) {
  * Gets the excerpt, just here so I can do some backwards compatability stuff in the future
  *
  * @param int $post
- * @return string
+ * @return string|null
  */
 function getExcerpt($post = \false) {
     if( empty( get_field('homepage_excerpt', $post) ) ) {
@@ -51,6 +51,18 @@ function getExcerpt($post = \false) {
     } else {
         return get_field('homepage_excerpt', $post);
     }
+}
+
+/**
+ * Get post subheadline
+ * 
+ * Returns the subheadline
+ *
+ * @param int $post
+ * @return string|null
+ */
+function getSubheadline($post = \false) {
+    return get_field('subheadline', $post);
 }
 
 /**
