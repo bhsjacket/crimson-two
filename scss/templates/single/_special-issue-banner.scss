@@ -1,0 +1,130 @@
+.special-issue-banner {
+    background-color: var(--special-issue-background);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    transform: translateY( calc(-100% - 15px) );
+    transition: transform 0.2s;
+    &.shown {
+        transform: translateY(0);
+    }
+
+    .special-issue-inner {
+        display: grid;
+        grid-template-columns: 250px 1fr 23px;
+        align-items: center;
+
+        padding: var(--gap);
+        max-width: var(--width);
+        margin: 0 auto;
+
+        .special-issue-info {
+            padding-right: var(--gap);
+            border-right: solid 1px var(--special-issue-accent);
+
+            .special-issue-logo {
+                svg {
+                    path {
+                        fill: var(--special-issue-logo);
+                    }
+                }
+            }
+
+            .special-issue-name {
+                color: var(--special-issue-accent);
+                text-decoration: none;
+                font-family: var(--sans);
+            }
+        }
+
+        .special-issue-articles-wrapper {
+            overflow: auto;
+            margin: calc( var(--gap) * -1 ) 0;
+            padding: var(--gap) 0;
+            height: 100%;
+
+            &::-webkit-scrollbar { display: none; }
+
+            .special-issue-articles {
+                height: 100%;
+        
+                .special-issue-articles-inner {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+        
+                    .special-issue-article {
+                        min-width: 300px;
+                        text-decoration: none;
+
+                        height: 100%;
+                        display: grid;
+                        grid-template-columns: 50px 1fr;
+                        grid-gap: 10px;
+                        align-items: center;
+            
+                        padding: 0 var(--gap);
+                        border-right: solid 1px var(--special-issue-accent);
+                        &:last-child {
+                            border-right: none;
+                            padding-right: 0;
+                        }
+
+                        img {
+                            display: block;
+                            z-index: -1;
+                            width: 100%;
+                            height: auto;
+                            transition: filter 0.2s;
+                            filter: saturate(0);
+                        }
+
+                        &.current-article { img { filter: saturate(1); } }
+
+                        .article-title {
+                            color: var(--special-issue-logo);
+                            text-decoration: none;
+            
+                            .current-article-marker {
+                                color: var(--special-issue-accent);
+                            }
+                        }
+
+                        &:hover { img { filter: saturate(1); } }
+                    }
+                }
+            }
+        }
+
+        .special-issue-next {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            i {
+                color: var(--special-issue-accent);
+                cursor: pointer;
+            }
+
+            &:before {
+                content: '';
+                width: 30px;
+                height: 100%;
+                display: block;
+
+                position: absolute;
+                top: 0;
+                left: -30px;
+
+                background-image: linear-gradient(to left, var(--special-issue-background), rgba(255,255,255,0));
+            }
+        }
+    }
+
+    @media all and (max-width: 800px) { display: none; }
+}
