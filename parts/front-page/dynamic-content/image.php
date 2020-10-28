@@ -1,7 +1,7 @@
 <style>
     .image-dc img {
         object-fit: cover;
-        object-position: left;
+        object-position: right;
         width: 100%!important;
         height: 100%!important;
     }
