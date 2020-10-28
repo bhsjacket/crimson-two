@@ -6,8 +6,8 @@ This file enqueues styles and scripts for the theme.
 
 function frontendAssets() {
 
-    wp_enqueue_style('css-variables', get_template_directory_uri() . '/css/variables.css');
-    wp_enqueue_style( 'style', get_stylesheet_uri() );
+    wp_enqueue_style( 'css-variables', get_template_directory_uri() . '/css/variables.css');
+    wp_enqueue_style( 'style', get_stylesheet_uri(), [], filemtime( get_stylesheet_directory() . '/style.css' ) );
 
     wp_enqueue_style( 'typekit-fonts', 'https://use.typekit.net/erm4tbu.css' );
 
@@ -43,5 +43,5 @@ function backendAssets() {
     
 }
 
-add_action('wp_enqueue_scripts', 'frontendAssets'); // Frontend
+add_action( 'wp_enqueue_scripts', 'frontendAssets'); // Frontend
 add_action( 'admin_enqueue_scripts', 'backendAssets' ); // Backend
