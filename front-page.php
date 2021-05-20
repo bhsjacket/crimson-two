@@ -45,12 +45,32 @@ $s1_2 = new WP_Query([
 ]);
 $excludedPosts[] = $s1_2->posts[0]->ID;
 
+$s2_1 = new WP_Query([
+    'post_type' => ['post'],
+    'post_status' => ['publish'],
+    'posts_per_page' => 1,
+    'nopaging' => true,
+    'meta_key' => 'is_next_largest',
+    'meta_value' => true
+]);
+$excludedPosts[] = $s2_1->posts[0]->ID;
+
+$s4_1 = new WP_Query([
+    'post_type' => ['post'],
+    'post_status' => ['publish'],
+    'posts_per_page' => 1,
+    'nopaging' => true,
+    'meta_key' => 'is_bottom_of_page',
+    'meta_value' => true
+]);
+$excludedPosts[] = $s4_1->posts[0]->ID;
+
 $s1_1 = getPosts(3);
 
-$row_news = getPosts(4, 'news', null, [ get_term_by('slug', 'local-elections', 'post_tag')->term_id, get_term_by('slug', 'coronavirus', 'post_tag')->term_id ]);
-$row_coronavirus = getPosts(4, null, 'coronavirus', [ get_term_by('slug', 'local-elections', 'post_tag')->term_id ]);
-$row_elections = getPosts(4, null, 'local-elections');
-$row_sports = getPosts(4, 'sports');
+$row_news = getPosts(4, 'news', null, [ get_term_by('slug', 'schools-reopening', 'post_tag')->term_id, get_term_by('slug', 'coronavirus', 'post_tag')->term_id ]);
+$row_coronavirus = getPosts(4, null, 'coronavirus', [ get_term_by('slug', 'schools-reopening', 'post_tag')->term_id ]);
+$row_elections = getPosts(4, null, 'schools-reopening');
+$row_features = getPosts(4, 'features');
 
 $rowSections = [
     [
@@ -66,19 +86,18 @@ $rowSections = [
         'query' => $row_coronavirus
     ],
     [
-        'title' => 'Election Corner',
-        'tag' => 'local-elections',
+        'title' => 'Schools Reopening',
+        'tag' => 'schools-reopening',
         'class' => 'highlighted gray-highlight no-border',
         'query' => $row_elections
     ],
     [
         'title' => false,
-        'category' => 'sports',
-        'query' => $row_sports
+        'category' => 'features',
+        'query' => $row_features
     ],
 ];
 
-$s2_1 = getPosts(1);
 $s2_2 = getPosts(2);
 $s2_3 = getColumns(5);
 
@@ -86,7 +105,6 @@ $s3_1 = getPosts(1, 'features');
 $s3_2 = getColumns(2, 5);
 $s3_3 = getPosts(3, 'features');
 
-$s4_1 = getPosts(1);
 $s4_2 = getPosts(1);
 $s4_3 = getPosts(2);
 
