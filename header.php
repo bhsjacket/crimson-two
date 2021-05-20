@@ -2,24 +2,43 @@
 
 <!DOCTYPE html>
 
-<?php
-$adjectives = [
-    'amazing',
-    'brilliant',
-    'stupid',
-    'clever',
-    'mediocre',
-    'fine',
-    'alright',
-    'talented',
-    '(CloudFlare\'s slacking if you\'re seeing this)',
-    '(CloudFlare\'s slacking if you\'re seeing this)',
-    '(CloudFlare\'s slacking if you\'re seeing this)',
-    '(CloudFlare\'s slacking if you\'re seeing this)',
-    '(CloudFlare\'s slacking if you\'re seeing this)'
-]
-?>
-<!-- Everything here by the <?php echo $adjectives[array_rand($adjectives)] ?> Jerome Paulos -->
+<!--[if lt IE 3]>
+
+Apoligies to all the IE3 users viewing this site. I don't this this is making it
+much worse than it already looks for you. Have fun with your 1996 CSS.
+
+Website and logo/branding designed and developed by Jerome Paulos (2022)
+
+     @@@@@@@@@@@@@    *@@@@@@@@@@@@(     @@@@@@@@@@@     @@@@@@@@@@@@@@@@@@@@@@@
+       @@@@@@@@@        ,@@@@@@@@%        @@@@@@         @@@@@% @@@@@@@@@  @@@@@
+       #@@@@@@@@         @@@@@@@@        @@@@            @@@&   .@@@@@@@@    @@@
+       #@@@@@@@@         @@@@@@@@      @@@               @@.    .@@@@@@@@     @@
+       #@@@@@@@@         @@@@@@@@    @@@                 @(     .@@@@@@@@      @
+       #@@@@@@@@         @@@@@@@@  @@@                   @      .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@@@@@@@&                        .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@ @@@@@@@@@                     .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@  .@@@@@@@@                    .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@   @@@@@@@@@                   .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@    @@@@@@@@                   .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@    @@@@@@@@@                  .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@     @@@@@@@@                  .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@     @@@@@@@@@                 .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@      @@@@@@@@                 .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@      @@@@@@@@@                .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@       @@@@@@@@                .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@       @@@@@@@@@               .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@        @@@@@@@@&              .@@@@@@@@       
+       #@@@@@@@@         @@@@@@@@        @@@@@@@@@.             .@@@@@@@@       
+       @@@@@@@@@        .@@@@@@@@/        @@@@@@@@@@            @@@@@@@@@       
+       @@@@@@@@        @@@@@@@@@@@@        @@@@@@@@@@@         @@@@@@@@@@@@     
+      @@@@@@@@                                                                  
+     @@@@@@@@                                                                   
+    @@@@@@                                                                      
+  @@@@                                                                          
+
+<![endif]-->
+
+<!-- Cloudflare's slacking if you're seeing this one. -->
 
 <html lang="en">
 <head>
@@ -89,8 +108,7 @@ $adjectives = [
                 </div>
                 <div class="donation-dropdown-right">
                     <div class="donation-dropdown-form">
-                        <form action="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=bhsasb@berkeley.net&item_name=Donation%20to%20the%20Berkeley%20High%20Jacket%20newspaper&currency_code=USD" method="post" target="_blank">
-                            <input type="hidden" name="page" value="<?php echo get_site_url() . $_SERVER['REQUEST_URI']; ?>">
+                        <form action="https://berkeley.myschoolcentral.com/asbworks/(S(r4s5u51awofyamunbi35lbvb))/apps/webstore/pages/Product.aspx?org=50259&pid=9" method="post" target="_blank">
                             <select name="amount">
                                 <option value="10.00">$10</option>
                                 <option value="25.00" selected>$25</option>
@@ -122,7 +140,7 @@ $adjectives = [
                 </div>
                 <div class="header-right">
                     <ul>
-                        <li><a href="/about/contact">Send Tips</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
                         <li class="header-button">Support Us</li>
                         <li class="search-toggle search-toggle-mobile"><span>Search</span><i class="far fa-search"></i></li>
                         <li class="search-toggle"><i class="far fa-search"></i></li>
@@ -146,7 +164,7 @@ $adjectives = [
                 </div>
                 <div class="sticky-sections-right">
                     <ul>
-                        <li><a href="/about/contact">Send Tips</a></li>
+                        <li><a href="/newsletter">Newsletter</a></li>
                         <li class="header-button">Support Us</li>
                         <li class="search-toggle"><i class="far fa-search"></i></li>
                     </ul>
